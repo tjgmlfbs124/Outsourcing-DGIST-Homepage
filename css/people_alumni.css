@@ -1,0 +1,9 @@
+#alumnidiv { width: 100%; font-size:23px; font-family: 'ON-IGothic',AppleGothic,sans-serif;}
+#alumnidiv > a.title { width: 100%; font-size:23px; border-bottom: 5px solid #fca103; font-weight: bold; }
+#alumnidiv > div.listWrap {margin-top: 40px; color:#333; background: #fff;}
+#alumnidiv > div.listWrap > div {width:550px; height: 240px; float: left; display: block; margin: 10px;}
+#alumnidiv > div.listWrap > div > img {width:150px; height: 200px; float: left; margin-right: 20px;}
+#alumnidiv > div.listWrap > div > p {font-size: 21px; color: #1e2d3b; font-weight: bold;}
+#alumnidiv > div.listWrap > div > a {font-size: 15px;  color: #2c2c2c; margin-left: 10px; }
+#alumnidiv > div.listWrap > div > a.email {color:#007bff; cursor:pointer; font-family: none;}
+#alumnidiv > div.listWrap > div > a.email:hover {text-decoration:underline; }

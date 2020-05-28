@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <title>대구경북과학기술원</title>
+  <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/paper_index.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    var list = {
+      International : [],
+      Domestic : [],
+      Conference : [],
+      Books : [],
+    }
+
+    <?php
+      require $_SERVER['DOCUMENT_ROOT'].'/requestAPI.php';
+      $api = new RequestAPI();
+      $result = $api->select_paper_list("international_journal");
+      while ($row = mysql_fetch_array($result)){?>
+        var temp = "<?php $row['content']?>".replace("'","");
+        <?php
+          if(!strcmp($row['category'], "international_journal")){ ?>
+            list['International'].push('<?php echo $row['title'].$row['content'] ?>')
+        <?php }
+          else if(!strcmp($row['category'], "domestic_journal")){ ?>
+            list['Domestic'].push('<?php echo  $row['title'].$row['content'] ?>')
+        <?php }
+          else if(!strcmp($row['category'], "conference")){ ?>
+            list['Conference'].push('<?php echo $row['title'].$row['content'] ?>')
+        <?php }?>
+    <?php } ?>
+    renderInfo(list);
+    function renderInfo(list){
+      $(".listWrap").append("<a class='title'>International Journal</a>");
+      $(".listWrap").append("<ul class='journalList'></ul>");
+      list['International'].forEach((item, i) => {
+        $(".journalList").append("<li><a>" + item + "</a></li>");
+      });
+
+      $(".listWrap").append("<a class='title'>Demestic Jounal</a>");
+      $(".listWrap").append("<ul class='journalList'></ul>");
+      list['Domestic'].forEach((item, i) => {
+        $(".journalList").append("<li><a>" + item + "</a></li>");
+      });
+
+      $(".listWrap").append("<a class='title'>Conference</a>");
+      $(".listWrap").append("<ul class='journalList'></ul>");
+      list['Conference'].forEach((item, i) => {
+        $(".journalList").append("<li><a>" + item + "</a></li>");
+      });
+    }
+
+    function setBold(text){
+      // if(text.includes('Jonghun Lee')){
+      //   if(text.replace("Jonghun Lee","<a class="">Jonghun Lee</a>"))
+      // };
+      // if(text.replace("Jonghun Lee","<a>Jonghun Lee</a>"))
+    }
+  });
+  </script>
+</head>
+	<div id="header">
+			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/header.php';?>
+	</div>
+
+  <div id="wrap">
+    <div class="listWrap">
+
+    </div>
+  </div>
+	<div id="footer">
+    <?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php';?>
+  </div>

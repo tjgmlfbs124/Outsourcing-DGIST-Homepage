@@ -1,0 +1,17 @@
+.professordiv a.title { width: 100%; font-size:23px; border-bottom: 5px solid #fca103; font-weight: bold; }
+.professordiv > div.menu {padding: 0; margin-top: 20px; width:100%; height:40px;}
+.professordiv > div.menu > a {font-size: 16px; width:120px; line-height: 40px; float: left; text-align: center; font-family: 'LotteMartDream',AppleGothic,sans-serif;}
+.professordiv > div.menu > a.active{border-bottom: 5px solid #fca103; font-size: 16px; width:120px; line-height: 40px; float: left; text-align: center; background:#1e2d3b; color: #fff; font-weight: bold;}
+.professordiv > div.menu > a:hover {cursor: pointer;}
+.professordiv > div.loadDiv{height: 100%; }
+.professordiv > div.loadDiv > div.info{width:100%; border-top: 5px solid #fca103;}
+.professordiv > div.loadDiv > div.info > div.profile {width:150px; height: 240px; background: #fff; float: left; margin-top: 20px; background: #e2e2e2;}
+.professordiv > div.loadDiv > div.info > div.profile > img{width:150px; height: 240px;}
+.professordiv > div.loadDiv > div.info > div.comment01 {margin: 20px 0px 0px 20px; width: 980px;  height: 240px; float: left;}
+.professordiv > div.loadDiv > div.info > div.comment01 > p {font-size: 22px; font-style: bold; font-family: 'ON-IGothic',AppleGothic,sans-serif; }
+.professordiv > div.loadDiv > div.info > div.comment01 > ul {margin-left: 30px; font-size: 15px; font-family: sans-serif; }
+.professordiv > div.loadDiv > div.info > div.comment01 > ul > li > a.email {color:#007bff; cursor:pointer;}
+.professordiv > div.loadDiv > div.info > div.comment01 > ul > li > a.email:hover {text-decoration:underline;}
+.professordiv > div.loadDiv > div.info > div.comment02{margin-top: 20px; width: 1150px; height: 100%; float: left;}
+.professordiv > div.loadDiv > div.info > div.comment02 > p {font-size: 22px; font-family: 'ON-IGothic',AppleGothic,sans-serif; }
+.professordiv > div.loadDiv > div.info > div.comment02 > ul {margin-left: 30px; font-size: 15px; font-family: sans-serif; }

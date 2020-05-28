@@ -1,0 +1,16 @@
+#header > div.logobar {height:30px; background:#1e2d3b; width:100%; color:#fff;}
+#header > div.logobar > div {float:left; height: 20px;}
+#header > div.logobar > div > img {height: 20px; width: 20px; margin:5px 10px 5px 10px; cursor: pointer;}
+#header > div.logobar > a.logotext02 {font-size: 13px; line-height: 30px; float:right; margin-right: 10px; cursor: pointer;}
+
+#header {  width:100%;  height: 90px; text-align: center; border-bottom: 1px solid #e2e2e2; ;}
+#header > .menuWrap {width: 100%; height: 60px; float:left; margin-top: 0px; }
+#header > .menuWrap > img { height: 100%; float: left; cursor: pointer;}
+#header > .menuWrap > ul { width:85%; float: right; margin: 0 auto; padding: 0; overflow: hidden;}
+#header > .menuWrap > ul > li{  float: right;  width:8%;  cursor: pointer; line-height: 60px; color:#1e2d3b; list-style: none; }
+#header > .menuWrap > ul > li:hover{ color:#1e2d3b; background: #e2e2e2;  }
+#header > .menuWrap > ul > li > a{  font-size: 1em;  text-align: right;}
+#header > .menuWrap > ul > li > ul.submenu{  display: none;  list-style: none; z-index: 0;}
+#header > .menuWrap > ul > li > ul.submenu > li{ height:40px; line-height: 40px; background: rgba(0,0,0,0.1);}
+#header > .menuWrap > ul > li > ul.submenu > li:hover{ background: rgba(0,0,0,0.2);  }
+#header > .menuWrap > ul > li > ul.submenu > li > a{ font-size: 13px; }
