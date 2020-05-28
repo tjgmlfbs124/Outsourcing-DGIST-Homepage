@@ -1,0 +1,54 @@
+-- MySQL dump 10.13  Distrib 8.0.18, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: kyu_db
+-- ------------------------------------------------------
+-- Server version	8.0.18
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `research_interests_tb`
+--
+
+DROP TABLE IF EXISTS `research_interests_tb`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `research_interests_tb` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` text,
+  `professorid` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `research_interests_test_ibfk_1` (`professorid`),
+  CONSTRAINT `research_interests_tb_ibfk_1` FOREIGN KEY (`professorid`) REFERENCES `professor_tb` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `research_interests_tb`
+--
+
+LOCK TABLES `research_interests_tb` WRITE;
+/*!40000 ALTER TABLE `research_interests_tb` DISABLE KEYS */;
+INSERT INTO `research_interests_tb` VALUES (2,'Radar System Design',2),(3,'MIMO/Multi-channel Radar',2),(4,'Multifunctional Radar(MFR)',2),(5,'Multi-dimensional Imaging Radar',2),(6,'Super-resolution radar algorithm',2),(7,'See-thru-the obstacle Radar',2),(8,'Automotive Radar',2),(9,'Meta-material based RF Cloaking & absorber',2),(10,'Super-resolution radar',7),(11,'Vital sign radar',7),(12,'Automotive radar',7),(13,'MIMO imaging radar',7);
+/*!40000 ALTER TABLE `research_interests_tb` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-05-28 17:42:07
