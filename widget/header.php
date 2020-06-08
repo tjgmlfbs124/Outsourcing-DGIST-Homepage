@@ -21,7 +21,7 @@
 <body>
   <div class="logobar">
     <div>
-      <img src="/images/setting.png" onclick="onPage('/page/setting/index')"></img>
+      <img src="/images/setting.png" onclick="onPage('/page/admin/index.php')"></img>
     </div>
     <a class="logotext02">DGIST 대구경북과학기술원</a>
   </div>
@@ -34,13 +34,13 @@
         </ul>
       </li>
       <li>
-        <a>Researcher</a>
+        <a>Research</a>
         <ul class="submenu">
-          <li onclick="onPage('/page/paper/index.php')"><a>Paper</a></li>
-          <li onclick="onPage('/page/paper/index.php?pg=domestic_journal')"><a>Patent</a></li>
-          <li onclick="onPage('/page/paper/index.php?pg=conference')"><a>Technology Transfer</a></li>
-          <li onclick="onPage('/page/paper/index.php?pg=patents')"><a>Project</a></li>
-          <li onclick="onPage('/page/paper/index.php?pg=technology_transfer')"><a>Interest</a></li>
+          <li onclick="onPage('/page/research/paper.php')"><a>Paper</a></li>
+          <li onclick="onPage('/page/research/patent.php')"><a>Patent</a></li>
+          <li onclick="onPage('/page/research/technology_transfer.php')"><a>Technology Transfer</a></li>
+          <li onclick="onPage('/page/research/project.php')"><a>Project</a></li>
+          <li onclick="onPage('/page/research/interest.php')"><a>Interest</a></li>
         </ul>
       </li>
       <li>
@@ -52,7 +52,7 @@
           <li onclick="onPage('/page/peoples/index.php?pg=alumni')"><a>Alumni</a></li>
         </ul>
       </li>
-      <li onclick="onPage('/page/artlab/artlabs')">
+      <li onclick="onPage('/page/artLab/index.php')">
         <a>ART Lab</a>
         <ul class="submenu"></ul>
       </li>

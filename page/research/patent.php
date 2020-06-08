@@ -15,8 +15,8 @@
     }
 
     <?php
-      require $_SERVER['DOCUMENT_ROOT'].'/requestAPI.php';
-      $api = new RequestAPI();
+      require $_SERVER['DOCUMENT_ROOT'].'/getForm.php';
+      $api = new getForm();
       $result = $api->select_paper_list("international_journal");
       while ($row = mysql_fetch_array($result)){?>
         var temp = "<?php $row['content']?>".replace("'","");
@@ -31,33 +31,8 @@
             list['Conference'].push('<?php echo $row['title'].$row['content'] ?>')
         <?php }?>
     <?php } ?>
-    renderInfo(list);
-    function renderInfo(list){
-      $(".listWrap").append("<a class='title'>International Journal</a>");
-      $(".listWrap").append("<ul class='journalList'></ul>");
-      list['International'].forEach((item, i) => {
-        $(".journalList").append("<li><a>" + item + "</a></li>");
-      });
 
-      $(".listWrap").append("<a class='title'>Demestic Jounal</a>");
-      $(".listWrap").append("<ul class='journalList'></ul>");
-      list['Domestic'].forEach((item, i) => {
-        $(".journalList").append("<li><a>" + item + "</a></li>");
-      });
-
-      $(".listWrap").append("<a class='title'>Conference</a>");
-      $(".listWrap").append("<ul class='journalList'></ul>");
-      list['Conference'].forEach((item, i) => {
-        $(".journalList").append("<li><a>" + item + "</a></li>");
-      });
-    }
-
-    function setBold(text){
-      // if(text.includes('Jonghun Lee')){
-      //   if(text.replace("Jonghun Lee","<a class="">Jonghun Lee</a>"))
-      // };
-      // if(text.replace("Jonghun Lee","<a>Jonghun Lee</a>"))
-    }
+      $(".listWrap").append("<a class='title'>Patent</a>");
   });
   </script>
 </head>

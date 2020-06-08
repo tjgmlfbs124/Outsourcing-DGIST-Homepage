@@ -9,8 +9,8 @@
     $(document).ready(function(){
       var list = new Array();
       <?php
-        require $_SERVER['DOCUMENT_ROOT'].'/requestAPI.php';
-        $api = new RequestAPI();
+        require $_SERVER['DOCUMENT_ROOT'].'/getForm.php';
+        $api = new getForm();
         $result = $api->select_professor_list();
         while ($row = mysql_fetch_array($result)){?>
           var html = "<a id='<?php echo $row['id']?>'>교수 " + "<?php echo $row['name']?></a>";

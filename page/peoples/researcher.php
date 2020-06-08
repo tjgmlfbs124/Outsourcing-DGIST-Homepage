@@ -7,8 +7,8 @@
     $(document).ready(function(){
       var list = new Array();
       <?php
-        require $_SERVER['DOCUMENT_ROOT'].'/requestAPI.php';
-        $api = new RequestAPI();
+        require $_SERVER['DOCUMENT_ROOT'].'/getForm.php';
+        $api = new getForm();
         $result = $api->select_researcher_list();
         while ($row = mysql_fetch_array($result)){?>
           list.push({

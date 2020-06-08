@@ -1,0 +1,49 @@
+/* 교수 정보리스트 */
+#professorWrap {float:left; width:-webkit-calc(100% - 200px); padding-left: 20px; height:100%; overflow-y: scroll; background: #fafafa;font-family: "ON-IGothic",AppleGothic,sans-serif;}
+#professorWrap > div.header {height:auto; float:left; width:auto;}
+#professorWrap > div.header > div.path { width:100%; height:50px; float:left;}
+#professorWrap > div.header > div.path > h2 {font-size: 25px; color: #1e2d3b; line-height: 50px; margin-left: 20px; font-family: "ON-IGothic",AppleGothic,sans-serif;}
+#professorWrap > div.header > div.list {width:100%; height:60px; float:left;}
+#professorWrap > div.header > div.list > h2 {float:left; font-size: 18px; line-height: 60px; margin-left: 20px; color: #1e2d3b; }
+#professorWrap > div.header > div.list > #select { width: 300px; float:left; height: 35px; margin:15px 0px 0px 20px; text-align: center; font-size: 15px; font-family: "ON-IGothic",AppleGothic,sans-serif;}
+#professorWrap > div.header > div.edit{float : left; width: 100%;height:50px;}
+#professorWrap > div.header > div.edit > button{float:left; margin: 5px;}
+
+#professorWrap > div.content > div.profile {float: left; height:280px; border-bottom: 1px solid #a2a2a2;}
+#professorWrap > div.content > div.profile > div.imgWrap {float: left;  border: 1px solid #ffffff; margin: 10px 30px 0px 10px; }
+#professorWrap > div.content > div.profile > div.imgWrap > img {width:150px; height: 240px; cursor: pointer;}
+#professorWrap > div.content > div.profile > div.imgWrap > #ajaxFrom {width:150px;}
+#professorWrap > div.content > div.profile > div.profileWrap {height:240px;  margin: 10px 0px 10px 20px;}
+#professorWrap > div.content > div.profile > div.profileWrap > ul > li {height: 40px; border-bottom: 1px solid #e2e2e2; overflow: hidden;}
+#professorWrap > div.content > div.profile > div.profileWrap > ul > li > a{ line-height:40px; color:#000; }
+#professorWrap > div.content > div.profile > div.profileWrap > ul > li > img:hover{background: #c2c2c2;}
+#professorWrap > div.content > div.profile > div.profileWrap > ul > li > input{width:1000px;}
+#professorWrap > div.content > div.profile > div.editWrap > .edtButton{ float: left;}
+
+#professorWrap > div.content > div.record {margin-top: 20px; float: left; font-family: "S-CoreDream-3Light",AppleGothic,sans-serif;}
+#professorWrap > div.content > div.record > div.recordWrap { width:100%; }
+#professorWrap > div.content > div.record > div.recordWrap > ul {margin-left: 20px; }
+#professorWrap > div.content > div.record > div.recordWrap > ul > h3 {color:#1e2d3b;}
+#professorWrap > div.content > div.record > div.recordWrap > ul > li {list-style: disc;  height:40px; overflow: hidden;}
+#professorWrap > div.content > div.record > div.recordWrap > ul > li > a {line-height: 40px; color:#000000; }
+#professorWrap > div.content > div.record > div.recordWrap > ul > li > input{width:200px;}
+#professorWrap > div.content > div.exitWrap {height:200px; width:100%; text-align: center;}
+#professorWrap > div.content > div.exitWrap > .complete {width:200px; height:60px; margin-top: 30px;}
+
+/* 교수 추가하기 */
+#professorAddWrap {float:left; width:-webkit-calc(100% - 200px); padding-left: 20px; background: #fafafa;font-family: "ON-IGothic",AppleGothic,sans-serif; height:95%; overflow:auto;}
+#professorAddWrap > form > div.listWrap {float: left; width:100%; padding: 0px 30px 100px 30px;}
+#professorAddWrap > form > div.listWrap > input#btnOk {width:100px; height:40px; margin: 20px 0px 20px 0px; float:right;}
+#professorAddWrap > form > div.listWrap > table#noticeTb {margin-top: 20px; width:100%; text-align: center; color:#1e2d3b; border-bottom: 0.2px solid #1e2d3b; border-top: 0.2px solid #1e2d3b;}
+#professorAddWrap > form > div.listWrap > table#noticeTb > tbody > tr {height: 50px; border-bottom: 1px solid #c2c2c2;}
+#professorAddWrap > form > div.listWrap > table#noticeTb > tbody > tr > td > div.imgWrap{position:relative; width:150px; height:220px;}
+#professorAddWrap > form > div.listWrap > table#noticeTb > tbody > tr > td > div.imgWrap > img#profileImg {width:150px; height:220px;   position: absolute;left:0px; z-index: 1;}
+#professorAddWrap > form > div.listWrap > table#noticeTb > tbody > tr > td > div.imgWrap > div.alphaWrap{width:150px; height:220px; position: absolute; background: rgba(255,255,255,0.7); z-index: 2; padding-top:87px;cursor: pointer;}
+#professorAddWrap > form > div.listWrap > table#noticeTb > tbody > tr > td > div.imgWrap > div.alphaWrap > img {width: 83px; height:66px;}
+#professorAddWrap > form > div.listWrap > table#noticeTb > tbody > tr > td:first-child{width:100px;}
+#professorAddWrap > form > div.listWrap > table#noticeTb > tbody > tr > th:first-child{width:100px;}
+#professorAddWrap > form > div.listWrap > table#noticeTb > tbody > tr.textArea {height:200px; overflow:auto;}
+#professorAddWrap > form > div.listWrap > table#noticeTb > tbody > tr > td > input#shortInput {float:left; width:300px;}
+#professorAddWrap > form > div.listWrap > table#noticeTb > tbody > tr > td > input#longInput {float:left; width:90%;}
+#professorAddWrap > form > div.listWrap > table#noticeTb > tbody > tr.textArea > td > textarea {float:left; width:100%; height:180px;}
+#professorAddWrap > form > div.listWrap > table#noticeTb > tbody > tr.textArea > td > a {float:left; font-size: 10px;}
