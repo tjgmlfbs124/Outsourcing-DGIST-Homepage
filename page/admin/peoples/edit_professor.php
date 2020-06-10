@@ -6,15 +6,18 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/admin/admin_people.css">
   <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/fonts.css">
-  <script src="<?php $_SERVER[''] ?>/js/Utils/utils.js" type="text/javascript"></script>
   <script>
-    var formData = new FormData();
     $(document).ready(function() {
+      var target = document.getElementById('fileToUpload');
+
+      // 업데이트시, url에 id가 있다면
       <?php if(isset($_GET['id'])){
         require $_SERVER['DOCUMENT_ROOT'].'/getForm.php';
         $api = new getForm();
         $result = $api->select_professor_id_list($_GET['id']);
         while ($row = mysql_fetch_array($result)){ ?>
+          $("input[name=id]").val("<?php echo $row['id']?>");
+          $("img[name=myImage]").attr('src',"<?php $_SERVER[''] ?>/uploadFile/<?php echo $row['image']?>.jpg");
           $("input[name=mode]").val("<?php echo $_GET['action']?>");
           $("input[name=name]").val("<?php echo $row['name']?>");
           $("input[name=position]").val("<?php echo $row['position']?>");
@@ -22,48 +25,44 @@
           $("input[name=phone]").val("<?php echo $row['phone']?>");
           $("input[name=email]").val("<?php echo $row['email']?>");
           $("input[name=fax]").val("<?php echo $row['fax']?>");
-          $("textarea[name=biography]").val(("<?php echo $row['biography']?>").replace(/&&/g, "\n"));
-          $("textarea[name=research_interests]").val(("<?php echo $row['research_interests']?>").replace(/&&/g, "\n"));
-          $("textarea[name=professional_experiences]").val(("<?php echo $row['professional_experiences']?>").replace(/&&/g, "\n"));
-          $("textarea[name=awards_and_honors]").val(("<?php echo $row['awards_and_honors']?>").replace(/&&/g, "\n"));
+          $("textarea[name=biography]").val(("<?php echo $row['biography']?>").replace(/&br&/g, "\n"));
+          $("textarea[name=research_interests]").val(("<?php echo $row['research_interests']?>").replace(/&br&/g, "\n"));
+          $("textarea[name=professional_experiences]").val(("<?php echo $row['professional_experiences']?>").replace(/&br&/g, "\n"));
+          $("textarea[name=awards_and_honors]").val(("<?php echo $row['awards_and_honors']?>").replace(/&br&/g, "\n"));
         <?php }
       }
       else{ ?>
         $("input[name=mode]").val("<?php echo $_GET['action']?>");
       <?php } ?>
+
+      imagePreView(target, function(img){
+        $("#profileImg").replaceWith(img);
+      });
+
     });
 
+    // 이미지를 클릭했을때, Form 업로드 클릭되게.
     function ajaxFileUpload() {
-        jQuery("#ajaxFile").click();
-      }
+      jQuery("#fileToUpload").click();
+    }
 
-      function ajaxFileChange() {
-        formData.set("myImage", jQuery("#ajaxFile")[0].files[0]);
-      }
+    // 폼을 통해 이미지를 업로드하면 클라이언트에 이미지가 프리뷰되는것.
+    function imagePreView(target, callback){
+      var img = new Image();
+      target.onchange = function (e) {
+        e.preventDefault();
+        var file = target.files[0], reader = new FileReader();
+        reader.onload = function (event) {
+          img.src = event.target.result;
+          img.width = 150;
+          img.height = 220;
+          img.id="profileImg";
+        };
+        reader.readAsDataURL(file);
+        callback(img);
+      };
+    }
 
-      function submit(){
-        // formData.set("name", $("input[name=name]").val());
-        // formData.set("position", $("input[name=position]").val());
-        // formData.set("phone", $("input[name=phone]").val());
-        // formData.set("address",$("input[name=address]").val());
-        // formData.set("fax",$("input[name=fax]").val());
-        // formData.set("email", $("input[name=email]").val());
-        // formData.set("department", null);
-        // formData.set("category", "professor");
-        // formData.set("biography", $("textarea[name=biography]").val().replace('\n', "&&"));
-        // formData.set("research_interests", $("textarea[name=research_interests]").val().replace('\n', "&&"));
-        // formData.set("professional_experiences", $("textarea[name=professional_experiences]").val().replace('\n', "&&"));
-        // formData.set("awards_and_honors", $("textarea[name=awards_and_honors]").val().replace('\n', "&&"));
-        // multipartAPi("/prof/"+mode,formData,function(result){
-        //   if(mode == "upload"){
-        //     alert("추가되었습니다.");
-        //   }
-        //   else{
-        //     alert("변경되었습니다.");
-        //   }
-        //   $("#content").load("_list_professor");
-        // });
-      }
 
   </script>
 </head>
@@ -76,19 +75,21 @@
 </div>
 
 <div id="professorAddWrap">
-  <form method="POST" action="/form/editProfessor.php">
+  <form method="POST" action="/form/editProfessor.php" enctype="multipart/form-data">
       <input name="mode" style="display:none;"/>
+      <input name="id" style="display:none;"/>
       <div class="listWrap">
-        <input type="file" id="ajaxFile" onChange="ajaxFileChange(this);" style="display:none;" name="myImage" />
+        <input type="file" id="ajaxFile" onChange="ajaxFileChange(this);" style="display:none;" >
         <input type="submit" id="btnOk" value="확인" class="btn btn-outline-secondary"/>
         <table id="noticeTb">
           <tr>
             <td rowspan="4" style="padding:5px;">
               <div class="imgWrap">
                 <div class="alphaWrap" onclick="ajaxFileUpload()">
-                  <img src="/cam.png"></img>
+                  <img src="<?php $_SERVER[''] ?>/images/cam.png"></img>
                 </div>
-                <img name="myImage" id="profileImg" src="/empty.png" ></img>
+                <img name="myImage" id="profileImg" src="<?php $_SERVER[''] ?>/images/empty.png" ></img>
+                <input type="file" name="fileToUpload" id="fileToUpload" style="display:none;">
               </div>
 
             </td>

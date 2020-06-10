@@ -1,6 +1,6 @@
 /* 교수 정보리스트 */
 #professorWrap {float:left; width:-webkit-calc(100% - 200px); padding-left: 20px; height:100%; overflow-y: scroll; background: #fafafa;font-family: "ON-IGothic",AppleGothic,sans-serif;}
-#professorWrap > div.header {height:auto; float:left; width:auto;}
+#professorWrap > div.header {height:auto; float:left; width:auto; width:100%;}
 #professorWrap > div.header > div.path { width:100%; height:50px; float:left;}
 #professorWrap > div.header > div.path > h2 {font-size: 25px; color: #1e2d3b; line-height: 50px; margin-left: 20px; font-family: "ON-IGothic",AppleGothic,sans-serif;}
 #professorWrap > div.header > div.list {width:100%; height:60px; float:left;}
@@ -9,7 +9,7 @@
 #professorWrap > div.header > div.edit{float : left; width: 100%;height:50px;}
 #professorWrap > div.header > div.edit > button{float:left; margin: 5px;}
 
-#professorWrap > div.content > div.profile {float: left; height:280px; border-bottom: 1px solid #a2a2a2;}
+#professorWrap > div.content > div.profile {float: left; height:280px; border-bottom: 1px solid #a2a2a2;width:100%;}
 #professorWrap > div.content > div.profile > div.imgWrap {float: left;  border: 1px solid #ffffff; margin: 10px 30px 0px 10px; }
 #professorWrap > div.content > div.profile > div.imgWrap > img {width:150px; height: 240px; cursor: pointer;}
 #professorWrap > div.content > div.profile > div.imgWrap > #ajaxFrom {width:150px;}

@@ -74,7 +74,7 @@
       title.forEach((item, i) => {
         $(".comment02").append("<p>" + capitalize(title[i]) +"</p>");
         $(".comment02").append("<ul class='infoList02'>");
-        (proList[title[i]]).split("&&").forEach((item, i) => {
+        (proList[title[i]]).split("&br&").forEach((item, i) => {
           if(item){
             $(".infoList02").append("<li>" + item.replace(/\n/g, "") + "</li>");
           }

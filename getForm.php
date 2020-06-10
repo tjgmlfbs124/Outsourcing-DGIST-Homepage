@@ -51,14 +51,45 @@ class getForm{
 
   // 교수 등록
   function add_professor($_name, $_position, $_address, $_phone, $_fax, $_email,$_department, $_image, $_category, $_biography, $_research_interests, $_professional_experiences, $_awards_and_honors){
-    $query = "INSERT INTO professor_tb(name, position, address, phone, fax, email, department,image,category, biography, research_interests, professional_experiences, awards_and_honors) VALUES (\"$_name\", \"$_position\", \"$_address\", \"$_phone\", \"$_fax\", \"$_email\",\"$_department\", \"$_imge\", \"$_category\", \"$_biography\", \"$_research_interests\", \"$_professional_experiences\", \"$_awards_and_honors\");";
+    $_biography = str_replace("\r\n","&br&",$_biography);
+    $_research_interests = str_replace("\r\n","&br&",$_research_interests);
+    $_professional_experiences = str_replace("\r\n","&br&",$_professional_experiences);
+    $_awards_and_honors = str_replace("\r\n","&br&",$_awards_and_honors);
+    $query = "INSERT INTO professor_tb(name, position, address, phone, fax, email, department,image,category, biography, research_interests, professional_experiences, awards_and_honors) VALUES (\"$_name\", \"$_position\", \"$_address\", \"$_phone\", \"$_fax\", \"$_email\",\"$_department\", \"$_image\", \"$_category\", \"$_biography\", \"$_research_interests\", \"$_professional_experiences\", \"$_awards_and_honors\");";
     $result = mysql_query($query);
     if(strcmp($result,"true")){
       echo '<script>
             alert("추가되었습니다.");
-            location.replace("/page/admin/peoples/professor.php");</script>';
+            location.replace("/page/admin/peoples/professor.php");
+            </script>';
     }
   }
+
+  // 교수 업데이트
+  function update_professor($_id, $_name, $_position, $_address, $_phone, $_fax, $_email,$_department, $_image, $_category, $_biography, $_research_interests, $_professional_experiences, $_awards_and_honors){
+    $_biography = str_replace("\r\n","&br&",$_biography);
+    $_research_interests = str_replace("\r\n","&br&",$_research_interests);
+    $_professional_experiences = str_replace("\r\n","&br&",$_professional_experiences);
+    $_awards_and_honors = str_replace("\r\n","&br&",$_awards_and_honors);
+    echo $_image;
+    // 이미지가 있을경우 이미지도 업데이트
+    if(isset($_image)){
+      $query = "UPDATE professor_tb SET name=\"$_name\", position=\"$_position\", address=\"$_address\", phone=\"$_phone\", email=\"$_email\", department=\"$_department\", image=\"$_image\", category=\"$_category\", biography=\"$_biography\", research_interests=\"$_research_interests\", professional_experiences=\"$_professional_experiences\", awards_and_honors=\"$_awards_and_honors\" WHERE id=\"$_id\"";
+    }
+
+    // 이미지가 없을경우, 원래 이미지 사용을 위해 이미지 빼고 업데이트
+    else{
+      $query = "UPDATE professor_tb SET name=\"$_name\", position=\"$_position\", address=\"$_address\", phone=\"$_phone\", email=\"$_email\", department=\"$_department\", category=\"$_category\", biography=\"$_biography\", research_interests=\"$_research_interests\", professional_experiences=\"$_professional_experiences\", awards_and_honors=\"$_awards_and_honors\" WHERE id=\"$_id\"";
+    }
+    $result = mysql_query($query);
+    if(strcmp($result,"true")){
+      echo '<script>
+            alert("변경되었습니다.");
+            location.replace("/page/admin/peoples/professor.php");
+            </script>';
+    }
+  }
+
 
   // 교수 삭제
   function remove_professor($id){

@@ -25,7 +25,7 @@
           <li><a>PEOPLE</a>
               <ul class="submenu">
                   <li onclick="setPage('/page/admin/peoples/professor.php')"><a>Professor</a></li>
-                  <li onclick="setPage('research')"><a>Researcher</a></li>
+                  <li onclick="setPage('/page/admin/peoples/researcher.php')"><a>Researcher</a></li>
                   <li onclick="setPage('student')"><a>Student</a></li>
               </ul>
           </li>
