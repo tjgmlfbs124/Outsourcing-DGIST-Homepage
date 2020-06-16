@@ -53,7 +53,7 @@
   </script>
 </head>
 
-<body>
+<body style="position:relative;">
 
 	<div id="header">
 			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/header.php';?>

@@ -12,7 +12,7 @@
       <?php
         require $_SERVER['DOCUMENT_ROOT'].'/getForm.php';
         $api = new getForm();
-        $result = $api->select_alumni_list();
+        $result = $api->select_etc_list("alumni");
         while ($row = mysql_fetch_array($result)){?>
           list.push({
             "name" : "<?php echo $row['name']?>",

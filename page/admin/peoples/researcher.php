@@ -19,7 +19,7 @@
 
         // URL에 id가 없다면 select Box만 렌더링
         if(!isset($_GET['id'])){
-          $result = $api->select_professor_name_list();
+          $result = $api->select_etc_list($_GET['category']);
           while ($row = mysql_fetch_array($result)){?>
             $("#select").append("<option value=<?php echo $row['id']?>><?php echo $row['name']?></option>");
           <?php
@@ -27,7 +27,7 @@
         }
         // URL에 id가 있다면 selector 선택 및 id에 맞는 교수 조회
         else{
-          $result = $api->select_professor_name_list();
+          $result = $api->select_etc_list($_GET['category']);
           while ($row = mysql_fetch_array($result)){?>
             $("#select").append("<option value=<?php echo $row['id']?>><?php echo $row['name']?></option>");
           <?php
@@ -37,8 +37,7 @@
 
           <?php
           // id에 맞는 교수 조회 및 정보 제공
-          $paper = array("biography","research_interests","professional_experiences","awards_and_honors");
-          $result = $api->select_professor_id_list($_GET['id']);
+          $result = $api->select_etc_id_list($_GET['category'], $_GET['id']);
           while ($row = mysql_fetch_array($result)){?>
             $(".profile").empty();
             $(".record").empty();
@@ -50,35 +49,13 @@
             $(".profile").append("<div class='profileWrap'></div>");
             $(".profileWrap").append("<ul id='profileList'></ul>");
             $("#profileList").append("<li id='name'><a>이름 : </a><a><?php echo $row['name']?></a></li>");
+            $("#profileList").append("<li id='position'><a>학과 : </a><a><?php echo $row['department']?></a></li>");
             $("#profileList").append("<li id='position'><a>직책 : </a><a><?php echo $row['position']?></a></li>");
             $("#profileList").append("<li id='address'><a>주소 : </a><a><?php echo $row['address']?></a></li>");
             $("#profileList").append("<li id='phone'><a>휴대폰 : </a><a><?php echo $row['phone']?></a></li>");
-            $("#profileList").append("<li id='fax'><a>팩스 : </a><a><?php echo $row['fax']?></a></li>");
             $("#profileList").append("<li id='email'><a>이메일 : </a><a><?php echo $row['email']?></a></li>");
             $(".record").append("<div class='recordWrap'></div>");
             $(".recordWrap").append("<ul class=\"recordList\"></ul>");
-            var paper = {
-              "Biograpy" : "<?php echo $row['biography']?>",
-              "Research_Interests" : "<?php echo $row['research_interests']?>",
-              "Professional_Experiences" : "<?php echo $row['professional_experiences']?>",
-              "Awards_and_Honors" : "<?php echo $row['awards_and_honors']?>",
-            };
-            $(".recordList").append("<h3>Biograpy</h3>");
-            paper.Biograpy.split("&br&").forEach((item, i) => {
-              $(".recordList").append("<li><a>" + item + "</a></li>");
-            });
-            $(".recordList").append("<h3>Research Interests</h3>");
-            paper.Research_Interests.split("&br&").forEach((item, i) => {
-              $(".recordList").append("<li><a>" + item + "</a></li>");
-            });
-            $(".recordList").append("<h3>Professional Experiences</h3>");
-            paper.Professional_Experiences.split("&br&").forEach((item, i) => {
-              $(".recordList").append("<li><a>" + item + "</a></li>");
-            });
-            $(".recordList").append("<h3>Awards and Honors</h3>");
-            paper.Awards_and_Honors.split("&br&").forEach((item, i) => {
-              $(".recordList").append("<li><a>" + item + "</a></li>");
-            });
           <?php
           }
         }?>
@@ -88,7 +65,7 @@
     function select(target){
       var id = target.value;
       if($("#select").prop('selectedIndex') > 0){
-        location.href = "<?php $_SERVER[''] ?>/page/admin/peoples/professor.php?category=peoples&id="+id;
+        location.href = "<?php $_SERVER[''] ?>/page/admin/peoples/<?php echo$_GET['category']?>.php?category=<?php echo$_GET['category']?>&id="+id;
       }
       else{
         $("#btn_profssor_add").attr("disabled",);
@@ -103,17 +80,17 @@
         case "delete":
           var alert = confirm("정말 삭제하시겠습니까?");
           if(alert){
-            url = "<?php $_SERVER[''] ?>/form/removeProfessor.php?id=<?php echo $_GET['id']?>";
+            url = "<?php $_SERVER[''] ?>/form/form_remove_etc_people.php?id=<?php echo $_GET['id']?>&category=<?php echo $_GET['category']?>";
           }
           break;
         case "update":
           <?php if(isset($_GET['id'])){ ?>
-            url = "<?php $_SERVER[''] ?>/page/admin/peoples/edit_professor.php?category=peoples&action="+mode+"&id=<?php echo $_GET['id']?>";
+            url = "<?php $_SERVER[''] ?>/page/admin/peoples/edit_etc.php?category=<?php echo $_GET['category']?>&action="+mode+"&id=<?php echo $_GET['id']?>";
           <?php } ?>
 
           break;
         case "upload":
-          url = "<?php $_SERVER[''] ?>/page/admin/peoples/edit_professor.php?category=peoples&action="+mode;
+          url = "<?php $_SERVER[''] ?>/page/admin/peoples/edit_etc.php?category=<?php echo $_GET['category']?>&action="+mode;
           break;
       }
       location.href = url;
@@ -134,18 +111,18 @@
 
   <div class="header">
     <div class="path">
-      <h2> 교수 설정</h2>
+      <h2>Researcher</h2>
     </div>
     <div class="list">
-      <h2>교수선택</h2>
+      <h2>연구원 선택</h2>
         <select id='select' class='form-control' onchange='select(this)'>
 
       </select>
     </div>
     <div class="edit">
-      <button class="btn btn-outline-secondary" id="btn_profssor_add" onclick="edit('upload')">교수추가</button>
-      <button class="btn btn-outline-secondary" id="btn_profssor_edit" onclick="edit('update')" disabled="true">교수편집</button>
-      <button class="btn btn-outline-secondary" id="btn_profssor_delete" onclick="edit('delete')"disabled="true">교수삭제</button>
+      <button class="btn btn-outline-secondary" id="btn_profssor_add" onclick="edit('upload')">연구원 추가</button>
+      <button class="btn btn-outline-secondary" id="btn_profssor_edit" onclick="edit('update')" disabled="true">연구원 편집</button>
+      <button class="btn btn-outline-secondary" id="btn_profssor_delete" onclick="edit('delete')"disabled="true">연구원 삭제</button>
     </div>
   </div>
 

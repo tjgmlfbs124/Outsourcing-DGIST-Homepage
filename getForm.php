@@ -85,7 +85,7 @@ class getForm{
     if(strcmp($result,"true")){
       echo '<script>
             alert("변경되었습니다.");
-            location.replace("/page/admin/peoples/professor.php");
+            location.replace("/page/admin/peoples/professor.php?category=professor");
             </script>';
     }
   }
@@ -93,23 +93,78 @@ class getForm{
 
   // 교수 삭제
   function remove_professor($id){
-    $query = "DELETE FROM professor_tb WHERE id=".$id;
+    $query = "DELETE FROM professor_tb WHERE id=".$id." AND category=professor";
     $result = mysql_query($query);if(strcmp($result,"true")){
       echo '<script>
-              location.replace("/page/admin/peoples/professor.php");
+              location.replace("/page/admin/peoples/professor.php?category=professor");
               alert("삭제되었습니다.");
             </script>';
     }
   }
 
-  // 등록된 연구원 검색
-  function select_researcher_list(){
+  // 카테고리에 맞는 등록된 사람 검색
+  function select_etc_list($category){
     try{
-      $query = "SELECT * FROM professor_tb WHERE category=\"researcher\"";
+      $query = "SELECT * FROM professor_tb WHERE category=\"$category\"";
       $result = mysql_query($query);
       return $result;
     }catch(Exception $e){
       echo $e;
+    }
+  }
+
+  // id에 맞는 사람 검색
+  function select_etc_id_list($category, $id){
+    try{
+      $query = "SELECT * FROM professor_tb WHERE category=\"$category\" AND id=".$id;
+      $result = mysql_query($query);
+      return $result;
+    }catch(Exception $e){
+      echo $e;
+    }
+  }
+
+  // id에 맞는 사람 삭제
+  function remove_etc_id_remove($category, $id){
+    $query = "DELETE FROM professor_tb WHERE id=".$id." AND category=\"$category\"";
+    $result = mysql_query($query);
+    if(strcmp($result,"true")){
+      echo '<script>
+              location.replace("/page/admin/peoples/researcher.php?category='.$category.'");
+              alert("삭제되었습니다.");
+            </script>';
+    }
+  }
+
+  // 사람등록
+  function add_etc($_name, $_position, $_address, $_phone, $_fax, $_email,$_department, $_image, $_category){
+    echo $_department."<br>";
+    $query = "INSERT INTO professor_tb(name, position, address, phone, fax, email, department,image, category) VALUES (\"$_name\", \"$_position\", \"$_address\", \"$_phone\", \"$_fax\", \"$_email\",\"$_department\", \"$_image\", \"$_category\");";
+    $result = mysql_query($query);
+    if(strcmp($result,"true")){
+      echo '<script>
+            alert("추가되었습니다.");
+            location.replace("/page/admin/peoples/'.$_category.'.php?category='.$_category.'");
+            </script>';
+    }
+  }
+
+  // 사람 업데이트
+  function update_etc($_id, $_name, $_position, $_address, $_phone, $_fax, $_email,$_department, $_image, $_category){
+    // 이미지가 있을경우 이미지도 업데이트
+    if(isset($_image)){
+      $query = "UPDATE professor_tb SET name=\"$_name\", position=\"$_position\", address=\"$_address\", phone=\"$_phone\", email=\"$_email\", department=\"$_department\", image=\"$_image\", category=\"$_category\" WHERE id=\"$_id\"";
+    }
+    // 이미지가 없을경우, 원래 이미지 사용을 위해 이미지 빼고 업데이트
+    else{
+      $query = "UPDATE professor_tb SET name=\"$_name\", position=\"$_position\", address=\"$_address\", phone=\"$_phone\", email=\"$_email\", department=\"$_department\", category=\"$_category\" WHERE id=\"$_id\"";
+    }
+    $result = mysql_query($query);
+    if(strcmp($result,"true")){
+      echo '<script>
+            alert("변경되었습니다.");
+            location.replace("/page/admin/peoples/'.$_category.'.php?category='.$_category.'");
+            </script>';
     }
   }
 

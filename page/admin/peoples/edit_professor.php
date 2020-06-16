@@ -75,7 +75,7 @@
 </div>
 
 <div id="professorAddWrap">
-  <form method="POST" action="/form/editProfessor.php" enctype="multipart/form-data">
+  <form method="POST" action="/form/form_edit_professor.php" enctype="multipart/form-data">
       <input name="mode" style="display:none;"/>
       <input name="id" style="display:none;"/>
       <div class="listWrap">

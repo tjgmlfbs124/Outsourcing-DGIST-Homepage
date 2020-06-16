@@ -3,9 +3,11 @@
     padding: 0;
 }
 #mainWrap{
-  position: relative;
+  position: absolute;
   width:80%;
-  top:50px;
+  height:auto;
+  top:120px;
+  left:10%;
 }
 .peopleMenuWrap{
   display: inline-block;
