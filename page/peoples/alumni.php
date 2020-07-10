@@ -13,7 +13,7 @@
         require $_SERVER['DOCUMENT_ROOT'].'/getForm.php';
         $api = new getForm();
         $result = $api->select_etc_list("alumni");
-        while ($row = mysql_fetch_array($result)){?>
+        while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
           list.push({
             "name" : "<?php echo $row['name']?>",
             "address" : "<?php echo $row['address']?>",

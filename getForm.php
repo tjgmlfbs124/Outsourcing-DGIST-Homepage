@@ -11,12 +11,7 @@ class getForm{
       $pdo = $GLOBALS["pdo"];
       $stmt = $pdo->prepare("SELECT * FROM professor_tb WHERE category=\"professor\"");
       $stmt->execute();
-      // $result = $stmt -> fetchAll(PDO::FETCH_ASSOC);
       return $stmt;
-
-      // $query = "SELECT * FROM professor_tb WHERE category=\"professor\"";
-      // $result = mysqli_query($pdo, $query);
-      // return $result;
     }catch(Exception $e){
     echo $e;
     }
@@ -100,9 +95,11 @@ class getForm{
   // 카테고리에 맞는 등록된 사람 검색
   function select_etc_list($category){
     try{
-      $query = "SELECT * FROM professor_tb WHERE category=\"$category\"";
-      $result = mysqli_query($conn, $query);
-      return $result;
+			$pdo = $GLOBALS["pdo"];
+      $stmt = $pdo->prepare("SELECT * FROM professor_tb WHERE category=:category");
+			$stmt->bindParam(':category',$category);
+      $stmt->execute();
+      return $stmt;
     }catch(Exception $e){
       echo $e;
     }
@@ -166,9 +163,10 @@ class getForm{
   // 등록된 학생 검색
   function select_student_list(){
     try{
-      $query = "SELECT * FROM professor_tb WHERE category=\"student\"";
-      $result = mysqli_query($conn, $query);
-      return $result;
+			$pdo = $GLOBALS["pdo"];
+      $stmt = $pdo->prepare("SELECT * FROM professor_tb WHERE category=\"student\"");
+      $stmt->execute();
+      return $stmt;
     }catch(Exception $e){
       echo $e;
     }

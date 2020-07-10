@@ -61,7 +61,7 @@
       var title = ["biography", "research_interests", "professional_experiences", "awards_and_honors"]
       $(".loadDiv").append("<div class='info'></div>");
       $(".info").append("<div class='profile'></div>");
-      // $(".profile").append(" <img src=<?php $_SERVER['DOCUMENT_ROOT'] ?>'/uploadFile/" + proList.image + ".jpg'></img>");
+      $(".profile").append(" <img src=<?php $_SERVER['DOCUMENT_ROOT'] ?>'/uploadFile/" + proList.image + ".jpg'></img>");
       $(".info").append("<div class='comment01'>");
       $(".comment01").append("<p>" + proList.name +"</p>");
       $(".comment01").append("<ul class='infoList01'>");
