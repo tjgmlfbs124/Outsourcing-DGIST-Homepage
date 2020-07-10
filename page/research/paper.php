@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <title>대구경북과학기술원</title>
-  <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/paper_index.css">
+  <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/paper_index.css">
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script>
   $(document).ready(function(){

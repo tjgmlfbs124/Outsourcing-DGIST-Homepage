@@ -5,9 +5,9 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/admin/admin_people.css">
-  <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/fonts.css">
-  <script src="<?php $_SERVER[''] ?>/js/Utils/utils.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/admin/admin_people.css">
+  <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/fonts.css">
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/js/Utils/utils.js" type="text/javascript"></script>
   <script>
     var list = new Array();
     var professor = null;
@@ -45,7 +45,7 @@
             $("#btn_profssor_edit").attr("disabled",false);
             $("#btn_profssor_delete").attr("disabled",false);
             $(".profile").append("<div class='imgWrap'></div>");
-            $(".imgWrap").append("<img src=\"<?php $_SERVER[''] ?>/uploadFile/<?php echo $row['image']?>.jpg\" onclick =\"ajaxFileUpload()\" </img>");
+            $(".imgWrap").append("<img src=\"<?php $_SERVER['DOCUMENT_ROOT'] ?>/uploadFile/<?php echo $row['image']?>.jpg\" onclick =\"ajaxFileUpload()\" </img>");
             $(".profile").append("<div class='profileWrap'></div>");
             $(".profileWrap").append("<ul id='profileList'></ul>");
             $("#profileList").append("<li id='name'><a>이름 : </a><a><?php echo $row['name']?></a></li>");
@@ -65,10 +65,10 @@
     function select(target){
       var id = target.value;
       if($("#select").prop('selectedIndex') > 0){
-        location.href = "<?php $_SERVER[''] ?>/page/admin/peoples/<?php echo$_GET['category']?>.php?category=<?php echo$_GET['category']?>&id="+id;
+        location.href = "<?php $_SERVER['DOCUMENT_ROOT'] ?>/page/admin/peoples/<?php echo$_GET['category']?>.php?category=<?php echo$_GET['category']?>&id="+id;
       }
       else{
-        $("#btn_profssor_add").attr("disabled",);
+        $("#btn_profssor_add").attr("disabled",true);
         $("#btn_profssor_edit").attr("disabled",true);
         $("#btn_profssor_delete").attr("disabled",true);
       }
@@ -80,17 +80,17 @@
         case "delete":
           var alert = confirm("정말 삭제하시겠습니까?");
           if(alert){
-            url = "<?php $_SERVER[''] ?>/form/form_remove_etc_people.php?id=<?php echo $_GET['id']?>&category=<?php echo $_GET['category']?>";
+            url = "<?php $_SERVER['DOCUMENT_ROOT'] ?>/form/form_remove_etc_people.php?id=<?php echo $_GET['id']?>&category=<?php echo $_GET['category']?>";
           }
           break;
         case "update":
           <?php if(isset($_GET['id'])){ ?>
-            url = "<?php $_SERVER[''] ?>/page/admin/peoples/edit_etc.php?category=<?php echo $_GET['category']?>&action="+mode+"&id=<?php echo $_GET['id']?>";
+            url = "<?php $_SERVER['DOCUMENT_ROOT'] ?>/page/admin/peoples/edit_etc.php?category=<?php echo $_GET['category']?>&action="+mode+"&id=<?php echo $_GET['id']?>";
           <?php } ?>
 
           break;
         case "upload":
-          url = "<?php $_SERVER[''] ?>/page/admin/peoples/edit_etc.php?category=<?php echo $_GET['category']?>&action="+mode;
+          url = "<?php $_SERVER['DOCUMENT_ROOT'] ?>/page/admin/peoples/edit_etc.php?category=<?php echo $_GET['category']?>&action="+mode;
           break;
       }
       location.href = url;

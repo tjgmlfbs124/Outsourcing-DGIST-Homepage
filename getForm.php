@@ -1,29 +1,24 @@
 <?php
-  $mysql_host = '';
-  $mysql_user = '';
-  $mysql_password = '';
-  $mysql_db = '';
-  $conn;
-  $dbconn;
+require_once $_SERVER['DOCUMENT_ROOT'].'/pdo.php';
 class getForm{
-  function __construct(){
-      $mysql_host = 'localhost:3306';
-      $mysql_user = 'root';
-      $mysql_password = 'emsys$$$';
-      $mysql_db = 'kyu_db';
-      $conn = mysql_connect($mysql_host, $mysql_user, $mysql_password);
-      $dbconn = mysql_select_db($mysql_db, $conn);
-      mysql_query("set names utf8");
-  }
+	function __construct(){
+
+	}
 
   // 등록된 교수의 전체 검색
   function select_professor_list(){
     try{
-      $query = "SELECT * FROM professor_tb WHERE category=\"professor\"";
-      $result = mysql_query($query);
-      return $result;
+      $pdo = $GLOBALS["pdo"];
+      $stmt = $pdo->prepare("SELECT * FROM professor_tb WHERE category=\"professor\"");
+      $stmt->execute();
+      // $result = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+      return $stmt;
+
+      // $query = "SELECT * FROM professor_tb WHERE category=\"professor\"";
+      // $result = mysqli_query($pdo, $query);
+      // return $result;
     }catch(Exception $e){
-      echo $e;
+    echo $e;
     }
   }
 
@@ -31,7 +26,7 @@ class getForm{
   function select_professor_name_list(){
     try{
       $query = "SELECT id,name FROM professor_tb WHERE category=\"professor\"";
-      $result = mysql_query($query);
+      $result = mysqli_query($conn, $query);
       return $result;
     }catch(Exception $e){
       echo $e;
@@ -42,7 +37,7 @@ class getForm{
   function select_professor_id_list($id){
     try{
       $query = "SELECT * FROM professor_tb WHERE category=\"professor\" AND id=".$id;
-      $result = mysql_query($query);
+      $result = mysqli_query($conn, $query);
       return $result;
     }catch(Exception $e){
       echo $e;
@@ -56,7 +51,7 @@ class getForm{
     $_professional_experiences = str_replace("\r\n","&br&",$_professional_experiences);
     $_awards_and_honors = str_replace("\r\n","&br&",$_awards_and_honors);
     $query = "INSERT INTO professor_tb(name, position, address, phone, fax, email, department,image,category, biography, research_interests, professional_experiences, awards_and_honors) VALUES (\"$_name\", \"$_position\", \"$_address\", \"$_phone\", \"$_fax\", \"$_email\",\"$_department\", \"$_image\", \"$_category\", \"$_biography\", \"$_research_interests\", \"$_professional_experiences\", \"$_awards_and_honors\");";
-    $result = mysql_query($query);
+    $result = mysqli_query($conn, $query);
     if(strcmp($result,"true")){
       echo '<script>
             alert("추가되었습니다.");
@@ -81,7 +76,7 @@ class getForm{
     else{
       $query = "UPDATE professor_tb SET name=\"$_name\", position=\"$_position\", address=\"$_address\", phone=\"$_phone\", email=\"$_email\", department=\"$_department\", category=\"$_category\", biography=\"$_biography\", research_interests=\"$_research_interests\", professional_experiences=\"$_professional_experiences\", awards_and_honors=\"$_awards_and_honors\" WHERE id=\"$_id\"";
     }
-    $result = mysql_query($query);
+    $result = mysqli_query($conn, $query);
     if(strcmp($result,"true")){
       echo '<script>
             alert("변경되었습니다.");
@@ -94,7 +89,7 @@ class getForm{
   // 교수 삭제
   function remove_professor($id){
     $query = "DELETE FROM professor_tb WHERE id=".$id." AND category=professor";
-    $result = mysql_query($query);if(strcmp($result,"true")){
+    $result = mysqli_query($conn, $query);if(strcmp($result,"true")){
       echo '<script>
               location.replace("/page/admin/peoples/professor.php?category=professor");
               alert("삭제되었습니다.");
@@ -106,7 +101,7 @@ class getForm{
   function select_etc_list($category){
     try{
       $query = "SELECT * FROM professor_tb WHERE category=\"$category\"";
-      $result = mysql_query($query);
+      $result = mysqli_query($conn, $query);
       return $result;
     }catch(Exception $e){
       echo $e;
@@ -117,7 +112,7 @@ class getForm{
   function select_etc_id_list($category, $id){
     try{
       $query = "SELECT * FROM professor_tb WHERE category=\"$category\" AND id=".$id;
-      $result = mysql_query($query);
+      $result = mysqli_query($conn, $query);
       return $result;
     }catch(Exception $e){
       echo $e;
@@ -127,7 +122,7 @@ class getForm{
   // id에 맞는 사람 삭제
   function remove_etc_id_remove($category, $id){
     $query = "DELETE FROM professor_tb WHERE id=".$id." AND category=\"$category\"";
-    $result = mysql_query($query);
+    $result = mysqli_query($conn, $query);
     if(strcmp($result,"true")){
       echo '<script>
               location.replace("/page/admin/peoples/researcher.php?category='.$category.'");
@@ -140,7 +135,7 @@ class getForm{
   function add_etc($_name, $_position, $_address, $_phone, $_fax, $_email,$_department, $_image, $_category){
     echo $_department."<br>";
     $query = "INSERT INTO professor_tb(name, position, address, phone, fax, email, department,image, category) VALUES (\"$_name\", \"$_position\", \"$_address\", \"$_phone\", \"$_fax\", \"$_email\",\"$_department\", \"$_image\", \"$_category\");";
-    $result = mysql_query($query);
+    $result = mysqli_query($conn, $query);
     if(strcmp($result,"true")){
       echo '<script>
             alert("추가되었습니다.");
@@ -159,7 +154,7 @@ class getForm{
     else{
       $query = "UPDATE professor_tb SET name=\"$_name\", position=\"$_position\", address=\"$_address\", phone=\"$_phone\", email=\"$_email\", department=\"$_department\", category=\"$_category\" WHERE id=\"$_id\"";
     }
-    $result = mysql_query($query);
+    $result = mysqli_query($conn, $query);
     if(strcmp($result,"true")){
       echo '<script>
             alert("변경되었습니다.");
@@ -172,7 +167,7 @@ class getForm{
   function select_student_list(){
     try{
       $query = "SELECT * FROM professor_tb WHERE category=\"student\"";
-      $result = mysql_query($query);
+      $result = mysqli_query($conn, $query);
       return $result;
     }catch(Exception $e){
       echo $e;
@@ -183,7 +178,7 @@ class getForm{
   function select_alumni_list(){
     try{
       $query = "SELECT * FROM professor_tb WHERE category=\"alumni\"";
-      $result = mysql_query($query);
+      $result = mysqli_query($conn, $query);
       return $result;
     }catch(Exception $e){
       echo $e;
@@ -194,7 +189,7 @@ class getForm{
   function select_paper_list(){
     try{
       $query = "SELECT * FROM paper_tb";
-      $result = mysql_query($query);
+      $result = mysqli_query($conn, $query);
       return $result;
     }catch(Exception $e){
       echo $e;

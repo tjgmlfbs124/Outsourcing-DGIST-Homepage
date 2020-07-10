@@ -4,8 +4,8 @@
   <meta charset="UTF-8"/>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/admin/admin_people.css">
-  <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/fonts.css">
+  <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/admin/admin_people.css">
+  <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/fonts.css">
   <script>
     $(document).ready(function() {
       var target = document.getElementById('fileToUpload');
@@ -18,7 +18,7 @@
         $result = $api->select_etc_id_list($_GET['category'], $_GET['id']);
         while ($row = mysql_fetch_array($result)){ ?>
           $("input[name=id]").val("<?php echo $row['id']?>");
-          $("img[name=myImage]").attr('src',"<?php $_SERVER[''] ?>/uploadFile/<?php echo $row['image']?>.jpg");
+          $("img[name=myImage]").attr('src',"<?php $_SERVER['DOCUMENT_ROOT'] ?>/uploadFile/<?php echo $row['image']?>.jpg");
           $("input[name=mode]").val("<?php echo $_GET['action']?>");
           $("input[name=department]").val("<?php echo $row['department']?>");
           $("input[name=name]").val("<?php echo $row['name']?>");
@@ -85,9 +85,9 @@
             <td rowspan="4" style="padding:5px;">
               <div class="imgWrap">
                 <div class="alphaWrap" onclick="ajaxFileUpload()">
-                  <img src="<?php $_SERVER[''] ?>/images/cam.png"></img>
+                  <img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/cam.png"></img>
                 </div>
-                <img name="myImage" id="profileImg" src="<?php $_SERVER[''] ?>/images/empty.png" ></img>
+                <img name="myImage" id="profileImg" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/images/empty.png" ></img>
                 <input type="file" name="fileToUpload" id="fileToUpload" style="display:none;">
               </div>
 

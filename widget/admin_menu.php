@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/admin/index.css">
+  <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/admin/index.css">
   <script type="text/javascript">
     $(document).ready(function() {
       $(".menu > ul > li").hover(
@@ -13,7 +13,7 @@
     });
 
     function setPage(page){
-      location.href = "<?php $_SERVER[''] ?>" + page;
+      location.href = "<?php $_SERVER['DOCUMENT_ROOT'] ?>" + page;
     }
 
   </script>

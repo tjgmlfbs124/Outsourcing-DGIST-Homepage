@@ -5,9 +5,9 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/admin/admin_people.css">
-  <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/fonts.css">
-  <script src="<?php $_SERVER[''] ?>/js/Utils/utils.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/admin/admin_people.css">
+  <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/fonts.css">
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/js/Utils/utils.js" type="text/javascript"></script>
   <script>
     var list = new Array();
     var professor = null;
@@ -46,7 +46,7 @@
             $("#btn_profssor_edit").attr("disabled",false);
             $("#btn_profssor_delete").attr("disabled",false);
             $(".profile").append("<div class='imgWrap'></div>");
-            $(".imgWrap").append("<img src=\"<?php $_SERVER[''] ?>/uploadFile/<?php echo $row['image']?>.jpg\" onclick =\"ajaxFileUpload()\" </img>");
+            $(".imgWrap").append("<img src=\"<?php $_SERVER['DOCUMENT_ROOT'] ?>/uploadFile/<?php echo $row['image']?>.jpg\" onclick =\"ajaxFileUpload()\" </img>");
             $(".profile").append("<div class='profileWrap'></div>");
             $(".profileWrap").append("<ul id='profileList'></ul>");
             $("#profileList").append("<li id='name'><a>이름 : </a><a><?php echo $row['name']?></a></li>");
@@ -61,22 +61,23 @@
               "Biograpy" : "<?php echo $row['biography']?>",
               "Research_Interests" : "<?php echo $row['research_interests']?>",
               "Professional_Experiences" : "<?php echo $row['professional_experiences']?>",
-              "Awards_and_Honors" : "<?php echo $row['awards_and_honors']?>",
+              "Awards_and_Honors" : "<?php echo $row['awards_and_honors']?>"
             };
             $(".recordList").append("<h3>Biograpy</h3>");
-            paper.Biograpy.split("&br&").forEach((item, i) => {
+            (paper.Biograpy.split("&br&")).forEach(function(item, i){
+              c
               $(".recordList").append("<li><a>" + item + "</a></li>");
             });
             $(".recordList").append("<h3>Research Interests</h3>");
-            paper.Research_Interests.split("&br&").forEach((item, i) => {
+            paper.Research_Interests.split("&br&").forEach(function(item, i){
               $(".recordList").append("<li><a>" + item + "</a></li>");
             });
             $(".recordList").append("<h3>Professional Experiences</h3>");
-            paper.Professional_Experiences.split("&br&").forEach((item, i) => {
+            paper.Professional_Experiences.split("&br&").forEach(function(item, i){
               $(".recordList").append("<li><a>" + item + "</a></li>");
             });
             $(".recordList").append("<h3>Awards and Honors</h3>");
-            paper.Awards_and_Honors.split("&br&").forEach((item, i) => {
+            paper.Awards_and_Honors.split("&br&").forEach(function(item, i){
               $(".recordList").append("<li><a>" + item + "</a></li>");
             });
           <?php
@@ -88,10 +89,10 @@
     function select(target){
       var id = target.value;
       if($("#select").prop('selectedIndex') > 0){
-        location.href = "<?php $_SERVER[''] ?>/page/admin/peoples/professor.php?category=peoples&id="+id;
+        location.href = "<?php $_SERVER['DOCUMENT_ROOT'] ?>/page/admin/peoples/professor.php?category=peoples&id="+id;
       }
       else{
-        $("#btn_profssor_add").attr("disabled",);
+        $("#btn_profssor_add").attr("disabled",true);
         $("#btn_profssor_edit").attr("disabled",true);
         $("#btn_profssor_delete").attr("disabled",true);
       }
@@ -103,17 +104,17 @@
         case "delete":
           var alert = confirm("정말 삭제하시겠습니까?");
           if(alert){
-            url = "<?php $_SERVER[''] ?>/form/removeProfessor.php?id=<?php echo $_GET['id']?>";
+            url = "<?php $_SERVER['DOCUMENT_ROOT'] ?>/form/removeProfessor.php?id=<?php echo $_GET['id']?>";
           }
           break;
         case "update":
           <?php if(isset($_GET['id'])){ ?>
-            url = "<?php $_SERVER[''] ?>/page/admin/peoples/edit_professor.php?category=peoples&action="+mode+"&id=<?php echo $_GET['id']?>";
+            url = "<?php $_SERVER['DOCUMENT_ROOT'] ?>/page/admin/peoples/edit_professor.php?category=peoples&action="+mode+"&id=<?php echo $_GET['id']?>";
           <?php } ?>
 
           break;
         case "upload":
-          url = "<?php $_SERVER[''] ?>/page/admin/peoples/edit_professor.php?category=peoples&action="+mode;
+          url = "<?php $_SERVER['DOCUMENT_ROOT'] ?>/page/admin/peoples/edit_professor.php?category=peoples&action="+mode;
           break;
       }
       location.href = url;

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>대구경북과학기술원</title>
-  <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/people_professor.css">
-  <script type="text/javascript" src="<?php $_SERVER[''] ?>/js/Utils/utils.js"></script>
+  <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/people_professor.css">
+  <script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/js/Utils/utils.js"></script>
   <script>
     $(document).ready(function(){
       var list = new Array();
@@ -12,7 +12,7 @@
         require $_SERVER['DOCUMENT_ROOT'].'/getForm.php';
         $api = new getForm();
         $result = $api->select_professor_list();
-        while ($row = mysql_fetch_array($result)){?>
+        while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
           var html = "<a id='<?php echo $row['id']?>'>교수 " + "<?php echo $row['name']?></a>";
           <?php
             if(!strcmp($row['name'], "이종훈")){
@@ -61,7 +61,7 @@
       var title = ["biography", "research_interests", "professional_experiences", "awards_and_honors"]
       $(".loadDiv").append("<div class='info'></div>");
       $(".info").append("<div class='profile'></div>");
-      $(".profile").append(" <img src=<?php $_SERVER[''] ?>'/uploadFile/" + proList.image + ".jpg'></img>");
+      // $(".profile").append(" <img src=<?php $_SERVER['DOCUMENT_ROOT'] ?>'/uploadFile/" + proList.image + ".jpg'></img>");
       $(".info").append("<div class='comment01'>");
       $(".comment01").append("<p>" + proList.name +"</p>");
       $(".comment01").append("<ul class='infoList01'>");
@@ -85,7 +85,6 @@
   </script>
 </head>
 <div class="professordiv">
-  <a class="title">PROFESSOR</a>
   <div class="menu">
 
   </div>

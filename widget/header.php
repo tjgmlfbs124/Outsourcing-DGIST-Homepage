@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="<?php $_SERVER[''] ?>/css/menu.css">
+  <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/css/menu.css">
   <script type="text/javascript">
     $(document).ready(function() {
       $("#menuList > li").mouseover(function(){
@@ -13,18 +13,20 @@
     });
 
     function onPage(content){
-      location.href = "<?php $_SERVER[''] ?>" + content;
+	  console.log(content)
+      location.href = "<?php $_SERVER['DOCUMENT_ROOT'] ?>" + content;
+	  console.log("<?php $_SERVER['DOCUMENT_ROOT'] ?>" + content)
     }
 
   </script>
 </head>
 <body>
-  <div class="logobar">
+  <!-- <div class="logobar">
     <div>
       <img src="/images/setting.png" onclick="onPage('/page/admin/index.php')"></img>
     </div>
     <a class="logotext02">DGIST 대구경북과학기술원</a>
-  </div>
+  </div> -->
   <div class="menuWrap">
     <img id="logo" src="/images/logo.png"  onclick="onPage('/')"></img>
     <ul id="menuList">
@@ -58,6 +60,5 @@
       </li>
     </ul>
   </div>
-
 </body>
 </html>
