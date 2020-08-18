@@ -1,9 +1,0 @@
-#studentdiv { width: 100%; font-size:23px; font-family: 'ON-IGothic',AppleGothic,sans-serif;}
-#studentdiv > a.title { width: 100%; font-size:23px; border-bottom: 5px solid #fca103; font-weight: bold; }
-#studentdiv > div.listWrap {margin-top: 40px; color:#333; background: #fff;}
-#studentdiv > div.listWrap > div {width:550px; height: 240px; float: left; display: block; margin: 10px;}
-#studentdiv > div.listWrap > div > img {width:150px; height: 200px; float: left; margin-right: 20px;}
-#studentdiv > div.listWrap > div > p {font-size: 21px; color: #1e2d3b; font-weight: bold;}
-#studentdiv > div.listWrap > div > a {font-size: 15px;  color: #2c2c2c; margin-left: 10px; }
-#studentdiv > div.listWrap > div > a.email {color:#007bff; cursor:pointer; font-family: none;}
-#studentdiv > div.listWrap > div > a.email:hover {text-decoration:underline; }
