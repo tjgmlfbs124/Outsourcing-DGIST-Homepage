@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Team Member :: Businex - Corporate Business Bootstrap4 Template</title>
+    <title>DGIST :: Radar Lab</title>
 
     <!--== Favicon ==-->
     <link rel="shortcut icon" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/favicon.ico" type="image/x-icon" />
@@ -48,29 +47,25 @@
   		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/header.php'?>
 	</header>
 
-    <!--== Start Page Header Area ==-->
-    <div class="page-header-area bg-img" data-bg="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/page-header.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-xl-8 m-auto text-center">
-                    <div class="page-header-content-inner">
-                        <div class="page-header-content">
-                            <h2>BUSINEX TEAM</h2>
-                            <p>Businex always try to provide the best Business Solutions for Clinets
-                                to grow up their Business very sharply and smoothly.</p>
-                            <div class="breadcrumb-wrap">
-                                <ul class="breadcrumb">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="team.html">Team</a></li>
-                                    <li><a class="current" href="service-details.html">Member Details</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!--== Start Page Header Area ==-->
+  <div class="page-header-area">
+    <div class="page-header-area bg-img" data-bg="<?php $_SERVER['DOCUMENT_ROOT']?>/image/main01.jpg" style="position:absolute;"></div>
+    <div class="page-header-area bg-img" style="position:absolute; background:#080b1a; opacity: 0.7;">
+      <div class="container" >
+          <div class="row">
+              <div class="col-lg-10 col-xl-8 m-auto text-center">
+                  <div class="page-header-content-inner">
+                      <div class="page-header-content">
+                          <h2>LAB :: Research</h2>
+                          <p>Businex always try to provide the best Business Solutions for Clinets
+                              to grow up their Business very sharply and smoothly.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
+  </div>
     <!--== End Page Header Area ==-->
 
     <!--== Start Page Content Area Wrapper ==-->
@@ -88,124 +83,67 @@
 
                             <div class="col-md-7 ml-auto">
                                 <div class="member-desc">
-                                    <h2>Rebeca Luice</h2>
-                                    <h5>Creative Designer</h5>
-                                    <p>Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                                        itate non vident, similique sunt in culpa modi tempora incidunt ut labore et dolor
-                                        am
-                                        aera boluptatum deleniti atque corrupti quosres </p>
-                                    <p>Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                                        itate non vident, similique sunt in culpa modi tempora incidunt ut labore</p>
+                                    <h2>Hong Gil Dong</h2>
+                                    <h5>Professor/Convergence Engineering</h5>
+                                    <p>abcdefghijklmnopqrxtuvwxyzabcdefghijklmnopqrxtuvwxyzabcdefghi</p>
+                                    <p>abcdefghijklmnopqrxtuvwxyzabcdefghijklmnopqrxtuvwxyz</p>
+                                    <p>abcdefghijklmnopqrxtuvwxyzabcdefghijklmnopqrxtuvwxyzabcdefghijk
+                                    abcdefghijklmnopqrxtuvwxyzabcz</p>
 
                                     <div class="contact-info mt-25">
-                                        <p><strong>Address</strong> 256 Central Street, Mosque Tower <br> Central City, New
-                                        Yourk</p>
-                                            <p><strong>Phone</strong> +012354 658 987 / +02154 568 987</p>
-                                            <p><strong>Web</strong> mail@yourmail.com / www.yourmail.com</p>
+                                        <p><strong>Address</strong> DGIST (Daegu Gyeongbuk Institute of Science & Technology), 50-1,<br>
+                                           Sang-Ri, Hyeongpung-Myeon, Dalseong-Gun, Daegu, 711-873, Korea</p>
+                                        <p><strong>Phone</strong> 82-53-785-4580</p>
+                                        <p><strong>Fax</strong> 82-53-785-4589</p>
+                                        <p><strong>Email</strong> jhlee@dgist.ac.kr</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="col-lg-15">
+                                <article class="blog-post-details">
 
-                    <div class="member-details-middle sm-top-wt">
-                        <div class="row mtn-50">
-                            <div class="col-lg-6">
-                                <div class="skill-experience-area mem-achieve-item">
-                                    <h4>Skills & Experience</h4>
-                                    <p>Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                                        itate non vident, similique suntculpa modi tempora incidunt ut labore et dolor am
-                                        aera boluptatum deleniti corrupti. </p>
+                                  <div class="team-page-area-wrapper bg-offwhite sp-y sm-top">
+                                      <div class="container">
+                                          <div class="row mtn-30">
+                                              <div class="col-sm-6 col-lg-3">
+                                                  <div class="team-mem-item">
+                                                      <figure class="member-pic">
+                                                          <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/01.jpg" alt="Team-Businex" />
+                                                      </figure>
+                                                  </div>
+                                              </div>
 
-                                    <p>Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                                        itate non vident, simibore et dolor amera boluptatum deleniti corrupti. </p>
+                                              <div class="col-sm-6 col-lg-3">
+                                                  <div class="team-mem-item">
+                                                      <figure class="member-pic">
+                                                          <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/01.jpg" alt="Team-Businex" />
+                                                      </figure>
+                                                  </div>
+                                              </div>
 
-                                    <div class="skill-bar-wrap">
-                                        <!-- Start Skills Item #1 -->
-                                        <div class="single-skill-bar">
-                                            <div class="skills-info d-flex align-items-center justify-content-between">
-                                                <span class="skill-title">UI</span>
-                                                <span class="skill-percent"></span>
-                                            </div>
+                                              <div class="col-sm-6 col-lg-3">
+                                                  <div class="team-mem-item">
+                                                      <figure class="member-pic">
+                                                          <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/01.jpg" alt="Team-Businex" />
+                                                      </figure>
+                                                  </div>
+                                              </div>
 
-                                            <div class="skill-progress progress">
-                                                <div class="progress-bar skill-progress-bar" data-skill-amount="95%"></div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Start Skills Item #2 -->
-                                        <div class="single-skill-bar">
-                                            <div class="skills-info d-flex align-items-center justify-content-between">
-                                                <span class="skill-title">UX</span>
-                                                <span class="skill-percent"></span>
-                                            </div>
-
-                                            <div class="skill-progress progress">
-                                                <div class="progress-bar skill-progress-bar" data-skill-amount="68%"></div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Start Skills Item #3 -->
-                                        <div class="single-skill-bar">
-                                            <div class="skills-info d-flex align-items-center justify-content-between">
-                                                <span class="skill-title">Creative</span>
-                                                <span class="skill-percent"></span>
-                                            </div>
-
-                                            <div class="skill-progress progress">
-                                                <div class="progress-bar skill-progress-bar" data-skill-amount="85%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                              <div class="col-sm-6 col-lg-3">
+                                                  <div class="team-mem-item">
+                                                      <figure class="member-pic">
+                                                          <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/01.jpg" alt="Team-Businex" />
+                                                      </figure>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                </article>
                             </div>
 
-                            <div class="col-lg-6">
-                                <div class="my-history-area mem-achieve-item">
-                                    <h4>My History</h4>
-                                    <p>Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                                        itate non vident, similique suntculpa modi tempora incidunt ut labore et dolor am
-                                        aera boluptatum deleniti corrupti. </p>
-
-                                    <div class="history-content-wrap how-we-works-content">
-                                        <!-- Start Member History Item #1 -->
-                                        <div class="icon-box-item">
-                                            <div class="icon-box__icon">
-                                                <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/details/date-1.png" alt="Businex-History" />
-                                            </div>
-                                            <div class="icon-box__info">
-                                                <h5>Start My Career</h5>
-                                                <p>Voluptatum deleniti atque lorem ipsum use esed et quas molestias
-                                                    cepte</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Start Member History Item #2 -->
-                                        <div class="icon-box-item">
-                                            <div class="icon-box__icon">
-                                                <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/details/date-2.png" alt="Businex-History" />
-                                            </div>
-                                            <div class="icon-box__info">
-                                                <h5>Best Designer Award</h5>
-                                                <p>Voluptatum deleniti atque lorem ipsum use esed et quas molestias
-                                                    cepte</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Start Member History Item #3 -->
-                                        <div class="icon-box-item">
-                                            <div class="icon-box__icon">
-                                                <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/details/date-3.png" alt="Businex-History" />
-                                            </div>
-                                            <div class="icon-box__info">
-                                                <h5>Most Seller Award</h5>
-                                                <p>Voluptatum deleniti atque lorem ipsum use esed et quas molestias
-                                                    cepte</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -213,13 +151,9 @@
                         <div class="row mtn-50">
                             <div class="col-xl-6 m-auto text-center">
                                 <div class="member-education mem-achieve-item">
-                                    <h4>Education</h4>
-                                    <p>Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                                        itate non vident, similique suntculpa modi tempora incidunt ut labore et dolor am
-                                        aera boluptatum deleniti corrupti.</p>
+                                    <h4>History</h4>
                                 </div>
                             </div>
-
                             <div class="col-12">
                                 <div class="cd-timeline-wrap">
                                     <div class="cd-timeline">
@@ -231,8 +165,8 @@
 
                                             <div class="cd-timeline-content">
                                                 <div class="cd-heading">
-                                                    <h5>Bachelor in Graphics</h5>
-                                                    <p>JAN 2013 - MAY 2016 | <span>University of Manchester</span></p>
+                                                    <h2>B.S., Department of Electronic Engineering </h2>
+                                                    <p>1996 | <span>Sungkyunkwan University</span></p>
                                                 </div>
                                                 <p class="cd-description">Businex boluptatum deleniti atque corrupti
                                                     quosres et quas molestias cepturi sint eca itate non vident, similique
@@ -249,8 +183,8 @@
 
                                             <div class="cd-timeline-content">
                                                 <div class="cd-heading">
-                                                    <h5>Diploma in Arts</h5>
-                                                    <p>JAN 2010 - DEC 2012 | <span>University of Community</span></p>
+                                                    <h2>M.S., Department of Electronic Engineering</h2>
+                                                    <p>1998 | <span>Sungkyunkwan University</span></p>
                                                 </div>
                                                 <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres et quas molestias
                                                     cepturi sint eca itate non vident, similique suntculpa modi tempora
@@ -266,8 +200,8 @@
 
                                             <div class="cd-timeline-content">
                                                 <div class="cd-heading">
-                                                    <h5>Diploma in Communication</h5>
-                                                    <p>JAN 2007 - Jan 2008 | <span>University of Community</span></p>
+                                                    <h2>Ph.D., Department of Electrical, <br>Electronics and Computer Engineering</h2>
+                                                    <p>2002 | <span>Sungkyunkwan University</span></p>
                                                 </div>
                                                 <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres et quas molestias
                                                     cepturi sint eca itate non vident, similique suntculpa modi tempora
@@ -283,14 +217,49 @@
 
                                             <div class="cd-timeline-content">
                                                 <div class="cd-heading">
-                                                    <h5>Diploma in Computer</h5>
-                                                    <p>JAN 2007 - Jan 2008 | <span>University of Community</span></p>
+                                                    <h2>Principal Researcher, Telecom R&D Center <br>Telecommunication Systems Division</h2>
+                                                    <p>JMarch 2002 ~ June 2005 | <span>Samsung Electronics Co., Ltd.,</span></p>
                                                 </div>
                                                 <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres et quas molestias
                                                     cepturi sint eca itate non vident, similique suntculpa modi tempora
                                                     incidunt ut labore et dolor am aera boluptatum deleniti corrupti.</p>
                                             </div>
                                         </div>
+
+                                        <!-- Start Education Item #05 -->
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img">
+                                                <span class="dot"></span>
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <div class="cd-heading">
+                                                    <h2>Principal researcher,<br> Research Division of Future Automotive Research</h2>
+                                                    <p>July 2005 ~ present | <span>DGIST</span></p>
+                                                </div>
+                                                <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres et quas molestias
+                                                    cepturi sint eca itate non vident, similique suntculpa modi tempora
+                                                    incidunt ut labore et dolor am aera boluptatum deleniti corrupti.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Start Education Item #06 -->
+                                        <div class="cd-timeline-block">
+                                            <div class="cd-timeline-img">
+                                                <span class="dot"></span>
+                                            </div>
+
+                                            <div class="cd-timeline-content">
+                                                <div class="cd-heading">
+                                                    <h2>Visiting scholar, Department of Electrical<br>computer Engineering</h2>
+                                                    <p>Oct. 2016  Oct. 2017 | <span>Georgia Institute of Technology</span></p>
+                                                </div>
+                                                <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres et quas molestias
+                                                    cepturi sint eca itate non vident, similique suntculpa modi tempora
+                                                    incidunt ut labore et dolor am aera boluptatum deleniti corrupti.</p>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>

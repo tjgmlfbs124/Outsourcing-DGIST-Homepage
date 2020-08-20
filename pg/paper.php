@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Blog Details Sidebar :: Businex - Corporate Business Bootstrap4 Template</title>
+    <title>DGIST :: Radar Lab</title>
 
     <!--== Favicon ==-->
     <link rel="shortcut icon" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/favicon.ico" type="image/x-icon" />
@@ -49,13 +48,15 @@
 	</header>
 
   <!--== Start Page Header Area ==-->
-  <div class="page-header-area bg-img" data-bg="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/page-header.jpg">
-      <div class="container">
+  <div class="page-header-area">
+    <div class="page-header-area bg-img" data-bg="<?php $_SERVER['DOCUMENT_ROOT']?>/image/main01.jpg" style="position:absolute;"></div>
+    <div class="page-header-area bg-img" style="position:absolute; background:#080b1a; opacity: 0.7;">
+      <div class="container" >
           <div class="row">
               <div class="col-lg-10 col-xl-8 m-auto text-center">
                   <div class="page-header-content-inner">
                       <div class="page-header-content">
-                          <h2>Blog Details</h2>
+                          <h2>LAB :: Research</h2>
                           <p>Businex always try to provide the best Business Solutions for Clinets
                               to grow up their Business very sharply and smoothly.</p>
                       </div>
@@ -63,8 +64,9 @@
               </div>
           </div>
       </div>
+    </div>
   </div>
-  <!--== End Page Header Area ==-->
+    <!--== End Page Header Area ==-->
 
 
   <!--== Start Blog Details Page Content ==-->
@@ -74,35 +76,43 @@
               <div class="col-lg-9">
                   <article class="blog-post-details">
                       <div class="blog-post-txt">
-                          <h2 class="h3">Low angle photo of highers building</h2>
-
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam
-                              assumenda culpa cumque debitis dignissimos, dolor dolores doloribus ducimus fuga
-                              iusto magni maiores minus nam numquam officiis provident quasi quibusdam quos
-                              ratione rem saepe sequi sit unde ut velit vitae. Amet ea error expedita,
-                              laboriosam maxime officiis porro ut velit.</p>
-
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam
-                              assumenda culpa cumque debitis dignissimos, dolor dolores doloribus ducimus fuga
-                              iusto magni maiores minus nam numquam officiis provident quasi</p>
-
-                          <blockquote class="blockquote">
-                              <p>dolor dolores doloribus ducimus fuga
-                                  iusto magni maiores minus nam numquam officiis provident quasi</p>
-                          </blockquote>
-                          
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam
-                              assumenda culpa cumque debitis dignissimos, dolor dolores doloribus ducimus fuga
-                              iusto magni maiores minus nam numquam officiis provident quasi quibusdam quos
-                              ratione rem saepe sequi sit unde ut velit vitae. Amet ea error expedita,
-                              laboriosam maxime officiis porro ut velit.</p>
-
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam
-                              assumenda culpa cumque debitis dignissimos, dolor dolores doloribus ducimus fuga
-                              iusto magni maiores minus nam numquam officiis provident quasi</p>
+                          <h2 class="h3">Paper</h2>
+                          <ul>
+                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
+                              <p>1.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
+                            </li>
+                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
+                              <p>2.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
+                            </li>
+                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
+                              <p>3.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
+                            </li>
+                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
+                              <p>4.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
+                            </li>
+                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
+                              <p>5.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
+                            </li>
+                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
+                              <p>6.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
+                            </li>
+                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
+                              <p>7.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
+                            </li>
+                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
+                              <p>8.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
+                            </li>
+                          </ul>
+                          <div class="pagination-wrap">
+                              <ul class="pagination">
+                                  <li class="prev"><a href="#"><i class="fa fa-long-arrow-left"></i> Previous</a></li>
+                                  <li><a href="#" style="color:#080b1a">1</a></li>
+                                  <li><a href="#" style="color:#a0a0a0">2</a></li>
+                                  <li><a href="#" style="color:#a0a0a0">3</a></li>
+                                  <li class="next"><a href="#">Next <i class="fa fa-long-arrow-right"></i></a></li>
+                              </ul>
+                          </div>
                       </div>
-
-
                   </article>
               </div>
 

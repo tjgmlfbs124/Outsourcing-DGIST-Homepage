@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Businex :: Corporate Business Bootstrap4 Template</title>
+    <title>DGIST :: Radar Lab</title>
     <!--== Favicon ==-->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
     <!--== Google Fonts ==-->
@@ -52,7 +52,7 @@
                     <li data-index="rs-27" data-transition="random-premium" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default"
                         data-easeout="default" data-masterspeed="default" data-thumb="assets/img/slider/01_thumb.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide">
                         <!-- MAIN IMAGE -->
-                        <img src="assets/img/slider/01.jpg" alt="Businex" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="15" class="rev-slidebg" data-no-retina>
+                        <img src="/image/main08.jpg" alt="Businex" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="15" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
 
                         <!-- LAYER NR. 1 -->
@@ -61,7 +61,7 @@
                               data-width="['650','650','600','320']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on"
                               data-frames='[{"delay":10,"split":"lines","splitdelay":0.1,"speed":600,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
                               data-textAlign="['left']">
-                            GROW YOUR <br> BUSINESS WITH US
+                            <strong style="color:#fff;">DGIST<br>RADAR LABS</strong>
                         </div>
 
                             <!-- LAYER NR. 2 -->
@@ -70,8 +70,8 @@
                               data-visibility="['on','on','on','on']" data-type="text" data-responsive_offset="on"
                               data-frames='[{"delay":360,"split":"lines","splitdelay":0.1,"speed":500,"split_direction":"forward","frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                               data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-                            Businex always try to provide the best Business Solutions for Clinets to grow up their Business
-                            very sharply and smoothly.
+                            <span style="color:#fff;">Businex always try to provide the best Business Solutions for Clinets to grow up their Business
+                            very sharply and smoothly.</span>
                         </div>
 
                             <!-- LAYER NR. 3 -->
@@ -86,17 +86,18 @@
                     <!-- SLIDE  -->
                     <li data-index="rs-28" data-transition="slidingoverlayvertical,slidingoverlayleft,slideoverup" data-slotamount="default,default,default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default,default,default" data-easeout="default,default,default" data-masterspeed="default,default,default" data-thumb="assets/img/slider/02_thumb.jpg" data-rotate="0,0,0" data-saveperformance="off" data-title="Slide">
                         <!-- MAIN IMAGE -->
-                        <img src="assets/img/slider/02.jpg" alt="Businex" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="15" class="rev-slidebg" data-no-retina>
+                        <img src="/image/main09.jpg" alt="Businex" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="15" class="rev-slidebg" data-no-retina>
 
                         <!-- LAYER NR. 4 -->
                         <div class="tp-caption tp-resizeme slide-heading" data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']" data-y="['top','top','top','top']" data-voffset="['250','204','200','201']" data-fontsize="['60','60','50','30']" data-fontweight="['600']" data-lineheight="['70','70','60','40']" data-width="['650','650','600','320']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"split":"chars","splitdelay":0.1,"speed":1000,"split_direction":"forward","frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' data-textAlign="['left']">
-                            INVEST MONEY <br> WITH US
-                    </div>
+
+                          <strong style="color:#fff;">DGIST<br>RADAR LABS</strong>
+                          </div>
 
                             <!-- LAYER NR. 5 -->
                             <div class="tp-caption tp-resizeme slide-txt" data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']" data-y="['top','top','top','top']" data-voffset="['400','370','370','300']" data-fontsize="['16','20','20','20']" data-fontweight="['400','400','400','400']" data-width="['600','600','600','320']" data-height="none" data-whitespace="normal" data-visibility="['on','on','on','on']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":360,"split":"lines","splitdelay":0.1,"speed":500,"split_direction":"forward","frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-                                Businex always try to provide the best Business Solutions for Clinets to grow up their Business
-                                very sharply and smoothly.
+                              <span style="color:#fff;">Businex always try to provide the best Business Solutions for Clinets to grow up their Business
+                              very sharply and smoothly.</span>
 
                             </div>
 

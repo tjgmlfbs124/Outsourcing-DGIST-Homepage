@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Blog Details Sidebar :: Businex - Corporate Business Bootstrap4 Template</title>
+    <title>DGIST :: Radar Lab</title>
 
     <!--== Favicon ==-->
     <link rel="shortcut icon" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/favicon.ico" type="image/x-icon" />
@@ -48,22 +47,25 @@
   		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/header.php'?>
 	</header>
 
-    <!--== Start Page Header Area ==-->
-    <div class="page-header-area bg-img" data-bg="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/page-header.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-xl-8 m-auto text-center">
-                    <div class="page-header-content-inner">
-                        <div class="page-header-content">
-                            <h2>Blog Details</h2>
-                            <p>Businex always try to provide the best Business Solutions for Clinets
-                                to grow up their Business very sharply and smoothly.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!--== Start Page Header Area ==-->
+  <div class="page-header-area">
+    <div class="page-header-area bg-img" data-bg="<?php $_SERVER['DOCUMENT_ROOT']?>/image/main01.jpg" style="position:absolute;"></div>
+    <div class="page-header-area bg-img" style="position:absolute; background:#080b1a; opacity: 0.7;">
+      <div class="container" >
+          <div class="row">
+              <div class="col-lg-10 col-xl-8 m-auto text-center">
+                  <div class="page-header-content-inner">
+                      <div class="page-header-content">
+                          <h2>LAB :: Research</h2>
+                          <p>Businex always try to provide the best Business Solutions for Clinets
+                              to grow up their Business very sharply and smoothly.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
+  </div>
     <!--== End Page Header Area ==-->
 
 
