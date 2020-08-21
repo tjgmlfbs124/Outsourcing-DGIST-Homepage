@@ -56,7 +56,7 @@
               <div class="col-lg-10 col-xl-8 m-auto text-center">
                   <div class="page-header-content-inner">
                       <div class="page-header-content">
-                          <h2>LAB :: Research</h2>
+                          <h2>LAB :: Professor</h2>
                           <p>Businex always try to provide the best Business Solutions for Clinets
                               to grow up their Business very sharply and smoothly.</p>
                       </div>
@@ -81,7 +81,7 @@
                             <div class="comments-view-area">
                                 <div class="single-comment-wrap d-flex">
                                     <figure class="author-thumb">
-                                        <a href="#"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/team-details.jpg" alt="Author"></a>
+                                        <a href="#"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile01.jpg" alt="Author"></a>
                                     </figure>
                                     <div class="comments-info" onclick="location.href='/pg/professorInfo.php'">
                                         <p class="m-0">
