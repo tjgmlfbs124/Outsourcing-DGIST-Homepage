@@ -78,54 +78,8 @@
 
                         <!-- Start Comment Area Wrapper -->
                         <div class="comment-area-wrapper">
-                            <div class="comments-view-area">
-                                <div class="single-comment-wrap d-flex">
-                                    <figure class="author-thumb">
-                                        <a href="#"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile01.jpg" alt="Author"></a>
-                                    </figure>
-                                    <div class="comments-info" onclick="location.href='/pg/professorInfo.php'">
-                                        <p class="m-0">
-                                          Name : Hond Gil Dong <br>
-                                          Position : abcdef professor <br>
-                                          Address : DGIST 50-1, Sang-Ri, Hyeongpung-Myeon, Dalseong-Gun, Daegu, 711-873, Korea <br>
-                                          Phone : 010-1234-5678 <br>
-                                          Fax : 123-123-123456 <br>
-                                          Email : abcdefg@dgist.com <br>
-                                        </p>
-                                    </div>
-                                </div>
+                            <div id="professor-list"class="comments-view-area">
 
-                                <div class="single-comment-wrap d-flex">
-                                    <figure class="author-thumb">
-                                        <a href="#"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/team-details.jpg" alt="Author"></a>
-                                    </figure>
-                                    <div class="comments-info">
-                                        <p class="m-0">
-                                          Name : Hond Gil Dong <br>
-                                          Position : abcdef professor <br>
-                                          Address : DGIST 50-1, Sang-Ri, Hyeongpung-Myeon, Dalseong-Gun, Daegu, 711-873, Korea <br>
-                                          Phone : 010-1234-5678 <br>
-                                          Fax : 123-123-123456 <br>
-                                          Email : abcdefg@dgist.com <br>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="single-comment-wrap d-flex">
-                                    <figure class="author-thumb">
-                                        <a href="#"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/team-details.jpg" alt="Author"></a>
-                                    </figure>
-                                    <div class="comments-info">
-                                        <p class="m-0">
-                                          Name : Hond Gil Dong <br>
-                                          Position : abcdef professor <br>
-                                          Address : DGIST 50-1, Sang-Ri, Hyeongpung-Myeon, Dalseong-Gun, Daegu, 711-873, Korea <br>
-                                          Phone : 010-1234-5678 <br>
-                                          Fax : 123-123-123456 <br>
-                                          Email : abcdefg@dgist.com <br>
-                                        </p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </article>
@@ -263,5 +217,30 @@
     <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/revslider/rev-active.js"></script>
 
 </body>
+
+<script>
+  <?php
+		require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
+		$api = new getForm();
+    $result = $api -> select_all_professor();
+			while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
+        console.log("id : " , <?php echo $row['id']?>);
+        $("#professor-list").append("<div class=\"single-comment-wrap d-flex\" id=\"list-" + <?php echo $row['id']?> + "\"></div>");
+        $("#list-<?php echo $row['id']?>").append("<figure class=\"author-thumb\"></figure>");
+        $("#list-<?php echo $row['id']?> > .author-thumb").append("<a href=\"#\"><img src=\"<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile/ef42e44fad01bb61023c55aefcfd26d7.jpg\" alt=\"Author\"></a>");
+        $("#list-<?php echo $row['id']?>").append("<div class=\"comments-info\" onclick=\"location.href='/pg/professorInfo.php'\"></div>");
+        $("#list-<?php echo $row['id']?> > .comments-info").append(
+          "<p class=\"m-0\">" +
+          "<strong style=\"font-size:20px;\"><?php echo $row['name'] ?></strong><br><br>" +
+          "position : <?php echo $row['position'] ?> <br>" +
+          "Address : <?php echo $row['address'] ?> <br>" +
+          "Phone : <?php echo $row['phone'] ?> <br>" +
+          "Fax : <?php echo $row['fax'] ?>6 <br>" +
+          "Email : <?php echo $row['email'] ?> <br>" +
+        "</p>"
+      );
+      <?php }
+   ?>
+</script>
 
 </html>

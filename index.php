@@ -130,12 +130,12 @@
                 <div class="row mtn-30">
                     <div class="col-sm-6 col-lg-4" >
                         <!-- Start Service Item -->
-                        <div class="service-item" onclick="location.href='pg/professorList.php'" style="cursor:pointer;">
+                        <div class="service-item" onclick="location.href='#'" style="cursor:pointer;">
                             <figure class="service-thumb" >
-                                <img src="image/menu14.jpg" alt="Businex-Service"/>
+                                <img src="image/menu16-02.jpg" alt="Businex-Service"/>
                                 <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0.5);">
                                     <div class="service-content-inner" >
-                                        <h3><strong style="color:#fff;">입학안내</strong></h3>
+                                        <h3><strong style="color:#fff;">미래자동차연구부<br>입학안내</strong></h3>
                                     </div>
                                 </div>
                             </figure>
@@ -147,10 +147,10 @@
                         <!-- Start Service Item -->
                         <div class="service-item" onclick="location.href='pg/artlab.php'" style="cursor:pointer;">
                             <figure class="service-thumb">
-                                <img src="image/menu13.jpg" alt="Businex-Service" />
-                                <div class="service-content" style="left:0; background-color: rgba(92,107,153, 0.4);">
+                                <img src="image/menu15-01.jpg" alt="Businex-Service" />
+                                <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0.5);">
                                     <div class="service-content-inner" >
-                                        <h3><strong style="color:#fff;">학과소개</strong></h3>
+                                        <h3><strong style="color:#fff;">미래자동차연구부<br>학과소개</strong></h3>
                                     </div>
                                 </div>
                             </figure>
@@ -162,10 +162,10 @@
                         <!-- Start Service Item -->
                         <div class="service-item" onclick="location.href='pg/research.php'" style="cursor:pointer;">
                             <figure class="service-thumb">
-                                <img src="image/menu15.jpg" alt="Businex-Service" />
+                                <img src="image/menu14-02.jpg" alt="Businex-Service" />
                                 <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0.5);">
                                     <div class="service-content-inner" >
-                                        <h3><strong style="color:#fff;">연구분야</strong></h3>
+                                        <h3><strong style="color:#fff;">미래자동차연구부<br>연구분야</strong></h3>
                                     </div>
                                 </div>
                             </figure>
