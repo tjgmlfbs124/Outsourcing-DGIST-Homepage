@@ -28,10 +28,10 @@
                     <li class="has-submenu">
                       <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/research.php">Research</a>
                       <ul class="submenu-nav">
-                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal">paper</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal&page=1">paper</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php">patent</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php">technology Transfer</a></li>
-                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php">project</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectList.php">project</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php">interest</a></li>
                       </ul>
                     </li>
