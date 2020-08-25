@@ -422,7 +422,7 @@
           $("#profile-position").text("<?php echo $row['kr_name']?>, <?php echo $row['position']?>");
           $("#profile-address").html("<strong>Address</strong><?php echo $row['address']?>");
           $("#profile-phone").html("<strong>Phone</strong><?php echo $row['phone']?>");
-          $("#profile-fax").html("<strong>Phone</strong><?php echo $row['fax']?>");
+          $("#profile-fax").html("<strong>Fax</strong><?php echo $row['fax']?>");
           $("#profile-email").html("<strong>Email</strong><span onclick=copy_to_clipboard(\"<?php echo $row['email'] ?>\") style=\"color:#007bff; cursor:pointer;text-decoration:underline;\"><?php echo $row['email']?></span>");
           $("#profile-info").html("<?php echo $row['awards_and_honors']?>")
         <?php }

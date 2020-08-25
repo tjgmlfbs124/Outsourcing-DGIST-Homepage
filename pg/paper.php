@@ -56,7 +56,7 @@
               <div class="col-lg-10 col-xl-8 m-auto text-center">
                   <div class="page-header-content-inner">
                       <div class="page-header-content">
-                          <h2>LAB :: Research</h2>
+                          <h2>LAB :: Paper</h2>
                           <p>Businex always try to provide the best Business Solutions for Clinets
                               to grow up their Business very sharply and smoothly.</p>
                       </div>
@@ -78,19 +78,16 @@
                       <div class="blog-post-txt">
                         <div class="member-desc">
                           <h2 id="profile-name">PAPER</h2>
-                          <h5 id="profile-position">International Journal</h5>
-                      </div>
-                          <ul id="paper-list">
-                          </ul>
-                          <div class="pagination-wrap">
-                              <ul class="pagination">
-                                  <li class="prev"><a href="#"><i class="fa fa-long-arrow-left"></i> Previous</a></li>
-                                  <li><a href="#" style="color:#080b1a">1</a></li>
-                                  <li><a href="#" style="color:#a0a0a0">2</a></li>
-                                  <li><a href="#" style="color:#a0a0a0">3</a></li>
-                                  <li class="next"><a href="#">Next <i class="fa fa-long-arrow-right"></i></a></li>
-                              </ul>
-                          </div>
+                          <h5 id="profile-position"></h5>
+                        </div>
+                        <ul id="paper-list">
+                        </ul>
+                        <div class="pagination-wrap">
+                            <ul id="page-list" class="pagination">
+                                <li class="prev" onclick="movePage('prev')"><a href="#"><i class="fa fa-long-arrow-left"></i> Previous</a></li>
+                                <li class="next" onclick="movePage('next')"><a href="#">Next <i class="fa fa-long-arrow-right"></i></a></li>
+                            </ul>
+                        </div>
                       </div>
                   </article>
               </div>
@@ -102,11 +99,10 @@
                           <h3 class="sidebar-title">Categories</h3>
                           <div class="sidebar-body">
                               <ul class="sidebar-list">
-                                  <li><a href="#">Paper</a></li>
-                                  <li><a href="#">Patent</a></li>
-                                  <li><a href="#">technology transfer</a></li>
-                                  <li><a href="#">project</a></li>
-                                  <li><a href="#">interest</a></li>
+                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal&page=1">INTERNATIONAL JOURNAL</a></li>
+                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=domestic_journal&page=1">DOMESTIC JOURNAL</a></li>
+                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=conference&page=1">CONFERENCE</a></li>
+                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=books&page=1">BOOKS</a></li>
                               </ul>
                           </div>
                       </div>
@@ -114,7 +110,7 @@
 
                       <!-- Start Single Sidebar Wrap -->
                       <div class="single-sidebar-item-wrap">
-                          <h3 class="sidebar-title">JOURNEL</h3>
+                          <h3 class="sidebar-title">RESEARCH</h3>
                           <div class="sidebar-body">
                               <div class="latest-blog-widget">
                                   <div class="single-blog-item">
@@ -123,7 +119,7 @@
                                       </div>
 
                                       <div class="post-info">
-                                          <h6><a href="blog-details.html">International Journal</a></h6>
+                                          <h6><a href="blog-details.html">Paper</a></h6>
                                           <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
                                       </div>
                                   </div>
@@ -134,7 +130,7 @@
                                       </div>
 
                                       <div class="post-info">
-                                          <h6><a href="blog-details.html">Domestic journals</a></h6>
+                                          <h6><a href="blog-details.html">Patent</a></h6>
                                           <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
                                       </div>
                                   </div>
@@ -144,7 +140,17 @@
                                           <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/service/03.jpg" alt="Thumb" /></a>
                                       </div>
                                       <div class="post-info">
-                                          <h6><a href="blog-details.html">Conference</a></h6>
+                                          <h6><a href="blog-details.html">Projects</a></h6>
+                                          <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
+                                      </div>
+                                  </div>
+
+                                  <div class="single-blog-item">
+                                      <div class="post-thumb">
+                                          <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/service/03.jpg" alt="Thumb" /></a>
+                                      </div>
+                                      <div class="post-info">
+                                          <h6><a href="blog-details.html">Technology Transfer</a></h6>
                                           <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
                                       </div>
                                   </div>
@@ -230,32 +236,61 @@
     <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/revslider/rev-active.js"></script>
     <script>
       var boldTagList = ["Jong-HunLee", "JonghunLee"];
+
+      function highlightPageIndex(){
+        $("#pg-index-<?php echo $_GET['page'] ?>").css("color","#3c3c3c");
+      }
+
+      function setSubTitle(){
+        var cat = "<?php echo $_GET['cat'] ?>";
+        switch(cat){
+          case "international_journal" :
+            cat = "International Journal";
+            break;
+          case "domestic_journal" :
+            cat = "Domestic Journal";
+            break;
+          case "conference" :
+            cat = "Conference";
+            break;
+          case "books" :
+            cat = "Books";
+            break;
+        }
+        $("#profile-position").text(cat);
+      }
+
       function bold(str){
         var temp = str.replace(/ /gi, "");
         boldTagList.forEach((item, i) => {
           if(temp.indexOf(item) > -1){
-            console.log("item : " , item);
-            var a= str.replace(item, "<strong>Jong-Hun Lee</strong>");
-            console.log("a : " , a);
+            temp = temp.replace(item, "<strong>Jong-Hun Lee</strong>");
           }
-
         });
-        return str;
+        return temp;
       }
 
       <?php
         require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
         $api = new getForm();
-        $result = $api -> select_papers($_GET['cat']);
-          while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
+        $idx=1;
+        $result = $api -> select_papers($_GET['cat'], $_GET['page']);
+        $pages = $api -> select_papers_count($_GET['cat']);
+
+        // category에 해당하는 논문 리스트 10개 출력
+        while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
             $("#paper-list").append("<li id=\"list-<?php echo $row['id']?>\" style=\"border-bottom:1px solid #eee; padding:10px 0px 10px 0px;\"></li>")
-            $("#list-<?php echo $row['id']?>").append('<p><?php echo $row['id']?>. ' + bold("<?php echo $row['title']?>")+' <?php echo $row['content']?></p>');
+            $("#list-<?php echo $row['id']?>").append('<p>' + bold("<?php echo $row['title']?>")+'<?php echo $row['content']?></p>');
+        <?php }
 
-          <?php }
-       ?>
-
+        // page index 생성
+        for($idx=1; $idx<=$pages['CNT'] / 10; $idx++){ ?>
+          $("#page-list > .next").before("<li><a id=\"pg-index-<?php echo $idx?>\" href=\"<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=<?php echo $_GET['cat']?>&page=<?php echo $idx?>\" style=\"color:#a0a0a0\"><?php echo $idx?></a></li>");
+          <?php
+        }
+      ?>
+      setSubTitle();
+      highlightPageIndex();
     </script>
-
 </body>
-
 </html>
