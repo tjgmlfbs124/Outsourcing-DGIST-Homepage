@@ -77,25 +77,22 @@
                         <div class="row">
                             <div class="col-md-5">
                                 <div class="member-pic mb-sm-35">
-                                    <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/team-details.jpg" alt="Businex-Team" />
+                                    <img id="profile-img" src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/team-details.jpg" alt="Businex-Team"/>
                                 </div>
                             </div>
 
                             <div class="col-md-7 ml-auto">
                                 <div class="member-desc">
-                                    <h2>Hong Gil Dong</h2>
-                                    <h5>Professor/Convergence Engineering</h5>
-                                    <p>abcdefghijklmnopqrxtuvwxyzabcdefghijklmnopqrxtuvwxyzabcdefghi</p>
-                                    <p>abcdefghijklmnopqrxtuvwxyzabcdefghijklmnopqrxtuvwxyz</p>
-                                    <p>abcdefghijklmnopqrxtuvwxyzabcdefghijklmnopqrxtuvwxyzabcdefghijk
-                                    abcdefghijklmnopqrxtuvwxyzabcz</p>
+                                    <h2 id="profile-name">Hong Gil Dong</h2>
+                                    <h5 id="profile-position">Professor/Convergence Engineering</h5>
+                                    <p id="profile-info">abcdefghijklmnopqrxtuvwxyzabcdefghijklmnopqrxtuvwxyzabcdefghi</p>
 
                                     <div class="contact-info mt-25">
-                                        <p><strong>Address</strong> DGIST (Daegu Gyeongbuk Institute of Science & Technology), 50-1,<br>
+                                        <p id="profile-address"><strong>Address</strong> DGIST (Daegu Gyeongbuk Institute of Science & Technology), 50-1,<br>
                                            Sang-Ri, Hyeongpung-Myeon, Dalseong-Gun, Daegu, 711-873, Korea</p>
-                                        <p><strong>Phone</strong> 82-53-785-4580</p>
-                                        <p><strong>Fax</strong> 82-53-785-4589</p>
-                                        <p><strong>Email</strong> jhlee@dgist.ac.kr</p>
+                                        <p id="profile-phone"><strong>Phone</strong> 82-53-785-4580</p>
+                                        <p id="profile-fax"><strong>Fax</strong> 82-53-785-4589</p>
+                                        <p id="profile-email"><strong>Email</strong> jhlee@dgist.ac.kr</p>
                                     </div>
                                 </div>
                             </div>
@@ -396,7 +393,41 @@
 
     <!--=== REVOLUTION JS ===-->
     <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/revslider/rev-active.js"></script>
+    <script>
+    // 클립보드에 글자를 복사한다.
+    function is_ie() {
+      if(navigator.userAgent.toLowerCase().indexOf("chrome") != -1) return false;
+      if(navigator.userAgent.toLowerCase().indexOf("msie") != -1) return true;
+      if(navigator.userAgent.toLowerCase().indexOf("windows nt") != -1) return true;
+      return false;
+    }
 
+    function copy_to_clipboard(str) {
+      if( is_ie() ) {
+        window.clipboardData.setData("Text", str);
+        alert("복사되었습니다.");
+        return;
+      }
+      prompt("Ctrl+C를 눌러 복사하세요.", str);
+    }
+
+    <?php
+      require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
+      $api = new getForm();
+      $result = $api -> select_professor($_GET['id']);
+        while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
+          console.log("id : <?php echo $row['id']?>");
+          $("#profile-img").attr("src","<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile/<?php echo $row['image']?>.jpg");
+          $("#profile-name").text("<?php echo $row['en_name']?>");
+          $("#profile-position").text("<?php echo $row['kr_name']?>, <?php echo $row['position']?>");
+          $("#profile-address").html("<strong>Address</strong><?php echo $row['address']?>");
+          $("#profile-phone").html("<strong>Phone</strong><?php echo $row['phone']?>");
+          $("#profile-fax").html("<strong>Phone</strong><?php echo $row['fax']?>");
+          $("#profile-email").html("<strong>Email</strong><span onclick=copy_to_clipboard(\"<?php echo $row['email'] ?>\") style=\"color:#007bff; cursor:pointer;text-decoration:underline;\"><?php echo $row['email']?></span>");
+          $("#profile-info").html("<?php echo $row['awards_and_honors']?>")
+        <?php }
+     ?>
+    </script>
 </body>
 
 </html>

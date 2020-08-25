@@ -76,32 +76,11 @@
               <div class="col-lg-9">
                   <article class="blog-post-details">
                       <div class="blog-post-txt">
-                          <h2 class="h3">Paper</h2>
-                          <ul>
-                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
-                              <p>1.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
-                            </li>
-                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
-                              <p>2.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
-                            </li>
-                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
-                              <p>3.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
-                            </li>
-                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
-                              <p>4.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
-                            </li>
-                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
-                              <p>5.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
-                            </li>
-                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
-                              <p>6.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
-                            </li>
-                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
-                              <p>7.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
-                            </li>
-                            <li style="border-bottom:1px solid #eee; padding:10px 0px 10px 0px;">
-                              <p>8.	Kim, S. D. , Kim, B.-S., Jin, Y. S., <strong>Lee, J. *</strong>, "Extrapolation-RELAX Estimator Based on Spectrum Partitioning for DOA Estimation of FMCW Radar", IEEE Access, vol.7, pp.98771~98780, 2019.07</p>
-                            </li>
+                        <div class="member-desc">
+                          <h2 id="profile-name">PAPER</h2>
+                          <h5 id="profile-position">International Journal</h5>
+                      </div>
+                          <ul id="paper-list">
                           </ul>
                           <div class="pagination-wrap">
                               <ul class="pagination">
@@ -135,7 +114,7 @@
 
                       <!-- Start Single Sidebar Wrap -->
                       <div class="single-sidebar-item-wrap">
-                          <h3 class="sidebar-title">Latest News</h3>
+                          <h3 class="sidebar-title">JOURNEL</h3>
                           <div class="sidebar-body">
                               <div class="latest-blog-widget">
                                   <div class="single-blog-item">
@@ -144,7 +123,7 @@
                                       </div>
 
                                       <div class="post-info">
-                                          <h6><a href="blog-details.html">Lorem ipsum dolor sit.</a></h6>
+                                          <h6><a href="blog-details.html">International Journal</a></h6>
                                           <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
                                       </div>
                                   </div>
@@ -155,7 +134,7 @@
                                       </div>
 
                                       <div class="post-info">
-                                          <h6><a href="blog-details.html">Creating electronic beats</a></h6>
+                                          <h6><a href="blog-details.html">Domestic journals</a></h6>
                                           <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
                                       </div>
                                   </div>
@@ -165,7 +144,7 @@
                                           <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/service/03.jpg" alt="Thumb" /></a>
                                       </div>
                                       <div class="post-info">
-                                          <h6><a href="blog-details.html">Mysterious Black</a></h6>
+                                          <h6><a href="blog-details.html">Conference</a></h6>
                                           <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
                                       </div>
                                   </div>
@@ -249,6 +228,33 @@
 
     <!--=== REVOLUTION JS ===-->
     <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/revslider/rev-active.js"></script>
+    <script>
+      var boldTagList = ["Jong-HunLee", "JonghunLee"];
+      function bold(str){
+        var temp = str.replace(/ /gi, "");
+        boldTagList.forEach((item, i) => {
+          if(temp.indexOf(item) > -1){
+            console.log("item : " , item);
+            var a= str.replace(item, "<strong>Jong-Hun Lee</strong>");
+            console.log("a : " , a);
+          }
+
+        });
+        return str;
+      }
+
+      <?php
+        require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
+        $api = new getForm();
+        $result = $api -> select_papers($_GET['cat']);
+          while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
+            $("#paper-list").append("<li id=\"list-<?php echo $row['id']?>\" style=\"border-bottom:1px solid #eee; padding:10px 0px 10px 0px;\"></li>")
+            $("#list-<?php echo $row['id']?>").append('<p><?php echo $row['id']?>. ' + bold("<?php echo $row['title']?>")+' <?php echo $row['content']?></p>');
+
+          <?php }
+       ?>
+
+    </script>
 
 </body>
 

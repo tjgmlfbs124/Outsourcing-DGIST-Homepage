@@ -90,7 +90,7 @@
     </div>
     <!--== End Blog Details Page Content ==-->
 
-  	<footer class="footer-area sp-y">
+  	<footer class="footer-area sp-y" style="margin-top:200px;">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   	</footer>
 
@@ -219,24 +219,41 @@
 </body>
 
 <script>
+
+  // 클립보드에 글자를 복사한다.
+  function is_ie() {
+    if(navigator.userAgent.toLowerCase().indexOf("chrome") != -1) return false;
+    if(navigator.userAgent.toLowerCase().indexOf("msie") != -1) return true;
+    if(navigator.userAgent.toLowerCase().indexOf("windows nt") != -1) return true;
+    return false;
+  }
+
+  function copy_to_clipboard(str) {
+    if( is_ie() ) {
+      window.clipboardData.setData("Text", str);
+      alert("복사되었습니다.");
+      return;
+    }
+    prompt("Ctrl+C를 눌러 복사하세요.", str);
+  }
+
   <?php
 		require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
 		$api = new getForm();
-    $result = $api -> select_all_professor();
+    $result = $api -> select_professors();
 			while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
-        console.log("id : " , <?php echo $row['id']?>);
         $("#professor-list").append("<div class=\"single-comment-wrap d-flex\" id=\"list-" + <?php echo $row['id']?> + "\"></div>");
         $("#list-<?php echo $row['id']?>").append("<figure class=\"author-thumb\"></figure>");
-        $("#list-<?php echo $row['id']?> > .author-thumb").append("<a href=\"#\"><img src=\"<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile/ef42e44fad01bb61023c55aefcfd26d7.jpg\" alt=\"Author\"></a>");
-        $("#list-<?php echo $row['id']?>").append("<div class=\"comments-info\" onclick=\"location.href='/pg/professorInfo.php'\"></div>");
+        $("#list-<?php echo $row['id']?> > .author-thumb").append("<a href=\"/pg/professorInfo.php?pos=professor&id=<?php echo $row['id']?>\"><img src=\"<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile/<?php echo $row['image']?>.jpg\" alt=\"Author\"></a>");
+        $("#list-<?php echo $row['id']?>").append("<div class=\"comments-info\"></div>");
         $("#list-<?php echo $row['id']?> > .comments-info").append(
-          "<p class=\"m-0\">" +
-          "<strong style=\"font-size:20px;\"><?php echo $row['name'] ?></strong><br><br>" +
+          "<p class=\"m-0\" onclick=\"location.href='/pg/professorInfo.php?pos=professor&id=<?php echo $row['id']?>'\">" +
+          "<div class=\"member-desc\"><h2 style=\"font-size:20px;\"><?php echo $row['en_name'] ?></h2><h5><?php echo $row['kr_name'] ?></h5></div>" +
           "position : <?php echo $row['position'] ?> <br>" +
           "Address : <?php echo $row['address'] ?> <br>" +
           "Phone : <?php echo $row['phone'] ?> <br>" +
-          "Fax : <?php echo $row['fax'] ?>6 <br>" +
-          "Email : <?php echo $row['email'] ?> <br>" +
+          "Fax : <?php echo $row['fax'] ?> <br>" +
+          "<p onclick=copy_to_clipboard(\"<?php echo $row['email'] ?>\")>Email : <span  style=\"color:#007bff; cursor:pointer;text-decoration:underline;\"><?php echo $row['email'] ?></span></p> <br>" +
         "</p>"
       );
       <?php }
