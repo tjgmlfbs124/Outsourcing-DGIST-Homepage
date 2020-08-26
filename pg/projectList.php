@@ -90,7 +90,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
-                                        <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-01.jpg" alt="Businex-Blog" /></a>
+                                        <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectInfo.php"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-01.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Automotive Radar</a></h2>
@@ -107,7 +107,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
-                                        <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-02.jpg" alt="Businex-Blog" /></a>
+                                        <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectInfo.php"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-02.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Vital Radar</a></h2>
@@ -124,7 +124,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
-                                        <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-03.jpg" alt="Businex-Blog" /></a>
+                                        <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectInfo.php"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-03.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Air-Born Radar</a></h2>
@@ -141,7 +141,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
-                                        <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-04.jpg" alt="Businex-Blog" /></a>
+                                        <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectInfo.php"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-04.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Sports and Leisure Radar</a></h2>
@@ -158,7 +158,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
-                                        <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-05.jpg" alt="Businex-Blog" /></a>
+                                        <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectInfo.php"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-05.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Defense Radar</a></h2>
@@ -175,7 +175,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
-                                        <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-06.jpg" alt="Businex-Blog" /></a>
+                                        <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectInfo.php"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-06.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Radar for Smart Lighting</a></h2>
