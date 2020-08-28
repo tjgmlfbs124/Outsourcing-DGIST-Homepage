@@ -47,17 +47,53 @@
   		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/header.php'?>
 	</header>
 
-
-  <!--== Start Testimonial Area Wrapper ==-->
-  <div class="testimonial-area testimonial-area--2">
-      <div class="row">
-          <div class="col-lg-10 col-xl-8 m-auto text-center">
-
-            <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/401-1.jpg" alt="Businex-Testimonial" />
+  <!--== Start Page Header Area ==-->
+  <div class="page-header-area">
+    <div class="page-header-area bg-img" data-bg="<?php $_SERVER['DOCUMENT_ROOT']?>/image/main01.jpg" style="position:absolute;"></div>
+    <div class="page-header-area bg-img" style="position:absolute; background:#080b1a; opacity: 0.7;">
+      <div class="container" >
+          <div class="row">
+              <div class="col-lg-10 col-xl-8 m-auto text-center">
+                  <div class="page-header-content-inner">
+                      <div class="page-header-content">
+                          <h2>LAB :: Notice</h2>
+                          <p>Businex always try to provide the best Business Solutions for Clinets
+                              to grow up their Business very sharply and smoothly.</p>
+                      </div>
+                  </div>
+              </div>
           </div>
       </div>
+    </div>
   </div>
-  <!--== End Testimonial Area Wrapper ==-->
+    <!--== End Page Header Area ==-->
+
+
+    <!--== Start Page Content Area Wrapper ==-->
+    <div class="page-content-wrapper" >
+        <div class="service-details-wrapper sm-top" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-11">
+                        <div class="service-details-content">
+                            <div class="service-details-info">
+                              <div class="member-desc" >
+                                <h4 id="notice-title"></h4>
+                                <h5 id="notice-date" style="float:right;"></h5>
+                              </div>
+
+                              <div class="about-service mt-50 mt-sm-35" style="margin-top:100px; margin-bottom:300px;">
+                                  <p id="notice-content"></p>
+
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div >
+    <!--== End Page Content Area Wrapper ==-->
 
   	<footer class="footer-area sp-y">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
@@ -120,7 +156,22 @@
 
     <!--=== REVOLUTION JS ===-->
     <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/revslider/rev-active.js"></script>
+    <script>
+      function sliceDate(date){
+        return date.split(" ")[0];
+      }
 
+      <?php
+        require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
+        $api = new getForm();
+        $result = $api -> select_notice($_GET['no']);
+        while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
+          $("#notice-title").text("<?php echo $row['title'] ?>");
+          $("#notice-date").text("<?php echo $row['date'] ?>");
+          $("#notice-content").text("<?php echo $row['content'] ?>");
+        <?php }
+
+      ?>
+    </script>
 </body>
-
 </html>

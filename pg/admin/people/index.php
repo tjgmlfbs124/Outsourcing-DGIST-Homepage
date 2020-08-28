@@ -48,16 +48,94 @@
 	</header>
 
 
-  <!--== Start Testimonial Area Wrapper ==-->
-  <div class="testimonial-area testimonial-area--2">
-      <div class="row">
-          <div class="col-lg-10 col-xl-8 m-auto text-center">
+  <!--== Start Blog Details Page Content ==-->
+  <div class="blog-details-page-content sp-y"  style="margin-top:100px;">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-9">
+                  <article class="blog-post-details">
+                      <div class="blog-post-txt">
+                        <div class="member-desc">
+                          <h2 id="profile-name">ART Rab :: PEOPLE</h2>
+                          <h5 id="profile-position">Professor</h5>
+                        </div>
+                      </div>
+                  </article>
+                  <ul id="people-list" class="sidebar-list">
+                  </ul>
+                  <div class="col-lg-15">
+                      <article id="input-form"class="blog-post-details">
 
-            <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/401-1.jpg" alt="Businex-Testimonial" />
+
+                      </article>
+                  </div>
+              </div>
+
+              <div class="col-lg-3">
+                  <aside class="sidebar-area-wrapper mt-md-80 mt-sm-60">
+                      <!-- Start Single Sidebar Wrap -->
+                      <div class="single-sidebar-item-wrap">
+                          <h3 class="sidebar-title">PEOPLE LIST</h3>
+                          <div class="sidebar-body">
+                              <ul class="sidebar-list">
+                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/people/index.php?cat=professor">PROFESSOR</a></li>
+                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/people/index.php?cat=researcher">RESEARCHER</a></li>
+                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/people/index.php?cat=student">STUDENT</a></li>
+                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/people/index.php?cat=alumni">ALUMNI</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <!-- End Single Sidebar Wrap -->
+
+                      <!-- Start Single Sidebar Wrap -->
+                      <div class="single-sidebar-item-wrap">
+                          <h3 class="sidebar-title">MENU</h3>
+                          <div class="sidebar-body">
+                              <div class="latest-blog-widget">
+                                  <div class="single-blog-item">
+                                      <div class="post-thumb">
+                                          <figure class="service-thumb" >
+                                              <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/paper-01.jpg" alt="Businex-Service"/>
+                                              <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0.5);">
+                                                  <div class="service-content-inner" style="width:100%; height:100%;">
+                                                  </div>
+                                              </div>
+                                          </figure>
+                                      </div>
+
+                                      <div class="post-info">
+                                          <h6><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal&page=1">RESEARCH</a></h6>
+                                          <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
+                                      </div>
+                                  </div>
+
+                                  <div class="single-blog-item">
+                                      <div class="post-thumb">
+                                          <figure class="service-thumb" >
+                                              <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/paper-02.jpg" alt="Businex-Service"/>
+                                              <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0.5);">
+                                                  <div class="service-content-inner" style="width:100%; height:100%;">
+
+                                                  </div>
+                                              </div>
+                                          </figure>
+                                      </div>
+
+                                      <div class="post-info">
+                                          <h6><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">NOTICE</a></h6>
+                                          <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- End Single Sidebar Wrap -->
+                  </aside>
+              </div>
           </div>
       </div>
   </div>
-  <!--== End Testimonial Area Wrapper ==-->
+  <!--== End Blog Details Page Content ==-->
 
   	<footer class="footer-area sp-y">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
@@ -120,7 +198,36 @@
 
     <!--=== REVOLUTION JS ===-->
     <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/revslider/rev-active.js"></script>
+    <script>
+      <?php
+        require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
+        $api = new getForm();
+        $category = $_GET['cat'];
+        $url = "";?>
 
+        $("#profile-position").text("<?php echo ucfirst($category)?>");
+        <?php
+        if(isset($_GET['id'])){
+          switch($category){
+            case "professor" :
+              $url = "/pg/admin/people/professor_input_form.php?cat=".$category."&id=".$_GET['id'];
+              break;
+            default :
+              $url = "/pg/admin/people/people_input_form.php?cat=".$category."&id=".$_GET['id'];
+          }
+          ?>
+          $("#input-form").load("<?php echo $url ?>");
+
+          <?php
+        }
+        else{
+          $result = $api -> select_peoples($category);
+          while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
+            $("#people-list").append("<li><a href=\"<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/people/index.php?cat=<?php echo $category?>&id=<?php echo $row['id']?>\"><?php echo $row['kr_name']?></a></li>");
+          <?php }
+        }
+
+      ?>
+    </script>
 </body>
-
 </html>

@@ -84,8 +84,8 @@
                         </ul>
                         <div class="pagination-wrap">
                             <ul id="page-list" class="pagination">
-                                <li class="prev" onclick="movePage('prev')"><a href="#"><i class="fa fa-long-arrow-left"></i> Previous</a></li>
-                                <li class="next" onclick="movePage('next')"><a href="#">Next <i class="fa fa-long-arrow-right"></i></a></li>
+                                <li class="prev"><a style="visibility:hidden;"><i class="fa fa-long-arrow-left"></i> Previous</a></li>
+                                <li class="next"><a style="visibility:hidden;">Next <i class="fa fa-long-arrow-right"></i></a></li>
                             </ul>
                         </div>
                       </div>
@@ -115,42 +115,56 @@
                               <div class="latest-blog-widget">
                                   <div class="single-blog-item">
                                       <div class="post-thumb">
-                                          <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/service/01.jpg" alt="Thumb" /></a>
+                                          <figure class="service-thumb" >
+                                              <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/paper-01.jpg" alt="Businex-Service"/>
+                                              <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0.5);">
+                                                  <div class="service-content-inner" style="width:100%; height:100%;">
+
+                                                  </div>
+                                              </div>
+                                          </figure>
                                       </div>
 
                                       <div class="post-info">
-                                          <h6><a href="blog-details.html">Paper</a></h6>
+                                          <h6><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal&page=1">Paper</a></h6>
                                           <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
                                       </div>
                                   </div>
 
                                   <div class="single-blog-item">
                                       <div class="post-thumb">
-                                          <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/service/02.jpg" alt="Thumb" /></a>
+                                          <figure class="service-thumb" >
+                                              <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/paper-02.jpg" alt="Businex-Service"/>
+                                              <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0.5);">
+                                                  <div class="service-content-inner" style="width:100%; height:100%;">
+
+                                                  </div>
+                                              </div>
+                                          </figure>
                                       </div>
 
                                       <div class="post-info">
-                                          <h6><a href="blog-details.html">Patent</a></h6>
+                                          <h6><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">Patent</a></h6>
                                           <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
                                       </div>
                                   </div>
 
                                   <div class="single-blog-item">
                                       <div class="post-thumb">
-                                          <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/service/03.jpg" alt="Thumb" /></a>
+                                          <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/paper-03.jpg" alt="Businex-Service"/>
                                       </div>
                                       <div class="post-info">
-                                          <h6><a href="blog-details.html">Projects</a></h6>
+                                          <h6><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectList.php">Projects</a></h6>
                                           <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
                                       </div>
                                   </div>
 
                                   <div class="single-blog-item">
                                       <div class="post-thumb">
-                                          <a href="blog-details.html"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/service/03.jpg" alt="Thumb" /></a>
+                                          <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/paper-04.jpg" alt="Businex-Service"/>
                                       </div>
                                       <div class="post-info">
-                                          <h6><a href="blog-details.html">Technology Transfer</a></h6>
+                                          <h6><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">Technology Transfer</a></h6>
                                           <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
                                       </div>
                                   </div>
@@ -161,9 +175,21 @@
 
                       <!-- Start Single Sidebar Wrap -->
                       <div class="single-sidebar-item-wrap">
-                          <div class="sidebar-body">
-                              <a href="#"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/banner-poster.jpg" alt="Poster"></a>
-                          </div>
+                        <div class="service-item" onclick="location.href='<?php $_SERVER['DOCUMENT_ROOT']?>/pg/research.php'" style="cursor:pointer;">
+                            <figure class="service-thumb">
+                                <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/paper-05.jpg" alt="Businex-Service" />
+                                <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0);">
+                                    <div class="service-content-inner" >
+                                        <h3 style="color:#1b2e67;">
+                                          <strong>연구분야<br></strong>
+                                          <h4 style="color:#1b2e67;">
+                                            <strong>한눈에보기</strong>
+                                          </h4>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
                       </div>
                       <!-- End Single Sidebar Wrap -->
                   </aside>
@@ -237,6 +263,16 @@
     <script>
       var boldTagList = ["Jong-HunLee", "JonghunLee"];
 
+      function bold(str){
+        var temp = str.replace(/ /gi, "");
+        boldTagList.forEach((item, i) => {
+          if(temp.indexOf(item) > -1){
+            temp = temp.replace(item, "<strong>Jong-Hun Lee</strong>");
+          }
+        });
+        return temp;
+      }
+
       function highlightPageIndex(){
         $("#pg-index-<?php echo $_GET['page'] ?>").css("color","#3c3c3c");
       }
@@ -259,17 +295,6 @@
         }
         $("#profile-position").text(cat);
       }
-
-      function bold(str){
-        var temp = str.replace(/ /gi, "");
-        boldTagList.forEach((item, i) => {
-          if(temp.indexOf(item) > -1){
-            temp = temp.replace(item, "<strong>Jong-Hun Lee</strong>");
-          }
-        });
-        return temp;
-      }
-
       <?php
         require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
         $api = new getForm();

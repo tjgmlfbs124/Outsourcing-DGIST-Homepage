@@ -97,7 +97,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-lg-15">
                                 <article class="blog-post-details">
 
@@ -141,7 +141,7 @@
                                 </article>
                             </div>
 
-                        </div>
+                        </div>-->
                     </div>
 
                     <div class="member-details-bottom sm-top-wt">
@@ -414,7 +414,7 @@
     <?php
       require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
       $api = new getForm();
-      $result = $api -> select_professor($_GET['id']);
+      $result = $api -> select_people($_GET['cat'],$_GET['id']);
         while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
           console.log("id : <?php echo $row['id']?>");
           $("#profile-img").attr("src","<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile/<?php echo $row['image']?>.jpg");

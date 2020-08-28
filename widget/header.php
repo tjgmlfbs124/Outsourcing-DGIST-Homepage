@@ -4,7 +4,7 @@
         <div class="col-5 col-lg-2">
             <!-- Start Logo Area -->
             <div class="logo-area">
-                <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/logo.png" alt="Businex-Logo"></a>
+                <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/logo.jpg" alt="Businex-Logo"></a>
             </div>
             <!-- End Logo Area -->
         </div>
@@ -18,7 +18,7 @@
                     <li class="has-submenu">
                       <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/professorList.php">People</a>
                       <ul class="submenu-nav">
-                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/professorList.php">professor</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/professorList.php?cat=professor">professor</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/teamList.php?po=researcher">researcher</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/teamList.php?po=student">student</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/teamList.php?po=alumni">alumni</a></li>
@@ -29,19 +29,19 @@
                       <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/research.php">Research</a>
                       <ul class="submenu-nav">
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal&page=1">paper</a></li>
-                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php">patent</a></li>
-                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php">technology Transfer</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">patent</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">technology Transfer</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectList.php">project</a></li>
-                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php">interest</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">interest</a></li>
                       </ul>
                     </li>
 
                     <li class="has-submenu">
-                      <a href="service.html">notice</a>
+                      <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/noticeList.php?page=1">notice</a>
                       <ul class="submenu-nav">
-                          <li><a href="service.html">notice</a></li>
-                          <li><a href="service.html">news</a></li>
-                          <li><a href="service.html">update</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/noticeList.php?page=1">notice</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">news</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">update</a></li>
                       </ul>
                     </li>
                 </ul>

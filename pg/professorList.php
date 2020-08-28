@@ -240,11 +240,11 @@
   <?php
 		require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
 		$api = new getForm();
-    $result = $api -> select_professors();
+    $result = $api -> select_peoples($_GET['cat']);
 			while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
         $("#professor-list").append("<div class=\"single-comment-wrap d-flex\" id=\"list-" + <?php echo $row['id']?> + "\"></div>");
         $("#list-<?php echo $row['id']?>").append("<figure class=\"author-thumb\"></figure>");
-        $("#list-<?php echo $row['id']?> > .author-thumb").append("<a href=\"/pg/professorInfo.php?pos=professor&id=<?php echo $row['id']?>\"><img src=\"<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile/<?php echo $row['image']?>.jpg\" alt=\"Author\"></a>");
+        $("#list-<?php echo $row['id']?> > .author-thumb").append("<a href=\"/pg/professorInfo.php?cat=professor&id=<?php echo $row['id']?>\"><img src=\"<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile/<?php echo $row['image']?>.jpg\" alt=\"Author\"></a>");
         $("#list-<?php echo $row['id']?>").append("<div class=\"comments-info\"></div>");
         $("#list-<?php echo $row['id']?> > .comments-info").append(
           "<p class=\"m-0\" onclick=\"location.href='/pg/professorInfo.php?pos=professor&id=<?php echo $row['id']?>'\">" +

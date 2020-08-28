@@ -47,17 +47,98 @@
   		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/header.php'?>
 	</header>
 
+  <!--== Start Service Area Wrapper ==-->
+  <div class="service-area-wrapper sm-top-wt">
+      <div class="service-area-top parallax" data-parallax-speed="0.75" data-bg="assets/img/service/service-bg.jpg">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-6 col-xl-5 m-auto text-center">
+                      <div class="section-title section-title--light">
+                          <h6>데이터 관리자모드</h6>
+                          <h2 class="mb-0">미래자동차 연구부</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-  <!--== Start Testimonial Area Wrapper ==-->
-  <div class="testimonial-area testimonial-area--2">
-      <div class="row">
-          <div class="col-lg-10 col-xl-8 m-auto text-center">
+      <div class="service-content-area">
+          <div class="container">
+              <div class="row mtn-30">
+                  <div class="col-sm-6 col-lg-4">
+                      <!-- Start Service Item -->
+                      <div class="service-item">
+                        <figure class="service-thumb" >
+                            <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/service/02.jpg" alt="Businex-Service"/>
+                            <div class="service-content" style="left:0; background-color: rgba(26,58,137, 1);">
+                                <div class="service-content-inner" >
+                                    <h2><strong style="color:#fff;">People </strong></h2>
+                                </div>
+                            </div>
+                        </figure>
+                        <div class="service-content">
+                            <div class="service-content-inner">
+                                <h5><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/people/index.php?cat=professor" class="stretched-link">Category List</a></h5>
+                                <p>- Professor</p>
+                                <p>- Researcher</p>
+                                <p>- Student</p>
+                                <p>- Alumi</p>
+                            </div>
+                        </div>
+                      </div>
+                      <!-- End Service Item -->
+                  </div>
 
-            <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/401-1.jpg" alt="Businex-Testimonial" />
+                  <div class="col-sm-6 col-lg-4">
+                      <!-- Start Service Item -->
+                      <div class="service-item">
+                        <figure class="service-thumb" >
+                            <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/service/02.jpg" alt="Businex-Service"/>
+                            <div class="service-content" style="left:0; background-color: rgba(26,58,137, 1);">
+                                <div class="service-content-inner" >
+                                    <h2><strong style="color:#fff;">Research </strong></h2>
+                                </div>
+                            </div>
+                        </figure>
+                        <div class="service-content">
+                            <div class="service-content-inner">
+                                <h5><a href="service-details.html" class="stretched-link">Category List</a></h5>
+                                <p>- Paper</p>
+                                <p>- Patent</p>
+                                <p>- Technology Trasnper</p>
+                                <p>- Project</p>
+                                <p>- Interest</p>
+                            </div>
+                        </div>
+                      </div>
+                      <!-- End Service Item -->
+                  </div>
+
+                  <div class="col-sm-6 col-lg-4">
+                      <!-- Start Service Item -->
+                      <div class="service-item">
+                        <figure class="service-thumb" >
+                            <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/service/02.jpg" alt="Businex-Service"/>
+                            <div class="service-content" style="left:0; background-color: rgba(26,58,137, 1);">
+                                <div class="service-content-inner" >
+                                    <h2><strong style="color:#fff;">Notice </strong></h2>
+                                </div>
+                            </div>
+                        </figure>
+                        <div class="service-content">
+                            <div class="service-content-inner">
+                                <h5><a href="service-details.html" class="stretched-link">Category List</a></h5>
+                                <p>- Notice</p>
+                                <p>- News</p>
+                                <p>- Update</p>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
           </div>
       </div>
   </div>
-  <!--== End Testimonial Area Wrapper ==-->
 
   	<footer class="footer-area sp-y">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>

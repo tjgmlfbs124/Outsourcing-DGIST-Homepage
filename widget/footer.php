@@ -13,6 +13,10 @@
 
                 </div>
 
+                <div class="copyright-txt" onclick="location.href='<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/index.php'" style="cursor:pointer;">
+                  <a style="float:right;">[관리자모드]</a>
+                </div>
+
                 <div class="copyright-txt">
                 </div>
             </div>
