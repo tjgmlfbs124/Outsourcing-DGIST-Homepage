@@ -1,9 +1,43 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/pdo.php';
+
+
+function renderView($msg, $url){
+	echo '<script>
+				alert("'.$msg.'");
+				location.replace("'.$url.'");
+				</script>';
+}
+
 class getForm{
 	function __construct(){}
 
-	// 교수 전체를 반환
+	function add_people($kr_name, $en_name, $_position, $_address, $_phone, $_fax, $_email,$_department, $_image, $_category, $_awards_and_honors){
+		try{
+			$_awards_and_honors = str_replace("\r\n","<br>",$_awards_and_honors);
+			/*이미지가 있을경우 이미지도 업데이트*/
+			if(isset($_image)){
+				$query = "INSERT INTO people_tb(kr_name, en_name, position, address, phone, fax, email, department, image, category, awards_and_honors)".
+				" VALUES(\"$kr_name\",\"$en_name\",\"$_position\", \"$_address\", \"$_phone\", \"$_fax\", \"$_email\", \"$_department\", \"$_image\", \"$_category\", \"$_awards_and_honors\")";
+			}
+			/*이미지가 없을경우, 원래 이미지 사용을 위해 이미지 빼고 업데이트*/
+			else{
+				$query = "INSERT INTO people_tb(kr_name, en_name, position, address, phone, fax, email, department, category, awards_and_honors)".
+				" VALUES(\"$kr_name\", \"$en_name\", \"$_position\", \"$_address\", \"$_phone\", \"$_fax\", \"$_email\", \"$_department\", \"$_category\", \"$_awards_and_honors\")";
+			}
+			echo "<br><br>";
+			echo "query : ".$query;
+			echo "<br><br>";
+			$pdo = $GLOBALS["pdo"];
+			$stmt = $pdo->prepare($query);
+			$stmt->execute();
+			renderView("추가되었습니다.", "/pg/admin/people/index.php?cat=".$_category);
+		}catch(Exception $e){
+			echo $e;
+		}
+	}
+
+	// 카테고리에 해당하는 임직원 전체를 반환
 	function select_peoples($cat){
 		try{
 			$pdo = $GLOBALS["pdo"];
@@ -14,7 +48,7 @@ class getForm{
 			echo $e;
 		}
 	}
-	// 교수 전체를 반환
+	// id에 해당하는 임직원 전체를 반환
 	function select_people($cat, $id){
 		try{
 			$pdo = $GLOBALS["pdo"];
@@ -25,6 +59,41 @@ class getForm{
 			echo $e;
 		}
 	}
+
+	// id에 맞는 임직원을 삭제후 페이지 리턴
+	function delete_people($id, $pg){
+		try{
+			$pdo = $GLOBALS["pdo"];
+			$stmt = $pdo->prepare("DELETE FROM people_tb WHERE id=".$id);
+			$stmt->execute();
+			renderView("삭제되었습니다.", "/pg/admin/people/index.php?cat=".$pg);
+		}catch(Exception $e){
+			echo $e;
+		}
+
+	}
+
+	// id에 맞는 임직원 업데이트
+	function update_people($_id, $kr_name, $en_name, $_position, $_address, $_phone, $_fax, $_email,$_department, $_image, $_category, $_awards_and_honors){
+		try{
+	    $_awards_and_honors = str_replace("\r\n","<br>",$_awards_and_honors);
+			/*이미지가 있을경우 이미지도 업데이트*/
+			if(isset($_image)){
+	      $query = "UPDATE people_tb SET kr_name=\"$kr_name\", en_name=\"$en_name\", position=\"$_position\", address=\"$_address\", phone=\"$_phone\", fax=\"$_fax\", email=\"$_email\", department=\"$_department\", image=\"$_image\", category=\"$_category\", awards_and_honors=\"$_awards_and_honors\" WHERE id=\"$_id\"";
+	    }
+			/*이미지가 없을경우, 원래 이미지 사용을 위해 이미지 빼고 업데이트*/
+	    else{
+	      $query = "UPDATE people_tb SET kr_name=\"$kr_name\", en_name=\"$en_name\", position=\"$_position\", address=\"$_address\", phone=\"$_phone\", fax=\"$_fax\", email=\"$_email\", department=\"$_department\", category=\"$_category\", awards_and_honors=\"$_awards_and_honors\" WHERE id=\"$_id\"";
+	    }
+			$pdo = $GLOBALS["pdo"];
+			$stmt = $pdo->prepare($query);
+			$stmt->execute();
+			renderView("변경되었습니다.", "/pg/admin/people/index.php?cat=".$_category);
+		}catch(Exception $e){
+			echo $e;
+		}
+	}
+
 
 	// Journel 검색
 	function select_papers($category, $page){
