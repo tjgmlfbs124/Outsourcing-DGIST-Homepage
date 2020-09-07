@@ -181,5 +181,30 @@ class getForm{
       echo $e;
     }
 	}
+
+	// id에 해당하는 notice 삭제
+	function delete_notice($id, $cat){
+    try{
+			$pdo = $GLOBALS["pdo"];
+			$stmt = $pdo->prepare("DELETE FROM notice_tb WHERE id=".$id);
+      $stmt->execute();
+			renderView("삭제되었습니다.", "/pg/admin/notice/index.php?cat=".$cat."&page=1");
+    }catch(Exception $e){
+      echo $e;
+    }
+	}
+
+	// id에 해당하는 notice 업데이트
+	function update_notice($id, $title, $content, $cat){
+    try{
+			$pdo = $GLOBALS["pdo"];
+			$sql = "UPDATE notice_tb SET title=\"".$title."\", content=\"".$content."\" WHERE id=".$id;
+			$stmt = $pdo->prepare($sql);
+      $stmt->execute();
+			renderView("변경되었습니다.", "/pg/admin/notice/index.php?cat=".$cat."&page=1");
+    }catch(Exception $e){
+      echo $e;
+    }
+	}
 }
 ?>

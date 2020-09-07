@@ -4,7 +4,8 @@
         <div class="col-5 col-lg-2">
             <!-- Start Logo Area -->
             <div class="logo-area">
-                <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/logo.jpg" alt="Businex-Logo"></a>
+                <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/">
+                <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/logo.svg" alt="Businex-Logo"></a>
             </div>
             <!-- End Logo Area -->
         </div>

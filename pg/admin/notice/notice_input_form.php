@@ -38,7 +38,34 @@
                   </div>
                   <div class="col-lg-15">
                       <article id="input-form"class="blog-post-details">
-
+                        <form method="POST" action="/form/update_notice.php" enctype="multipart/form-data">
+                          <input name="id" style="display:none;"/>
+                          <div class="comment-area-wrapper">
+                            <div class="row">
+                              <div class="col-md-8">
+                                제목
+                                <div class="single-input-item">
+                                    <input name="title" type="text" placeholder="제목" required />
+                                </div>
+                              </div>
+                                <div class="col-md-4">
+                                  날짜
+                                  <div class="single-input-item">
+                                      <input name="date" type="text" required disabled/>
+                                  </div>
+                                </div>
+                              <div class="col-md-12">
+                                내용
+                                <div class="single-input-item">
+                                  <textarea name="content" cols="30" rows="7" placeholder="내용" required=""></textarea>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                            <button class="btn btn-outline w-100"><a>UPDATE</a></button>
+                            <input type="submit" id="btnOk" value="확인" class="btn btn-outline-secondary" style="visibility:hidden;" />
+                          </div>
+                        </form>
 
                       </article>
                   </div>
@@ -48,12 +75,12 @@
                   <aside class="sidebar-area-wrapper mt-md-80 mt-sm-60">
                       <!-- Start Single Sidebar Wrap -->
                       <div class="single-sidebar-item-wrap">
-                          <h3 class="sidebar-title">NOTICE LIST</h3>
+                          <h3 class="sidebar-title">PEOPLE LIST</h3>
                           <div class="sidebar-body">
                               <ul class="sidebar-list">
-                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/notice/index.php?cat=notice&page1">NOTICE</a></li>
-                                  <li><a href="#">UPDATE</a></li>
-                                  <li><a href="#">NEWS</a></li>
+                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/people/index.php?cat=notice&page1">NOTICE</a></li>
+                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/people/index.php?cat=update">UPDATE</a></li>
+                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/people/index.php?cat=news">NEWS</a></li>
                               </ul>
                           </div>
                       </div>
@@ -95,7 +122,7 @@
                                       </div>
 
                                       <div class="post-info">
-                                          <h6><a href="#">RESEARCH</a></h6>
+                                          <h6><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal&page=1">RESEARCH</a></h6>
                                           <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
                                       </div>
                                   </div>
@@ -136,46 +163,22 @@
 
 
     <script>
-      function highlightPageIndex(){
-        $("#pg-index-<?php echo $_GET['page']-1 ?>").css("color","#3c3c3c");
-      }
-
       function sliceDate(date){
         return date.split(" ")[0];
-      }
-
-      function deleteRow(id){
-        var result = confirm("정말로 삭제하시겠습니까?");
-        if(result){
-          location.href="<?php $_SERVER['DOCUMENT_ROOT']?>/form/delete_notice.php?id="+id+"&cat=<?php echo $_GET['cat']?>";
-        }
       }
 
       <?php
         require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
         $api = new getForm();
-        $result = $api -> select_notices($_GET['page']);
-        $pages = $api -> select_notices_count();
-
+        $result = $api -> select_notice($_GET['no']);
         while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
-          $("#notice-list").append(
-            "<li id=\"list-<?php echo $row['id']?>\""+
-             "style=\"border-bottom:1px solid #eee; "+
-             "padding:10px 0px 10px 0px; cursor:pointer;\">"+
-             "<a onclick=\"location.href='<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/notice/notice_input_form.php?cat=<?php echo $_GET['cat'] ?>&no=<?php echo $row['id']?>'\">"+
-               "("+ sliceDate("<?php echo $row['date'] ?>") + ") <?php echo $row['title']?>"+
-             "</a>"+
-              "<i style=\"float:right; margin-left:20px;\"class=\"mdi mdi-close\" onclick=\"deleteRow(<?php echo $row['id']?>); return false;\">"+
-           "</li>");
+          $("form").attr("action","/form/update_notice.php?cat=<?php echo $_GET['cat']?>&id=<?php echo $row['id'] ?>");
+          $("input[name=title]").val("<?php echo $row['title'] ?>");
+          $("input[name=date]").val("<?php echo $row['date'] ?>");
+          $("textarea[name=content]").val("<?php echo $row['content'] ?>");
         <?php }
 
-        for($idx=0; $idx<=$pages['CNT'] / 10; $idx++){ ?>
-          $("#notice-list > .next").before("<li><a id=\"pg-index-<?php echo $idx?>\" href=\"<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/notice/index.php?cat=notice&page=<?php echo $idx+1?>\" style=\"color:#a0a0a0\"><?php echo $idx+1?></a></li>");
-          <?php
-        }
-
       ?>
-      highlightPageIndex();
     </script>
 </body>
 </html>
