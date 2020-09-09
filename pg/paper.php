@@ -15,28 +15,6 @@
   		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/header.php'?>
 	</header>
 
-  <!--== Start Page Header Area ==-->
-  <div class="page-header-area">
-    <div class="page-header-area bg-img" data-bg="<?php $_SERVER['DOCUMENT_ROOT']?>/image/main01.jpg" style="position:absolute;"></div>
-    <div class="page-header-area bg-img" style="position:absolute; background:#080b1a; opacity: 0.7;">
-      <div class="container" >
-          <div class="row">
-              <div class="col-lg-10 col-xl-8 m-auto text-center">
-                  <div class="page-header-content-inner">
-                      <div class="page-header-content">
-                          <h2>LAB :: Paper</h2>
-                          <p>Businex always try to provide the best Business Solutions for Clinets
-                              to grow up their Business very sharply and smoothly.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </div>
-  </div>
-    <!--== End Page Header Area ==-->
-
-
   <!--== Start Blog Details Page Content ==-->
   <div class="blog-details-page-content sp-y"  style="margin-top:100px;">
       <div class="container">
@@ -112,7 +90,7 @@
                                       </div>
 
                                       <div class="post-info">
-                                          <h6><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">Patent</a></h6>
+                                          <h6><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=patents&page=1">Patent</a></h6>
                                           <span class="post-date"><i class="fa fa-clock-o"></i>  March 9, 2019</span>
                                       </div>
                                   </div>
@@ -190,7 +168,7 @@
         </div>
     </aside>
 		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/pg/include/include_js.php'?>
-    
+
     <script>
       var boldTagList = ["Jong-HunLee", "JonghunLee"];
 

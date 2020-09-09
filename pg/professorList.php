@@ -19,20 +19,19 @@
   <div class="page-header-area">
     <div class="page-header-area bg-img" data-bg="<?php $_SERVER['DOCUMENT_ROOT']?>/image/main01.jpg" style="position:absolute;"></div>
     <div class="page-header-area bg-img" style="position:absolute; background:#080b1a; opacity: 0.7;">
-      <div class="container" >
+      <div class="container" style="max-width:1900px;">
           <div class="row">
               <div class="col-lg-10 col-xl-8 m-auto text-center">
                   <div class="page-header-content-inner">
                       <div class="page-header-content">
-                          <h2>LAB :: Professor</h2>
-                          <p>Businex always try to provide the best Business Solutions for Clinets
-                              to grow up their Business very sharply and smoothly.</p>
+                          <h2>Advanced Radar Tech. Lab<br></h2>
+                          <p style="max-width:100%;">Home / Professor</p>
                       </div>
                   </div>
               </div>
           </div>
+        </div>
       </div>
-    </div>
   </div>
     <!--== End Page Header Area ==-->
 

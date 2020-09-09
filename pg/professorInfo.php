@@ -24,9 +24,8 @@
               <div class="col-lg-10 col-xl-8 m-auto text-center">
                   <div class="page-header-content-inner">
                       <div class="page-header-content">
-                          <h2>LAB :: Research</h2>
-                          <p>Businex always try to provide the best Business Solutions for Clinets
-                              to grow up their Business very sharply and smoothly.</p>
+                          <h2>Advanced Radar Tech. Lab<br></h2>
+                          <p style="max-width:100%;">Home / Professor / Professor Detail</p>
                       </div>
                   </div>
               </div>
@@ -324,7 +323,7 @@
     </aside>
 		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/pg/include/include_js.php'?>
 
-    
+
     <script>
     // 클립보드에 글자를 복사한다.
     function is_ie() {

@@ -15,28 +15,6 @@
   		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/header.php'?>
 	</header>
 
-  <!--== Start Page Header Area ==-->
-  <div class="page-header-area">
-    <div class="page-header-area bg-img" data-bg="<?php $_SERVER['DOCUMENT_ROOT']?>/image/main01.jpg" style="position:absolute;"></div>
-    <div class="page-header-area bg-img" style="position:absolute; background:#080b1a; opacity: 0.7;">
-      <div class="container" >
-          <div class="row">
-              <div class="col-lg-10 col-xl-8 m-auto text-center">
-                  <div class="page-header-content-inner">
-                      <div class="page-header-content">
-                          <h2>LAB :: Projects</h2>
-                          <p>Businex always try to provide the best Business Solutions for Clinets
-                              to grow up their Business very sharply and smoothly.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </div>
-  </div>
-    <!--== End Page Header Area ==-->
-
-
     <!--== Start Blog Page Area Wrapper ==-->
     <div class="blog-page-content-area sp-y" style="margin-top:100px;">
         <div class="container">
@@ -58,7 +36,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
-                                        <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectInfo.php"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-01.jpg" alt="Businex-Blog" /></a>
+                                        <a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-01.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Automotive Radar</a></h2>
@@ -75,7 +53,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
-                                        <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectInfo.php"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-02.jpg" alt="Businex-Blog" /></a>
+                                        <a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-02.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Vital Radar</a></h2>
@@ -92,7 +70,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
-                                        <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectInfo.php"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-03.jpg" alt="Businex-Blog" /></a>
+                                        <a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-03.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Air-Born Radar</a></h2>
@@ -109,7 +87,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
-                                        <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectInfo.php"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-04.jpg" alt="Businex-Blog" /></a>
+                                        <a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-04.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Sports and Leisure Radar</a></h2>
@@ -126,7 +104,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
-                                        <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectInfo.php"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-05.jpg" alt="Businex-Blog" /></a>
+                                        <a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-05.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Defense Radar</a></h2>
@@ -143,7 +121,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
-                                        <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectInfo.php"><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-06.jpg" alt="Businex-Blog" /></a>
+                                        <a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-06.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Radar for Smart Lighting</a></h2>
@@ -187,7 +165,7 @@
         </div>
     </aside>
 		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/pg/include/include_js.php'?>
-    
+
     <script>
     </script>
 </body>

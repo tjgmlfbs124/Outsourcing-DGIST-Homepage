@@ -24,9 +24,8 @@
               <div class="col-lg-10 col-xl-8 m-auto text-center">
                   <div class="page-header-content-inner">
                       <div class="page-header-content">
-                          <h2>LAB :: Notice</h2>
-                          <p>Businex always try to provide the best Business Solutions for Clinets
-                              to grow up their Business very sharply and smoothly.</p>
+                          <h2>Advanced Radar Tech. Lab<br></h2>
+                          <p style="max-width:100%;">Home / Notice</p>
                       </div>
                   </div>
               </div>
@@ -88,7 +87,7 @@
     </aside>
 		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/pg/include/include_js.php'?>
 
-    
+
     <script>
       function highlightPageIndex(){
         $("#pg-index-<?php echo $_GET['page']-1 ?>").css("color","#3c3c3c");
