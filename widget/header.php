@@ -17,7 +17,7 @@
                     <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/artlab.php">ART Lab+</a> </li>
 
                     <li class="has-submenu">
-                      <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/professorList.php">People</a>
+                      <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/professorList.php?cat=professor">People</a>
                       <ul class="submenu-nav">
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/professorList.php?cat=professor">professor</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/teamList.php?po=researcher">researcher</a></li>
