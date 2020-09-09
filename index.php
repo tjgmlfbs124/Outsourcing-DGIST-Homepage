@@ -74,7 +74,7 @@
                         </div>
 
                             <!-- LAYER NR. 3 -->
-                        <div class="tp-caption Button-Outline-Secondary rev-btn" id="slide-27-layer-11" data-x="['left','left','left','left']" data-hoffset="['135','135','45','40']"
+                        <div onclick="location.href='/pg/artlab.php'"class="tp-caption Button-Outline-Secondary rev-btn" id="slide-27-layer-11" data-x="['left','left','left','left']" data-hoffset="['135','135','45','40']"
                             data-y="['top','top','top','top']" data-voffset="['490','470','490','465']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
                             data-responsive_offset="on" data-responsive="off"
                             data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]'
@@ -100,7 +100,7 @@
                             </div>
 
                             <!-- LAYER NR. 6 -->
-                            <div class="tp-caption Button-Outline-Secondary rev-btn" data-x="['left','left','left','left']" data-hoffset="['135','135','45','40']" data-y="['top','top','top','top']" data-voffset="['490','470','490','465']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">연구소개 바로가기
+                            <div onclick="location.href='/pg/project.php'" class="tp-caption Button-Outline-Secondary rev-btn" data-x="['left','left','left','left']" data-hoffset="['135','135','45','40']" data-y="['top','top','top','top']" data-voffset="['490','470','490','465']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">연구소개 바로가기
                             </div>
                     </li>
                 </ul>
@@ -130,7 +130,7 @@
                 <div class="row mtn-30">
                     <div class="col-sm-6 col-lg-4" >
                         <!-- Start Service Item -->
-                        <div class="service-item" onclick="location.href='#'" style="cursor:pointer;">
+                        <div class="service-item" onclick="location.href='https://www.dgist.ac.kr/gadm/html/sub02/020101.html'" target="_blank" style="cursor:pointer;">
                             <figure class="service-thumb" >
                                 <img src="image/menu16-02.jpg" alt="Businex-Service"/>
                                 <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0.5);">
@@ -160,7 +160,7 @@
 
                     <div class="col-sm-6 col-lg-4">
                         <!-- Start Service Item -->
-                        <div class="service-item" onclick="location.href='pg/research.php'" style="cursor:pointer;">
+                        <div class="service-item" onclick="location.href='pg/projectList.php'" style="cursor:pointer;">
                             <figure class="service-thumb">
                                 <img src="image/menu14-02.jpg" alt="Businex-Service" />
                                 <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0.5);">
