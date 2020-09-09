@@ -109,6 +109,7 @@ class getForm{
 						(SELECT @ROWNUM := 0) R
 					WHERE
 						category=\"$category\"
+					ORDER BY id DESC
 				)AS A
 				WHERE ROWNUM BETWEEN ((10*$page)-10) AND (10*$page);
 			");
