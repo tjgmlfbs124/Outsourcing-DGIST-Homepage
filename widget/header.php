@@ -30,20 +30,15 @@
                       <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/research.php">Research</a>
                       <ul class="submenu-nav">
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal&page=1">paper</a></li>
-                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">patent</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=patents&page=1">patent</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">technology Transfer</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectList.php">project</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">interest</a></li>
                       </ul>
                     </li>
 
-                    <li class="has-submenu">
+                    <li>
                       <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/noticeList.php?page=1">notice</a>
-                      <ul class="submenu-nav">
-                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/noticeList.php?page=1">notice</a></li>
-                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">news</a></li>
-                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">update</a></li>
-                      </ul>
                     </li>
                 </ul>
             </div>
