@@ -56,26 +56,37 @@
                         <!-- LAYERS -->
 
                         <!-- LAYER NR. 1 -->
-                        <div class="tp-caption tp-resizeme slide-heading" data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']" data-y="['top','top','top','top']"
-                              data-voffset="['250','204','200','201']" data-fontsize="['60','60','50','30']" data-fontweight="['600']" data-lineheight="['70','70','60','40']"
+                        <div class="tp-caption tp-resizeme slide-heading"
+                              data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']"
+                              data-y="['top','top','top','top']" data-voffset="['150','204','200','201']"
+                              data-fontsize="['60','60','50','30']"
+                              data-fontweight="['600']" data-lineheight="['70','70','60','40']"
                               data-width="['650','650','600','320']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on"
                               data-frames='[{"delay":10,"split":"lines","splitdelay":0.1,"speed":600,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
                               data-textAlign="['left']">
-                            <strong style="color:#fff;">DGIST<br>RADAR LABS</strong>
+                            <strong style="color:#fff;">DGIST<br><a style="font-size:40px;">Advanced Radar Tech. Lab</a></strong>
                         </div>
 
                             <!-- LAYER NR. 2 -->
-                        <div class="tp-caption tp-resizeme slide-txt" data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']" data-y="['top','top','top','top']" data-voffset="['400','370','370','300']"
+                        <div class="tp-caption tp-resizeme slide-txt"
+                              data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']"
+                              data-y="['top','top','top','top']" data-voffset="['350','370','370','300']"
                               data-fontsize="['16','20','20','20']" data-fontweight="['400','400','400','400']" data-width="['600','600','600','320']" data-height="none" data-whitespace="normal"
                               data-visibility="['on','on','on','on']" data-type="text" data-responsive_offset="on"
                               data-frames='[{"delay":360,"split":"lines","splitdelay":0.1,"speed":500,"split_direction":"forward","frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                               data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-                            <span style="color:#fff;">We lead the development of convergence technologies that can create innovative values in the automotive industry.</span>
+                            <p style="color:#fff;">DGIST ART lab. aims to transform digital and intelligent radar <br>research into innovative commercial and defens e technologies<br><br>
+
+                              We shall shape a new world through the innovative development of breakthrough digital
+                              radar techniques.
+                              </p>
                         </div>
 
                             <!-- LAYER NR. 3 -->
-                        <div onclick="location.href='/pg/artlab.php'"class="tp-caption Button-Outline-Secondary rev-btn" id="slide-27-layer-11" data-x="['left','left','left','left']" data-hoffset="['135','135','45','40']"
-                            data-y="['top','top','top','top']" data-voffset="['490','470','490','465']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
+                        <div  onclick="location.href='/pg/artlab.php'"class="tp-caption Button-Outline-Secondary rev-btn" id="slide-27-layer-11"
+                            data-x="['left','left','left','left']" data-hoffset="['135','135','45','40']"
+                            data-y="['top','top','top','top']" data-voffset="['540','470','490','465']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
                             data-responsive_offset="on" data-responsive="off"
                             data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]'
                             data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">학과소개 바로가기
@@ -90,7 +101,7 @@
                         <!-- LAYER NR. 4 -->
                         <div class="tp-caption tp-resizeme slide-heading" data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']" data-y="['top','top','top','top']" data-voffset="['250','204','200','201']" data-fontsize="['60','60','50','30']" data-fontweight="['600']" data-lineheight="['70','70','60','40']" data-width="['650','650','600','320']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"split":"chars","splitdelay":0.1,"speed":1000,"split_direction":"forward","frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' data-textAlign="['left']">
 
-                          <strong style="color:#fff;">DGIST<br>RADAR LABS</strong>
+                          <strong style="color:#fff;">DGIST<br><a style="font-size:40px;">Advanced Radar Tech. Lab</a></strong>
                           </div>
 
                             <!-- LAYER NR. 5 -->
