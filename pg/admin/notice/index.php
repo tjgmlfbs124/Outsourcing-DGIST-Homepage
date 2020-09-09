@@ -51,7 +51,7 @@
                           <h3 class="sidebar-title">NOTICE LIST</h3>
                           <div class="sidebar-body">
                               <ul class="sidebar-list">
-                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/notice/index.php?cat=notice&page1">NOTICE</a></li>
+                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/notice/index.php?cat=notice&page=1">NOTICE</a></li>
                                   <li><a href="#">UPDATE</a></li>
                                   <li><a href="#">NEWS</a></li>
                               </ul>
