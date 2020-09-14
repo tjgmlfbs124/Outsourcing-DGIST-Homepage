@@ -8,9 +8,7 @@
 <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/plugins/counterup.min.js"></script>
 <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/plugins/instafeed.min.js"></script>
 <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/plugins/jquery.appear.js"></script>
-<script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/plugins/jquery.slicknav.min.js"></script>
 <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/plugins/parallax.min.js"></script>
-<script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/plugins/slick.min.js"></script>
 <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/plugins/magnific-popup.min.js"></script>
 
 <!--=== Active Js ===-->

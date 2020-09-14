@@ -117,27 +117,6 @@
                               </div>
                           </div>
                       </div>
-                      <!-- End Single Sidebar Wrap -->
-
-                      <!-- Start Single Sidebar Wrap -->
-                      <div class="single-sidebar-item-wrap">
-                        <div class="service-item" onclick="location.href='<?php $_SERVER['DOCUMENT_ROOT']?>/pg/research.php'" style="cursor:pointer;">
-                            <figure class="service-thumb">
-                                <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/paper-05.jpg" alt="Businex-Service" />
-                                <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0);">
-                                    <div class="service-content-inner" >
-                                        <h3 style="color:#1b2e67;">
-                                          <strong>연구분야<br></strong>
-                                          <h4 style="color:#1b2e67;">
-                                            <strong>한눈에보기</strong>
-                                          </h4>
-                                        </h3>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                      </div>
-                      <!-- End Single Sidebar Wrap -->
                   </aside>
               </div>
           </div>

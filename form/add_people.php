@@ -52,7 +52,7 @@
 
   $kr_name = $_POST['kr_name'];
   $en_name = $_POST['en_name'];
-  $position = $_POST['position'];
+  $position = strtolower($_POST['position']);
   $phone = $_POST['phone'];
   $email = $_POST['email'];
 

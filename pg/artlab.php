@@ -13,12 +13,32 @@
 	<header class="header-area">
   		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/header.php'?>
 	</header>
+    <!--== Start Page Header Area ==-->
+    <div class="page-header-area">
+      <div class="page-header-area bg-img" data-bg="<?php $_SERVER['DOCUMENT_ROOT']?>/image/main01.jpg" style="position:absolute;"></div>
+      <div class="page-header-area bg-img" style="position:absolute; background:#080b1a; opacity: 0.7;">
+        <div class="container" >
+            <div class="row">
+                <div class="col-lg-10 col-xl-8 m-auto text-center">
+                    <div class="page-header-content-inner">
+                        <div class="page-header-content">
+                            <h2>ART LAB</h2>
+                            <p style="max-width:100%;">Advanced Radar Tech. Lab</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+      <!--== End Page Header Area ==-->
 
-    <div class="blog-details-page-content sp-y" style="margin-top:100px;">
+    <div class="blog-details-page-content sp-y" style="margin-top:40px;">
       <div class="container" style="padding-bottom:40px;">
           <div class="row align-items-lg-stretch" style="align-items:stretch;">
               <div class="col-lg-10">
                 <div class="service-details-info">
+
                   <div class="about-service mt-50 mt-sm-35" style="margin:0;">
                     <h4>Mission Statements</h4>
                     <p>We shall focus on making deep research on.</p>
@@ -31,38 +51,37 @@
                     </ul>
                   </div>
 
+                  <div class="about-service mt-50 mt-sm-35" style="margin-top:60px;">
+                    <h4>Graduate Student Assistantship Opening</h4>
+                    <p>The Department of Interdisplinary Engineering of DGIST has an opening for the 2021 spring semester graduate student assistantship
+                      with the following research focus area (Advisor: Prof. Jonghun Leen, Email: jhlee@dgist.ac.kr):</p>
+                      <p>1) radar processing (Deep/Mahcine Learning), 2) Automotive radar, 3) Vital Radar, 4) Sensor Fusion </p>
 
-                    <div class="about-service mt-50 mt-sm-35">
-                      <h4>Graduate Student Assistantship Opening</h4>
-                      <p>The Department of Interdisplinary Engineering of DGIST has an opening for the 2021 spring semester graduate student assistantship
-                        with the following research focus area (Advisor: Prof. Jonghun Leen, Email: jhlee@dgist.ac.kr):</p>
-                        <p>1) radar processing (Deep/Mahcine Learning), 2) Automotive radar, 3) Vital Radar, 4) Sensor Fusion </p>
-
-                        <p>To qualify for this highly competitive scholarship, applicants must meet the following requirements: </p>
-                      <ul class="service-feature">
-                          <li>Hold a bachelor’s or master’s degree as of March 1st, 2021</li>
-                          <li>For master’s program (or Integrated Master’s & Doctoral program): students should hold a bachelor’s degree or a diploma that is equivalent to or higher than bachelor’s degree</li>
-                          <li>For doctoral program: students should hold a master’s degree or a diploma that is equivalent to or higher than master’s degree</li>
-                          <li>Important requirements: Official english score should be over 80 in TOEFL or 6.0 in IELTS</li>
-                          <li>main research interests: Vehicle radar, biological radar, aviation and security radar, radar detection/identification and recognition technology, defense unmanned radar</li>
-                      </ul>
-                      <p><br></p>
-                      <p>Listed below are some features of this research assistantship and the expected benefits of the program for successful applicants: </p>
-                      <ul class="service-feature">
-                          <li>Monthly allowance of at least 1,200,000 won(KRW) for PHD student and 800,000 won for master student</li>
-                          <li>Tuition fees for study period</li>
-                          <li>Extra allowances based on research performance</li>
-                      </ul>
-                      <p><br></p>
+                      <p>To qualify for this highly competitive scholarship, applicants must meet the following requirements: </p>
+                    <ul class="service-feature">
+                        <li>Hold a bachelor’s or master’s degree as of March 1st, 2021</li>
+                        <li>For master’s program (or Integrated Master’s & Doctoral program): students should hold a bachelor’s degree or a diploma that is equivalent to or higher than bachelor’s degree</li>
+                        <li>For doctoral program: students should hold a master’s degree or a diploma that is equivalent to or higher than master’s degree</li>
+                        <li>Important requirements: Official english score should be over 80 in TOEFL or 6.0 in IELTS</li>
+                        <li>main research interests: Vehicle radar, biological radar, aviation and security radar, radar detection/identification and recognition technology, defense unmanned radar</li>
+                    </ul>
+                    <p><br></p>
+                    <p>Listed below are some features of this research assistantship and the expected benefits of the program for successful applicants: </p>
+                    <ul class="service-feature">
+                        <li>Monthly allowance of at least 1,200,000 won(KRW) for PHD student and 800,000 won for master student</li>
+                        <li>Tuition fees for study period</li>
+                        <li>Extra allowances based on research performance</li>
+                    </ul>
+                    <p><br></p>
                     <p>Application procedure: <br> Interested applicants should send the following things to the above advisor email address:</p>
-                  <ul class="service-feature">
-                    <li>Study plan (clearly stating the research topics you are interested in)</li>
-                    <li>Academic transcripts</li>
-                    <li>Brief summary of most recent thesis and the status (eg accepted, in progress, submitted, etc)</li>
-                    <li>CV (to include names, education, work experience, publications)</li>
-                    <li>Copy of official English score (TOEFL or IELTS score should be submitted)</li>
-                  </ul>
-                    </div>
+                    <ul class="service-feature">
+                      <li>Study plan (clearly stating the research topics you are interested in)</li>
+                      <li>Academic transcripts</li>
+                      <li>Brief summary of most recent thesis and the status (eg accepted, in progress, submitted, etc)</li>
+                      <li>CV (to include names, education, work experience, publications)</li>
+                      <li>Copy of official English score (TOEFL or IELTS score should be submitted)</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
           </div>

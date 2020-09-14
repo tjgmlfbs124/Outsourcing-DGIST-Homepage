@@ -42,13 +42,13 @@
                 <div class="member-details-wrap">
                     <div class="member-details-top">
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-4">
                                 <div class="member-pic mb-sm-35">
                                     <img id="profile-img" src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/team-details.jpg" alt="Businex-Team"/>
                                 </div>
                             </div>
 
-                            <div class="col-md-7 ml-auto">
+                            <div class="col-md-8 ml-auto">
                                 <div class="member-desc">
                                     <h2 id="profile-name">Hong Gil Dong</h2>
                                     <h5 id="profile-position">Professor/Convergence Engineering</h5>

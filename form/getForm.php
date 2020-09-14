@@ -207,5 +207,18 @@ class getForm{
       echo $e;
     }
 	}
+
+	// id에 해당하는 notice 업데이트
+	function insert_notice($title, $content, $date, $cat){
+    try{
+			$pdo = $GLOBALS["pdo"];
+			$sql = "INSERT INTO notice_tb(title, content, date, writer) VALUES(\"$title\", \"$content\", \"$date\", \"운영자\")";
+			$stmt = $pdo->prepare($sql);
+      $stmt->execute();
+			renderView("추가되었습니다.", "/pg/admin/notice/index.php?cat=".$cat."&page=1");
+    }catch(Exception $e){
+      echo $e;
+    }
+	}
 }
 ?>

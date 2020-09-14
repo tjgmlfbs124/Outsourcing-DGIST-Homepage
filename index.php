@@ -52,7 +52,7 @@
                     <li data-index="rs-27" data-transition="random-premium" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default"
                         data-easeout="default" data-masterspeed="default" data-thumb="assets/img/slider/01_thumb.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide">
                         <!-- MAIN IMAGE -->
-                        <img src="/image/main08.jpg" alt="Businex" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="15" class="rev-slidebg" data-no-retina>
+                        <img src="/image/main14-01.jpg" alt="Businex" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="15" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
 
                         <!-- LAYER NR. 1 -->
@@ -189,11 +189,79 @@
             </div>
         </div>
     </div>
-    <!--== End Service Area Wrapper ==-->
+    <div class="brand-logo-area sm-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                  <div class="brand-logo-content slick-row-20">
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-01.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-02.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-03.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-04.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-05.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-06.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-07.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-08.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-09.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-10.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-11.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-12.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-13.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-14.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-15.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-16.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-17.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-18.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-19.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-20.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-21.jpg" alt="Businex-Logo" height="25px;"/></a></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
   	<footer class="footer-area sp-y">
-  			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
+      <div class="footer-widget-area sm-top-wt" style="padding-bottom:30px; margin-top:70px">
+        <div class="container">
+            <div class="row mtn-40">
+                <div class="col-lg-3" style="font-size:20px; text-align:center;">
+                  <div class="copyright-txt">
+                      <p style="margin:0; color:#555;">Advanced Radar Tech. Lab</p>
+                  </div>
+                </div>
+
+                <div class="col-lg-4" style="font-size:12px; text-align:center;">
+                  <div class="copyright-txt">
+                    <p style="margin:0; color:#555;">(우)42988 대구광역시 달성군 현풍읍 테크노중앙대로 333</p>
+                    <p style="margin:0; color:#555;">COPYRIGHT(C) DGIST. ALL RIGHTS RESERVED.</p>
+                  </div>
+                </div>
+
+                <div class="col-lg-2" style="font-size:12px; text-align:center;">
+                  <div class="copyright-txt">
+                    <p style="margin:0; color:#555;">Tel : 054-123-1234</p>
+                    <p style="margin:0; color:#555;">Fax : 053-123-1324</p>
+                  </div>
+                </div>
+
+                <div class="col-lg-3" style="font-size:12px; text-align:center;">
+                  <div class="copyright-txt">
+                      <p style="margin:0; color:#555; float:left;">관련 학부</p>
+                      <select style="margin-left:30px; color:#555; float:left;" onchange="if(this.value) window.open(this.value);">
+                        <option value="https://www.dgist.ac.kr/kr/">DGIST</option>
+                        <option value="/">대학원</option>
+                        <option value="https://interdisciplinary.dgist.ac.kr/">융합전공</option>
+                        <option value="/">융합연구원</option>
+                        <option value="https://www.dgist.ac.kr/kr/html/sub01/010402.html?mode=SH&skey=post_dvs_nm&sval=%EB%AF%B8%EB%9E%98%EC%9E%90%EB%8F%99%EC%B0%A8%EC%97%B0%EA%B5%AC%EB%B6%80">미래자동차연구부</option>
+                      </select>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
   	</footer>
 
     <!-- Scroll Top Button -->

@@ -37,7 +37,7 @@
 
 
   <!--== Start Blog Details Page Content ==-->
-  <div class="blog-details-page-content sp-y"  style="margin-top:100px;">
+  <div class="blog-details-page-content sp-y"  style="margin:100px 0px 200px 0px;">
       <div class="container">
           <div class="row">
               <div class="col-lg-12">

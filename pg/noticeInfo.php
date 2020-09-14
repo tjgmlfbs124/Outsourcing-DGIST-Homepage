@@ -48,7 +48,7 @@
                                 <h5 id="notice-date" style="float:right;"></h5>
                               </div>
 
-                              <div class="about-service mt-50 mt-sm-35" style="margin-top:100px; margin-bottom:300px;">
+                              <div class="about-service mt-50 mt-sm-35" style="margin-top:100px; ">
                                   <p id="notice-content"></p>
 
                               </div>
@@ -61,7 +61,7 @@
     </div >
     <!--== End Page Content Area Wrapper ==-->
 
-  	<footer class="footer-area sp-y">
+  	<footer class="footer-area sp-y" >
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   	</footer>
 
@@ -91,6 +91,10 @@
         return date.split(" ")[0];
       }
 
+      function lineBreaker(str){
+        return str.replace(/<br>/g, "<br>");
+      }
+
       <?php
         require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
         $api = new getForm();
@@ -98,7 +102,8 @@
         while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
           $("#notice-title").text("<?php echo $row['title'] ?>");
           $("#notice-date").text("<?php echo $row['date'] ?>");
-          $("#notice-content").text("<?php echo $row['content'] ?>");
+          console.log("content : " , lineBreaker("<?php echo $row['content'] ?>"))
+          $("#notice-content").html(lineBreaker("<?php echo $row['content'] ?>"));
         <?php }
 
       ?>

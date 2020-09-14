@@ -19,6 +19,12 @@
       <div class="container">
           <div class="row">
               <div class="col-lg-9">
+                  <article id="input-form"class="blog-post-details">
+                    <div class="form-input-item" style="float:right;">
+                        <button class="btn-submit" onclick="location.href='<?php $_SERVER['DOCUMENT_ROOT']?>/pg/admin/notice/notice_input_form.php?cat=<?php echo $_GET['cat'] ?>'">ADD</button>
+                    </div>
+                  </article>
+
                   <article class="blog-post-details">
                       <div class="blog-post-txt">
                         <div class="member-desc">
@@ -36,7 +42,7 @@
                           <li class="next" onclick="movePage('next')"><a style="visibility:hidden;">Next <i class="fa fa-long-arrow-right"></i></a></li>
                       </ul>
                   </div>
-                  <div class="col-lg-15">
+                  <div class="col-lg-9">
                       <article id="input-form"class="blog-post-details">
 
 
@@ -109,11 +115,6 @@
       </div>
   </div>
   <!--== End Blog Details Page Content ==-->
-
-  	<footer class="footer-area sp-y">
-  			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
-  	</footer>
-
 
     <!-- Start Off Canvas Menu Wrapper -->
     <aside class="off-canvas-wrapper off-canvas-menu">

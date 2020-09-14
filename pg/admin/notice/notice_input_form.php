@@ -16,7 +16,7 @@
 
   <!--== Start Blog Details Page Content ==-->
   <div class="blog-details-page-content sp-y"  style="margin-top:100px;">
-      <div class="container">
+      <div class="container" >
           <div class="row">
               <div class="col-lg-9">
                   <article class="blog-post-details">
@@ -51,9 +51,37 @@
                                 <div class="col-md-4">
                                   날짜
                                   <div class="single-input-item">
-                                      <input name="date" type="text" required disabled/>
+                                      <input name="date" type="text" readonly />
                                   </div>
                                 </div>
+                                <!-- <div class="col-md-12">
+                                  이미지
+                                  <div class="single-input-item">
+                                    <div class="col-lg-4"  style="float:left;">
+                                        <div class="service-item" onclick="location.href='https://www.dgist.ac.kr/gadm/html/sub02/020101.html'" target="_blank" style="cursor:pointer;">
+                                            <figure class="service-thumb">
+                                                <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/menu16-02.jpg" alt="Businex-Service">
+                                            </figure>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4"  style="float:left;">
+                                        <div class="service-item" onclick="location.href='pg/artlab.php'" style="cursor:pointer;">
+                                            <figure class="service-thumb">
+                                                <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/menu15-01.jpg" alt="Businex-Service">
+                                            </figure>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4"  style="float:left;">
+                                      <div class="service-item" onclick="location.href='pg/projectList.php'" style="cursor:pointer;">
+                                          <figure class="service-thumb">
+                                              <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/menu14-02.jpg" alt="Businex-Service">
+                                          </figure>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div> -->
                               <div class="col-md-12">
                                 내용
                                 <div class="single-input-item">
@@ -62,8 +90,8 @@
                               </div>
                             </div>
                             <div class="row">
-                            <button class="btn btn-outline w-100"><a>UPDATE</a></button>
-                            <input type="submit" id="btnOk" value="확인" class="btn btn-outline-secondary" style="visibility:hidden;" />
+                            <button id="btnOk" class="btn btn-outline w-100"><a>UPDATE</a></button>
+                            <!-- <input type="submit"  value="확인" class="btn btn-outline-secondary" style="visibility:hidden;" /> -->
                           </div>
                         </form>
 
@@ -137,7 +165,7 @@
   </div>
   <!--== End Blog Details Page Content ==-->
 
-  	<footer class="footer-area sp-y">
+  	<footer class="footer-area sp-y" >
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   	</footer>
 
@@ -167,16 +195,30 @@
         return date.split(" ")[0];
       }
 
+      function lineBreaker(str){
+        return str.replace(/<br>/g, "\n");
+      }
+
       <?php
         require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
         $api = new getForm();
-        $result = $api -> select_notice($_GET['no']);
-        while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
-          $("form").attr("action","/form/update_notice.php?cat=<?php echo $_GET['cat']?>&id=<?php echo $row['id'] ?>");
-          $("input[name=title]").val("<?php echo $row['title'] ?>");
-          $("input[name=date]").val("<?php echo $row['date'] ?>");
-          $("textarea[name=content]").val("<?php echo $row['content'] ?>");
-        <?php }
+
+        // 공지목록을 클릭했다면
+        if(isset($_GET['no'])){
+          $result = $api -> select_notice($_GET['no']);
+          while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
+            $("form").attr("action","/form/update_notice.php?cat=<?php echo $_GET['cat']?>&id=<?php echo $row['id'] ?>");
+            $("input[name=title]").val("<?php echo $row['title'] ?>");
+            $("input[name=date]").val("<?php echo $row['date'] ?>");
+            $("textarea[name=content]").val(lineBreaker("<?php echo $row['content'] ?>"));
+          <?php }
+        }
+        else{  ?>
+          $("#btnOk").text("SUBMIT");
+          $("form").attr("action","/form/add_notice.php?cat=<?php echo $_GET['cat'] ?>");
+          $("input[name=date]").val("<?php echo date("Y-m-d H:i:s") ?>");
+        <?php
+        }
 
       ?>
     </script>
