@@ -48,7 +48,7 @@
     <script>
       function addCompany(){
         return ""+
-        "<div class=\"col-md-6 col-lg-3\">"+
+        "<div class=\"col-md-6 col-lg-4\">"+
           "<div class=\"blog-item\" style=\"border:1px solid #ccc; padding:10px; background-color:#fff;\">"+
             "<figure class=\"blog-thumb\" style=\" text-align:center;\">"+
               "<a >"+

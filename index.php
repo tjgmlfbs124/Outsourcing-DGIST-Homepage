@@ -248,6 +248,17 @@
     <!--=== REVOLUTION JS ===-->
     <script src="assets/js/revslider/rev-active.js"></script>
 
+    <script>
+    function popup(){
+      var url = "<?php $_SERVER['DOCUMENT_ROOT']?>/pg/popup/notice.php";
+      var name = "popup test";
+      var option = "width = 600, height = 800, top = 100, left = 200, irectories=no,resizable=no,status=no,toolbar=no,menubar=no";
+      window.open(url, name, option);
+    }
+
+    popup();
+    </script>
+
 </body>
 
 </html>
