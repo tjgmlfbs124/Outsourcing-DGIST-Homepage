@@ -16,15 +16,14 @@
 	</header>
 
   <!--== Start Blog Details Page Content ==-->
-  <div class="blog-details-page-content sp-y"  style="margin-top:100px;">
+  <div class="blog-details-page-content sp-y"  style="margin-top:50px;">
       <div class="container">
           <div class="row">
               <div class="col-lg-9">
                   <article class="blog-post-details">
                       <div class="blog-post-txt">
                         <div class="member-desc">
-                          <h2 id="profile-name">PAPER</h2>
-                          <h5 id="profile-position"></h5>
+                          <h2 id="profile-position"></h2>
                         </div>
                         <ul id="paper-list">
                         </ul>
@@ -124,9 +123,9 @@
   </div>
   <!--== End Blog Details Page Content ==-->
 
-  	<footer class="footer-area sp-y">
-  			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
-  	</footer>
+  <footer class="footer-area sp-y" style="position:absolute; bottom:0; width:100%; height:63px; padding-top:30px;">
+      <?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
+  </footer>
 
 
     <!-- Start Off Canvas Menu Wrapper -->
@@ -180,6 +179,9 @@
           case "books" :
             cat = "Books";
             break;
+          case "patents" :
+            cat = "Patents";
+            break;
         }
         $("#profile-position").text(cat);
       }
@@ -197,7 +199,7 @@
         <?php }
 
         // page index 생성
-        for($idx=1; $idx<=$pages['CNT'] / 10; $idx++){ ?>
+        for($idx=1; $idx<=$pages['CNT'] / 7; $idx++){ ?>
           $("#page-list > .next").before("<li><a id=\"pg-index-<?php echo $idx?>\" href=\"<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=<?php echo $_GET['cat']?>&page=<?php echo $idx?>\" style=\"color:#a0a0a0\"><?php echo $idx?></a></li>");
           <?php
         }

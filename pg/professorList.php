@@ -24,7 +24,7 @@
               <div class="col-lg-10 col-xl-8 m-auto text-center">
                   <div class="page-header-content-inner">
                       <div class="page-header-content">
-                          <h2>Advanced Radar Tech. Lab<br></h2>
+                          <h2>DGIST ART LAB<br></h2>
                           <p style="max-width:100%;">Home / Professor</p>
                       </div>
                   </div>
@@ -57,7 +57,7 @@
     </div>
     <!--== End Blog Details Page Content ==-->
 
-  	<footer class="footer-area sp-y" style="margin-top:200px;">
+    <footer class="footer-area sp-y" style="position:absolute; bottom:0; width:100%; height:63px; padding-top:30px;">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   	</footer>
 
@@ -176,8 +176,8 @@
         $("#list-<?php echo $row['id']?>").append("<div class=\"comments-info\"></div>");
         $("#list-<?php echo $row['id']?> > .comments-info").append(
           "<p class=\"m-0\" onclick=\"location.href='/pg/professorInfo.php?pos=professor&id=<?php echo $row['id']?>'\">" +
-          "<div class=\"member-desc\"><h2 style=\"font-size:20px;\"><?php echo $row['en_name'] ?></h2><h5><?php echo $row['kr_name'] ?></h5></div>" +
-          "position : <?php echo $row['position'] ?> <br>" +
+          "<div class=\"member-desc\"><h2 style=\"font-size:20px;\"><?php echo $row['en_name'] ?> &nbsp <a>Ph.D</a></h2><h5><?php echo $row['kr_name'] ?></h5></div>" +
+          "Position : <?php echo $row['position'] ?> <br>" +
           "Address : <?php echo $row['address'] ?> <br>" +
           "Phone : <?php echo $row['phone'] ?> <br>" +
           "Fax : <?php echo $row['fax'] ?> <br>" +

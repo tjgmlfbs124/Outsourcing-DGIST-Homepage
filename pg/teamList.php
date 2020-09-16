@@ -23,7 +23,7 @@
               <div class="col-lg-10 col-xl-8 m-auto text-center">
                   <div class="page-header-content-inner">
                       <div class="page-header-content">
-                          <h2>Advanced Radar Tech. Lab<br></h2>
+                          <h2>DGIST ART LAB<br></h2>
                           <p id="path" style="max-width:100%;">Home / Professor</p>
                       </div>
                   </div>
@@ -44,7 +44,7 @@
 
                       <div class="team-page-area-wrapper bg-offwhite sp-y sm-top">
                           <div class="container">
-                              <div id="team-list"class="row mtn-30">
+                              <div id="team-list"class="row mtn-30" style="background:#fff;">
 
                               </div>
                           </div>
@@ -57,7 +57,8 @@
     </div>
     <!--== End Blog Details Page Content ==-->
 
-  	<footer class="footer-area sp-y">
+
+  	<footer class="footer-area sp-y" style="position:absolute; bottom:0; width:100%; height:63px; padding-top:30px;">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   	</footer>
 
@@ -86,18 +87,63 @@
 </body>
 
 <script>
-  function addPerson(name, phone, email, image){
+  function addPerson(name, phone, email, image, position){
+    var tag = "";
+    switch (position) {
+      case "Student":
+        tag = "M.A";
+        break;
+      default:
+        tag = "";
+    }
     $("#team-list").append(""+
-    "<div class=\"col-sm-6 col-lg-3\">"+
-      "<div class=\"team-mem-item\">"+
+    "<div class=\"col-sm-6 col-lg-3\" style=\"background:#f8f9fc;\" >"+
+      "<div class=\"team-mem-item\" style=\"margin-bottom:30px;\">"+
         "<figure class=\"member-pic\">"+
           "<img src=\"<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile/"+image+".jpg\" alt=\"Team-Businex\" />"+
         "</figure>"+
-        "<div class=\"member-info\">"+
-          "<h5><a class=\"stretched-link\">"+name+"</a></h5><br>"+
-          "<span class=\"designation\" style=\"float:left;\">Position : <?php echo ucfirst($_GET['po'])?></span><br>"+
+        "<div class=\"member-info\" style=\"background:#f8f9fc;\">"+
+          "<h5><a class=\"stretched-link\">"+name+ " &nbsp" + tag + "</a></h5><br>"+
+          "<span class=\"designation\" style=\"float:left;\">Position : " + position + "</span><br>"+
           "<span class=\"designation\" style=\"float:left;\">Phone : "+phone+"</span><br>"+
           "<span class=\"designation\" style=\"float:left;\">Email : "+email+"</span><br>"+
+        "</div>"+
+      "</div>"+
+    "</div>");
+  }
+
+  function addAlumni(name, phone, email, image, position){
+    var tag = "";
+    switch (position) {
+      case "Student":
+        tag = "M.A";
+        break;
+      default:
+        tag = "";
+    }
+    $("#team-list").append(""+
+    "<div class=\"col-sm-6 col-lg-3\" style=\"background:#f8f9fc;\" >"+
+      "<div class=\"team-mem-item\" style=\"margin-bottom:30px;\">"+
+        "<div class=\"member-info\" style=\"background:#fff;\">"+
+          "<h5><a class=\"stretched-link\">"+name+ " &nbsp" + tag + "</a></h5><br>"+
+          "<span class=\"designation\" style=\"float:left;\">Position : " + position + "</span><br>"+
+          "<span class=\"designation\" style=\"float:left;\">Phone : "+phone+"</span><br>"+
+          "<span class=\"designation\" style=\"float:left;\">Email : "+email+"</span><br>"+
+        "</div>"+
+      "</div>"+
+    "</div>");
+  }
+
+  function addEmpty(){
+
+    $("#team-list").append(""+
+    "<div class=\"col-sm-6 col-lg-3\" background:#fff;>"+
+      "<div class=\"team-mem-item\" style=\"width:330px;\" background:#fff;>"+
+        "<div class=\"member-info\" style=\"width:330px; background:#fff;\">"+
+          "<h5><a class=\"stretched-link\"></a></h5><br>"+
+          "<span class=\"designation\" style=\"float:left;\"></span><br>"+
+          "<span class=\"designation\" style=\"float:left;\"></span><br>"+
+          "<span class=\"designation\" style=\"float:left;\"></span><br>"+
         "</div>"+
       "</div>"+
     "</div>");
@@ -114,17 +160,29 @@
     $api = new getForm();
     $result = $api -> select_peoples($_GET['po']);
       while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
-        console.log("<?php echo $row['en_name'] ?>")
-        addPerson(
-          "<?php echo $row['en_name'] ?>",
-          "<?php echo $row['phone'] ?>",
-          "<?php echo $row['email'] ?>",
-          "<?php echo $row['image'] ?>"
-        )
+        if("<?php echo $row['category'] ?>" === "alumni"){
+          addAlumni(
+            "<?php echo $row['en_name'] ?>",
+            "<?php echo $row['phone'] ?>",
+            "<?php echo $row['email'] ?>",
+            "<?php echo $row['image'] ?>",
+            "<?php echo ucfirst($row['position']) ?>"
+          )
+        }
+        else{
+          addPerson(
+            "<?php echo $row['en_name'] ?>",
+            "<?php echo $row['phone'] ?>",
+            "<?php echo $row['email'] ?>",
+            "<?php echo $row['image'] ?>",
+            "<?php echo ucfirst($row['position']) ?>"
+          )
+        }
       <?php }
+
     if($result->rowCount() % 4 != 0){
       for($idx=0; $idx<(4-$result->rowCount()); $idx++){?>
-        addPerson("","","","empty")
+        addEmpty()
       <?php }
     }
 

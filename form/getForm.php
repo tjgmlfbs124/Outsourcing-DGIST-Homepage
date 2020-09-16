@@ -98,8 +98,10 @@ class getForm{
 	// Journel 검색
 	function select_papers($category, $page){
     try{
+			$min = (($page-1)*7) +1;
+			$max = 7*$page;
 			$pdo = $GLOBALS["pdo"];
-      $stmt = $pdo->prepare("
+			$sql = "
 				SELECT A.* FROM (
 					SELECT
 						@ROWNUM := @ROWNUM + 1 AS ROWNUM,
@@ -111,8 +113,9 @@ class getForm{
 						category=\"$category\"
 					ORDER BY id DESC
 				)AS A
-				WHERE ROWNUM BETWEEN ((10*$page)-10) AND (10*$page);
-			");
+				WHERE ROWNUM BETWEEN ".$min." AND ".$max.";
+			";
+      $stmt = $pdo->prepare($sql);
       $stmt->execute();
       return $stmt;
     }catch(Exception $e){
@@ -216,6 +219,23 @@ class getForm{
 			$stmt = $pdo->prepare($sql);
       $stmt->execute();
 			renderView("추가되었습니다.", "/pg/admin/notice/index.php?cat=".$cat."&page=1");
+    }catch(Exception $e){
+      echo $e;
+    }
+	}
+
+	// 교수 경력 조회
+	function select_biography($id){
+    try{
+			$pdo = $GLOBALS["pdo"];
+			$sql = "
+				SELECT * FROM biography_tb
+				WHERE professorid =".$id."
+				ORDER BY order_idx;
+				";
+			$stmt = $pdo->prepare($sql);
+      $stmt->execute();
+      return $stmt;
     }catch(Exception $e){
       echo $e;
     }

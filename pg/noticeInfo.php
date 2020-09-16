@@ -23,7 +23,7 @@
               <div class="col-lg-10 col-xl-8 m-auto text-center">
                   <div class="page-header-content-inner">
                       <div class="page-header-content">
-                          <h2>Advanced Radar Tech. Lab<br></h2>
+                          <h2>DGIST ART LAB<br></h2>
                           <p style="max-width:100%;">Home / Notice / Notice Detail</p>
                       </div>
                   </div>
@@ -37,7 +37,7 @@
 
     <!--== Start Page Content Area Wrapper ==-->
     <div class="page-content-wrapper" >
-        <div class="service-details-wrapper sm-top" >
+        <div class="service-details-wrapper sm-top" style="margin-top:50px;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-11">
@@ -61,7 +61,7 @@
     </div >
     <!--== End Page Content Area Wrapper ==-->
 
-  	<footer class="footer-area sp-y" >
+    <footer class="footer-area sp-y" style="margin-top:100px;width:100%; height:63px; padding-top:30px;">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   	</footer>
 

@@ -1,0 +1,109 @@
+1. 로고-> 영어로만 << 수정 >>
+  - 로봇팔 이미지-> 전파나 레이더와 관련된 이미지
+
+2. 관력학과 수정 (링크)
+  - DGIST (디지스트)
+  - 융합전공 (https://interdisciplinary.dgist.ac.kr/)
+  - 미래자동차연구부 (미래자동차연구부 링크로 )
+
+3. 학과 소개페이지 << 수정 >>
+  - 메인프레임 삭제
+  - Mission statemnt추가
+
+
+4. Footer 영역 << 수정 >>
+  - DGIST 미래자동차연구부 -> ArtLab으로 수정
+  - 관력학과 옵션종류 요청
+
+5. 연구원, 학생 명단 추가.  << 수정 >>
+
+6. paper, project 메인프레임 삭제, 보여지는 순 반대로 << 수정 >>
+
+7. patents 유지 << 수정 >>
+
+8. Technology => 자료받으면 그대로 입력 << 수정 >>
+
+9. interest 자료 받으면 추가
+
+10. 공지사항 내용 DB 넣기 << 보류 >>
+  - 사진과 글 같이 들어갈수 있게
+
+11. Notice의 News, Update 빼기 << 수정 >>
+
+12. 연구협력기관 추가 << 수정 >>
+  - 상단메뉴 RESEARCH의 맨 마지막에 추가.
+  - 회사의 로고를 찾아서, 이름과 로고(이름 없어도됨)
+
+13. Quantum radar 키워드로 이미지로 교체 << 수정 >>
+
+
+
+feedback
+
+1. footer에 들어가는 대학원, 융합전공, 융합연구원, 미래자동차 연구부의 연결 url 주소가 필요합니다.
+
+
+
+
+
+2차 수정사항
+1 대학원 입학안내 -> DGIST 대구경북과학기술원
+2. 학과소개문구 => 융합전공
+3. 협력기관 : Research 안에 협력기관만
+
+
+4 footer Advanced Radar Tech.lab => DGIST Art.Lab
+주소 R4 205호 추가
+053-
+
+
+5. footer 관련학부에서
+DGIST는 DGIST로
+대학원없애도됨
+융합연구원 => https://www.dgist.ac.kr/kr/html/sub03/030102.html 링크
+미래자동차연구부 => 비활성화
+
+6. 학생 . 손은강 학생만
+이름뒤에 M.A
+
+손성원 학생 => 손성원 연구원으로.
+김봉석 연구원은 시니어 리서쳐.
+
+
+이종훈교수님 프로필
+이름 :Jonghun Lee, Ph.D.
+포지션 : Department of Interdisciplinary Engineering
+School of graduate
+address : R4 205. DGIST
+
+
+김상동도 같이
+포지션 : 어시스턴트 프로페서
+address : R4 206. DGIST
+
+History는 biography 갱신.
+
+
+alumni => 사진삭제  한페이지
+
+paper => 한페이지로, Paper => papers
+
+patants = > 한페이지로, 프레임은 patent로
+
+technolgoy Transfer은 영어로만
+
+projects는 by~랑 날짜빼라
+air-born => air-borne로 수정
+defense rader => 흐릿하게
+마크랑 radar#1 흐릿하게
+
+Sprots and Leisure Radar = > Sports radar
+Radar for Smart Lighting => Smart Lighting Radar.
+
+Rearch > CV의 Interests 넣고,
+순서 반대로 넣기. 배경에 넣어도됨.
+
+
+공지사항 팝업이 있었으면 좋겠음.
+
+Research > 콜라보레이터추가해서 협력기관

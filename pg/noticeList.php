@@ -24,7 +24,7 @@
               <div class="col-lg-10 col-xl-8 m-auto text-center">
                   <div class="page-header-content-inner">
                       <div class="page-header-content">
-                          <h2>Advanced Radar Tech. Lab<br></h2>
+                          <h2>DGIST ART LAB<br></h2>
                           <p style="max-width:100%;">Home / Notice</p>
                       </div>
                   </div>
@@ -63,9 +63,9 @@
   </div>
   <!--== End Blog Details Page Content ==-->
 
-  	<footer class="footer-area sp-y">
-  			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
-  	</footer>
+  <footer class="footer-area sp-y" style="position:absolute; bottom:0; width:100%; height:63px; padding-top:30px;">
+      <?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
+  </footer>
 
 
     <!-- Start Off Canvas Menu Wrapper -->

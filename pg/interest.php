@@ -40,14 +40,16 @@
                 <div class="service-details-info">
 
                   <div class="about-service mt-50 mt-sm-35" style="margin:0;">
-                    <h4>Mission Statements</h4>
-                    <p>We shall focus on making deep research on</p>
+                    <h4>Research Interests</h4>
                     <ul class="service-feature">
-                        <li>unique, innovative and disruptive radar technology</li>
-                        <li>radar application technology that has great industrial impact and is tightly linked to regional strategic industries</li>
-                        <li>core breakthrough radar technology with significant depth, comprehensive academic achievements</li>
-                        <li>defense and security radar technology that reflects publicity and improves people's lives according to Korean national demands</li>
-                        <li>main research interests: Vehicle radar, biological radar, aviation and security radar, radar detection/identification and recognition technology, defense unmanned radar</li>
+                      <li>Radar Detection & Classification</li>
+                        <li>Radar System Design</li>
+                        <li>MIMO/Multi-channel Radar</li>
+                        <li>Multifunctional Radar(MFR)</li>
+                        <li>Multi-dimensional Imaging Radar</li>
+                        <li>Super-resolution radar algorithm</li>
+                        <li>Automatic Target Recognition</li>
+                        <li>Machine learning & Deep learning Radar</li>
                     </ul>
                   </div>
                 </div>

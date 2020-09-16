@@ -24,7 +24,7 @@
               <div class="col-lg-10 col-xl-8 m-auto text-center">
                   <div class="page-header-content-inner">
                       <div class="page-header-content">
-                          <h2>Advanced Radar Tech. Lab<br></h2>
+                          <h2>DGIST ART LAB<br></h2>
                           <p style="max-width:100%;">Home / Professor / Professor Detail</p>
                       </div>
                   </div>
@@ -64,54 +64,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="row">
-                            <div class="col-lg-15">
-                                <article class="blog-post-details">
-
-                                  <div class="team-page-area-wrapper bg-offwhite sp-y sm-top">
-                                      <div class="container">
-                                          <div class="row mtn-30">
-                                              <div class="col-sm-6 col-lg-3">
-                                                  <div class="team-mem-item">
-                                                      <figure class="member-pic">
-                                                          <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/01.jpg" alt="Team-Businex" />
-                                                      </figure>
-                                                  </div>
-                                              </div>
-
-                                              <div class="col-sm-6 col-lg-3">
-                                                  <div class="team-mem-item">
-                                                      <figure class="member-pic">
-                                                          <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/01.jpg" alt="Team-Businex" />
-                                                      </figure>
-                                                  </div>
-                                              </div>
-
-                                              <div class="col-sm-6 col-lg-3">
-                                                  <div class="team-mem-item">
-                                                      <figure class="member-pic">
-                                                          <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/01.jpg" alt="Team-Businex" />
-                                                      </figure>
-                                                  </div>
-                                              </div>
-
-                                              <div class="col-sm-6 col-lg-3">
-                                                  <div class="team-mem-item">
-                                                      <figure class="member-pic">
-                                                          <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/img/team/01.jpg" alt="Team-Businex" />
-                                                      </figure>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                </article>
-                            </div>
-
-                        </div>-->
                     </div>
 
-                    <div class="member-details-bottom sm-top-wt">
+                    <div class="member-details-bottom sm-top-wt" style="margin-top:50px;">
                         <div class="row mtn-50">
                             <div class="col-xl-6 m-auto text-center">
                                 <div class="member-education mem-achieve-item">
@@ -120,110 +75,8 @@
                             </div>
                             <div class="col-12">
                                 <div class="cd-timeline-wrap">
-                                    <div class="cd-timeline">
-                                        <!-- Start Education Item #01 -->
-                                        <div class="cd-timeline-block">
-                                            <div class="cd-timeline-img">
-                                                <span class="dot"></span>
-                                            </div>
-
-                                            <div class="cd-timeline-content">
-                                                <div class="cd-heading">
-                                                    <h2>B.S., Department of Electronic Engineering </h2>
-                                                    <p>1996 | <span>Sungkyunkwan University</span></p>
-                                                </div>
-                                                <p class="cd-description">Businex boluptatum deleniti atque corrupti
-                                                    quosres et quas molestias cepturi sint eca itate non vident, similique
-                                                    suntculpa modi tempora incidunt ut labore et dolor am aera boluptatum
-                                                    deleniti corrupti.</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Start Education Item #02 -->
-                                        <div class="cd-timeline-block">
-                                            <div class="cd-timeline-img">
-                                                <span class="dot"></span>
-                                            </div>
-
-                                            <div class="cd-timeline-content">
-                                                <div class="cd-heading">
-                                                    <h2>M.S., Department of Electronic Engineering</h2>
-                                                    <p>1998 | <span>Sungkyunkwan University</span></p>
-                                                </div>
-                                                <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres et quas molestias
-                                                    cepturi sint eca itate non vident, similique suntculpa modi tempora
-                                                    incidunt ut labore et dolor am aera boluptatum deleniti corrupti.</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Start Education Item #03 -->
-                                        <div class="cd-timeline-block">
-                                            <div class="cd-timeline-img">
-                                                <span class="dot"></span>
-                                            </div>
-
-                                            <div class="cd-timeline-content">
-                                                <div class="cd-heading">
-                                                    <h2>Ph.D., Department of Electrical, <br>Electronics and Computer Engineering</h2>
-                                                    <p>2002 | <span>Sungkyunkwan University</span></p>
-                                                </div>
-                                                <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres et quas molestias
-                                                    cepturi sint eca itate non vident, similique suntculpa modi tempora
-                                                    incidunt ut labore et dolor am aera boluptatum deleniti corrupti.</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Start Education Item #04 -->
-                                        <div class="cd-timeline-block">
-                                            <div class="cd-timeline-img">
-                                                <span class="dot"></span>
-                                            </div>
-
-                                            <div class="cd-timeline-content">
-                                                <div class="cd-heading">
-                                                    <h2>Principal Researcher, Telecom R&D Center <br>Telecommunication Systems Division</h2>
-                                                    <p>JMarch 2002 ~ June 2005 | <span>Samsung Electronics Co., Ltd.,</span></p>
-                                                </div>
-                                                <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres et quas molestias
-                                                    cepturi sint eca itate non vident, similique suntculpa modi tempora
-                                                    incidunt ut labore et dolor am aera boluptatum deleniti corrupti.</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Start Education Item #05 -->
-                                        <div class="cd-timeline-block">
-                                            <div class="cd-timeline-img">
-                                                <span class="dot"></span>
-                                            </div>
-
-                                            <div class="cd-timeline-content">
-                                                <div class="cd-heading">
-                                                    <h2>Principal researcher,<br> Research Division of Future Automotive Research</h2>
-                                                    <p>July 2005 ~ present | <span>DGIST</span></p>
-                                                </div>
-                                                <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres et quas molestias
-                                                    cepturi sint eca itate non vident, similique suntculpa modi tempora
-                                                    incidunt ut labore et dolor am aera boluptatum deleniti corrupti.</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Start Education Item #06 -->
-                                        <div class="cd-timeline-block">
-                                            <div class="cd-timeline-img">
-                                                <span class="dot"></span>
-                                            </div>
-
-                                            <div class="cd-timeline-content">
-                                                <div class="cd-heading">
-                                                    <h2>Visiting scholar, Department of Electrical<br>computer Engineering</h2>
-                                                    <p>Oct. 2016  Oct. 2017 | <span>Georgia Institute of Technology</span></p>
-                                                </div>
-                                                <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres et quas molestias
-                                                    cepturi sint eca itate non vident, similique suntculpa modi tempora
-                                                    incidunt ut labore et dolor am aera boluptatum deleniti corrupti.</p>
-                                            </div>
-                                        </div>
-
+                                    <div id="biography-line" class="cd-timeline">
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -235,8 +88,7 @@
     </div>
     <!--== End Page Content Area Wrapper ==-->
 
-
-  	<footer class="footer-area sp-y">
+    <footer class="footer-area sp-y" style="margin-top: 30px;width:100%; height:63px; padding-top:30px;">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   	</footer>
 
@@ -342,21 +194,45 @@
       prompt("Ctrl+C를 눌러 복사하세요.", str);
     }
 
+    function addBiography(title, date, location){
+      return ""+
+      "<div class=\"cd-timeline-block\">"+
+          "<div class=\"cd-timeline-img\">"+
+              "<span class=\"dot\"></span>"+
+          "</div>"+
+          "<div class=\"cd-timeline-content\">"+
+              "<div class=\"cd-heading\">"+
+                  "<h2>"+title+"</h2>"+
+                  "<p>"+date+" | <span>"+location+"</span></p>"+
+              "</div>"+
+          "</div>"+
+      "</div>";
+    }
+
     <?php
       require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
       $api = new getForm();
       $result = $api -> select_people($_GET['cat'],$_GET['id']);
-        while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
-          console.log("id : <?php echo $row['id']?>");
-          $("#profile-img").attr("src","<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile/<?php echo $row['image']?>.jpg");
-          $("#profile-name").text("<?php echo $row['en_name']?>");
-          $("#profile-position").text("<?php echo $row['kr_name']?>, <?php echo $row['position']?>");
-          $("#profile-address").html("<strong>Address</strong><?php echo $row['address']?>");
-          $("#profile-phone").html("<strong>Phone</strong><?php echo $row['phone']?>");
-          $("#profile-fax").html("<strong>Fax</strong><?php echo $row['fax']?>");
-          $("#profile-email").html("<strong>Email</strong><span onclick=copy_to_clipboard(\"<?php echo $row['email'] ?>\") style=\"color:#007bff; cursor:pointer;text-decoration:underline;\"><?php echo $row['email']?></span>");
-          $("#profile-info").html("<?php echo $row['awards_and_honors']?>")
-        <?php }
+      $biography = $api -> select_biography($_GET['id']);
+      while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
+        $("#profile-img").attr("src","<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile/<?php echo $row['image']?>.jpg");
+        $("#profile-name").html("<?php echo $row['en_name']?> &nbsp Ph.D");
+        $("#profile-position").text("<?php echo $row['kr_name']?>, <?php echo $row['position']?>");
+        $("#profile-address").html("<strong>Address</strong><?php echo $row['address']?>");
+        $("#profile-phone").html("<strong>Phone</strong><?php echo $row['phone']?>");
+        $("#profile-fax").html("<strong>Fax</strong><?php echo $row['fax']?>");
+        $("#profile-email").html("<strong>Email</strong><span onclick=copy_to_clipboard(\"<?php echo $row['email'] ?>\") style=\"color:#007bff; cursor:pointer;text-decoration:underline;\"><?php echo $row['email']?></span>");
+        $("#profile-info").html("<?php echo $row['awards_and_honors']?>")
+      <?php }
+
+      while ($row = $biography->fetch(PDO::FETCH_BOTH)){?>
+        $("#biography-line").append(
+          addBiography(
+            "<?php echo $row['title']?>",
+            "<?php echo $row['year']?>",
+            "<?php echo $row['location']?>")
+          );
+      <?php }
      ?>
     </script>
 </body>

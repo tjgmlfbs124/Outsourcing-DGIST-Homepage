@@ -83,13 +83,22 @@
                         </div>
 
                             <!-- LAYER NR. 3 -->
-                        <div  onclick="location.href='/pg/artlab.php'"class="tp-caption Button-Outline-Secondary rev-btn" id="slide-27-layer-11"
-                            data-x="['left','left','left','left']" data-hoffset="['135','135','45','40']"
+                        <div  onclick="location.href='https://interdisciplinary.dgist.ac.kr/'"class="tp-caption Button-Outline-Secondary rev-btn" id="slide-27-layer-11"
+                            data-x="['left','left','left','left']" data-hoffset="['100','135','45','40']"
                             data-y="['top','top','top','top']" data-voffset="['540','470','490','465']"
                             data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
                             data-responsive_offset="on" data-responsive="off"
                             data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]'
-                            data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">학과소개 바로가기
+                            data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">융합전공
+                        </div>
+
+                        <div  onclick="location.href='https://www.dgist.ac.kr/gadm/html/sub02/020101.html'"class="tp-caption Button-Outline-Secondary rev-btn"
+                            data-x="['left','left','left','left']" data-hoffset="['250','135','45','40']"
+                            data-y="['top','top','top','top']" data-voffset="['540','470','490','465']"
+                            data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
+                            data-responsive_offset="on" data-responsive="off"
+                            data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]'
+                            data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">입학안내
                         </div>
                     </li>
 
@@ -105,223 +114,77 @@
                           </div>
 
                             <!-- LAYER NR. 5 -->
-                            <div class="tp-caption tp-resizeme slide-txt" data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']" data-y="['top','top','top','top']" data-voffset="['400','370','370','300']" data-fontsize="['16','20','20','20']" data-fontweight="['400','400','400','400']" data-width="['600','600','600','320']" data-height="none" data-whitespace="normal" data-visibility="['on','on','on','on']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":360,"split":"lines","splitdelay":0.1,"speed":500,"split_direction":"forward","frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-                              <span style="color:#fff;"> We will create a new era through the development of cutting-edge automobile fusion technology.</span>
+                          <div class="tp-caption tp-resizeme slide-txt" data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']" data-y="['top','top','top','top']" data-voffset="['400','370','370','300']" data-fontsize="['16','20','20','20']" data-fontweight="['400','400','400','400']" data-width="['600','600','600','320']" data-height="none" data-whitespace="normal" data-visibility="['on','on','on','on']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":360,"split":"lines","splitdelay":0.1,"speed":500,"split_direction":"forward","frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
+                              <span style="color:#fff;"> We will create a new era through the development of cutting-edge automobile technology.</span>
 
                             </div>
 
-                            <!-- LAYER NR. 6 -->
-                            <div onclick="location.href='/pg/project.php'" class="tp-caption Button-Outline-Secondary rev-btn" data-x="['left','left','left','left']" data-hoffset="['135','135','45','40']" data-y="['top','top','top','top']" data-voffset="['490','470','490','465']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">연구소개 바로가기
-                            </div>
+                              <!-- LAYER NR. 3 -->
+                          <div  onclick="location.href='https://interdisciplinary.dgist.ac.kr/'"class="tp-caption Button-Outline-Secondary rev-btn" id="slide-27-layer-11"
+                              data-x="['left','left','left','left']" data-hoffset="['100','135','45','40']"
+                              data-y="['top','top','top','top']" data-voffset="['540','470','490','465']"
+                              data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
+                              data-responsive_offset="on" data-responsive="off"
+                              data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]'
+                              data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">융합전공
+                          </div>
+
+                          <div  onclick="location.href='https://www.dgist.ac.kr/gadm/html/sub02/020101.html'"class="tp-caption Button-Outline-Secondary rev-btn"
+                              data-x="['left','left','left','left']" data-hoffset="['250','135','45','40']"
+                              data-y="['top','top','top','top']" data-voffset="['540','470','490','465']"
+                              data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
+                              data-responsive_offset="on" data-responsive="off"
+                              data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]'
+                              data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">입학안내
+                          </div>
                     </li>
                 </ul>
                 <div class="tp-bannertimer tp-bottom"></div>
             </div>
         </div>
     </div>
-    <!--== End Slider Area Wrapper ==-->
 
-    <!--== Start Service Area Wrapper ==-->
-    <div class="service-area-wrapper sm-top-wt">
-        <div class="service-area-top parallax" data-parallax-speed="0.75" data-bg="image/menu12.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-xl-5 m-auto text-center">
-                        <div class="section-title section-title--light">
-                            <h6>대구경북과학기술원 미래자동차연구부</h6>
-                            <h2 class="mb-0">A car that communicates with future life.</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="service-content-area">
-            <div class="container">
-                <div class="row mtn-30">
-                    <div class="col-sm-6 col-lg-4" >
-                        <!-- Start Service Item -->
-                        <div class="service-item" onclick="location.href='https://www.dgist.ac.kr/gadm/html/sub02/020101.html'" target="_blank" style="cursor:pointer;">
-                            <figure class="service-thumb" >
-                                <img src="image/menu16-02.jpg" alt="Businex-Service"/>
-                                <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0.5);">
-                                    <div class="service-content-inner" >
-                                        <h3><strong style="color:#fff;">미래자동차연구부<br>입학안내</strong></h3>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                        <!-- End Service Item -->
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4">
-                        <!-- Start Service Item -->
-                        <div class="service-item" onclick="location.href='pg/artlab.php'" style="cursor:pointer;">
-                            <figure class="service-thumb">
-                                <img src="image/menu15-01.jpg" alt="Businex-Service" />
-                                <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0.5);">
-                                    <div class="service-content-inner" >
-                                        <h3><strong style="color:#fff;">미래자동차연구부<br>학과소개</strong></h3>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                        <!-- End Service Item -->
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4">
-                        <!-- Start Service Item -->
-                        <div class="service-item" onclick="location.href='pg/projectList.php'" style="cursor:pointer;">
-                            <figure class="service-thumb">
-                                <img src="image/menu14-02.jpg" alt="Businex-Service" />
-                                <div class="service-content" style="left:0; background-color: rgba(64,64,64, 0.5);">
-                                    <div class="service-content-inner" >
-                                        <h3><strong style="color:#fff;">미래자동차연구부<br>연구분야</strong></h3>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                        <!-- End Service Item -->
-                        </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="brand-logo-area sm-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                  <div class="brand-logo-content slick-row-20">
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-01.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-02.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-03.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-04.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-05.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-06.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-07.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-08.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-09.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-10.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-11.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-12.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-13.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-14.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-15.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-16.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-17.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-18.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-19.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-20.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                    <div class="brand-logo-item"><a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/cooperation/Cooperation-21.jpg" alt="Businex-Logo" height="25px;"/></a></div>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-  	<footer class="footer-area sp-y">
-      <div class="footer-widget-area sm-top-wt" style="padding-bottom:30px; margin-top:70px">
+  	<footer class="footer-area sp-y" style="position:absolute; bottom:0; width:100%; height:63px; padding-top:30px; background:#0c1325"><div class="footer-widget-area sm-top-wt" >
         <div class="container">
             <div class="row mtn-40">
                 <div class="col-lg-3" style="font-size:20px; text-align:center;">
                   <div class="copyright-txt">
-                      <p style="margin:0; color:#555;">Advanced Radar Tech. Lab</p>
+                      <p style="margin:0; color:#ccc;">Advanced Radar Tech. Lab</p>
                   </div>
                 </div>
 
                 <div class="col-lg-4" style="font-size:12px; text-align:center;">
                   <div class="copyright-txt">
-                    <p style="margin:0; color:#555;">(우)42988 대구광역시 달성군 현풍읍 테크노중앙대로 333</p>
-                    <p style="margin:0; color:#555;">COPYRIGHT(C) DGIST. ALL RIGHTS RESERVED.</p>
+                    <p style="margin:0; color:#ccc;">(우)42988 대구광역시 달성군 현풍읍 테크노중앙대로 333</p>
+                    <p style="margin:0; color:#ccc;">COPYRIGHT(C) DGIST. ALL RIGHTS RESERVED.</p>
                   </div>
                 </div>
 
                 <div class="col-lg-2" style="font-size:12px; text-align:center;">
                   <div class="copyright-txt">
-                    <p style="margin:0; color:#555;">Tel : 054-123-1234</p>
-                    <p style="margin:0; color:#555;">Fax : 053-123-1324</p>
+                    <p style="margin:0; color:#ccc;">Tel : 054-123-1234</p>
+                    <p style="margin:0; color:#ccc;">Fax : 053-123-1324</p>
                   </div>
                 </div>
 
-                <div class="col-lg-3" style="font-size:12px; text-align:center;">
+                <div class="col-lg-3" style="font-size:12px; text-align:center;" >
                   <div class="copyright-txt">
-                      <p style="margin:0; color:#555; float:left;">관련 학부</p>
-                      <select style="margin-left:30px; color:#555; float:left;" onchange="if(this.value) window.open(this.value);">
+                      <a style="color:#ccc; float:left; line-height:40px;">관련 학부</a>
+                      <select style="margin-left:30px; color:#333; float:left; margin-top:10px;" onchange="if(this.value) window.open(this.value);" >
                         <option value="https://www.dgist.ac.kr/kr/">DGIST</option>
-                        <option value="/">대학원</option>
                         <option value="https://interdisciplinary.dgist.ac.kr/">융합전공</option>
-                        <option value="/">융합연구원</option>
-                        <option value="https://www.dgist.ac.kr/kr/html/sub01/010402.html?mode=SH&skey=post_dvs_nm&sval=%EB%AF%B8%EB%9E%98%EC%9E%90%EB%8F%99%EC%B0%A8%EC%97%B0%EA%B5%AC%EB%B6%80">미래자동차연구부</option>
+                        <option value="https://www.dgist.ac.kr/gadm/">대학원</option>
+                        <option value="" disable>미래자동차연구부</option>
                       </select>
                   </div>
                 </div>
             </div>
         </div>
     </div>
-
   	</footer>
 
     <!-- Scroll Top Button -->
     <button class="btn-scroll-top"><i class="mdi mdi-chevron-up"></i></button>
-
-
-    <!-- Start Off Canvas Menu Wrapper -->
-    <aside class="off-canvas-wrapper off-canvas-cog">
-        <div class="off-canvas-overlay"></div>
-        <div class="off-canvas-inner">
-            <div class="close-btn">
-                <button class="btn-close"><i class="mdi mdi-close"></i></button>
-            </div>
-
-            <!-- Start Off Canvas Content -->
-            <div class="off-canvas-content mb-sm-30">
-                <div class="off-canvas-item">
-                    <div class="log-in-content-wrap">
-                        <h2>Login</h2>
-                        <div class="login-form mtn-15">
-                            <form action="#" method="post">
-                                <div class="form-input-item">
-                                    <label for="username" class="sr-only">Username</label>
-                                    <input type="text" id="username" placeholder="Username" required>
-                                </div>
-
-                                <div class="form-input-item">
-                                    <label for="password" class="sr-only">Password</label>
-                                    <input type="password" id="password" placeholder="Password" required>
-                                </div>
-
-                                <div class="form-input-item">
-                                    <button type="submit" class="btn-submit">Login</button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="sign-up-notification">
-                            <p>Not Resisted? <a href="#">Create Account Now.</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="off-canvas-item mt-sm-30">
-                    <div class="social-icons">
-                        <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
-                        <a href="https://dribbble.com" target="_blank"><i class="fa fa-dribbble"></i></a>
-                        <a href="https://pinterest.com" target="_blank"><i class="fa fa-pinterest"></i></a>
-                    </div>
-                    <div class="copyright-content">
-                        <p> © Businex 2019. All Right Reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </aside>
-    <!-- End Off Canvas Menu Wrapper -->
-
 
 
 

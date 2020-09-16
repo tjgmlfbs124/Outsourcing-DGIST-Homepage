@@ -27,13 +27,14 @@
                     </li>
 
                     <li class="has-submenu">
-                      <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/research.php">Research</a>
+                      <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal&page=1">Research</a>
                       <ul class="submenu-nav">
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal&page=1">paper</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=patents&page=1">patent</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/techonology_transfer.php">technology Transfer</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectList.php">project</a></li>
-                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/404.php">interest</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/interest.php">interest</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/collaborator.php">collaborator</a></li>
                       </ul>
                     </li>
 
