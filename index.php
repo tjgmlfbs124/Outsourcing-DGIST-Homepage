@@ -32,45 +32,34 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <!--== Main Style CSS ==-->
     <link href="assets/css/style.min.css" rel="stylesheet" />
-
-    <!--[if lt IE 9]>
-<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
 </head>
 
-<body>
+<body style="background:#080b1a;">
 	<header class="header-area">
   		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/header.php'?>
 	</header>
-    <!--== Start Slider Area Wrapper ==-->
     <div class="slider-area-wrapper">
         <div id="rev_slider_11_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="business-classic" data-source="gallery">
             <div id="rev_slider_11_1" class="rev_slider fullwidthabanner" data-version="5.4.7" style="background:#080b1a;">
                 <ul>
-                    <!-- SLIDE  -->
                     <li data-index="rs-27" data-transition="random-premium" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default"
                         data-easeout="default" data-masterspeed="default" data-thumb="assets/img/slider/01_thumb.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide">
-                        <!-- MAIN IMAGE -->
                         <img src="/image/main14-01.jpg" alt="Businex" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="15" class="rev-slidebg" data-no-retina>
-                        <!-- LAYERS -->
-
-                        <!-- LAYER NR. 1 -->
                         <div class="tp-caption tp-resizeme slide-heading"
                               data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']"
-                              data-y="['top','top','top','top']" data-voffset="['150','204','200','201']"
+                              data-y="['top','top','top','top']" data-voffset="['150','204','200','100']"
                               data-fontsize="['60','60','50','30']"
-                              data-fontweight="['600']" data-lineheight="['70','70','60','40']"
-                              data-width="['650','650','600','320']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on"
+                              data-fontweight="['600']"
+                              data-lineheight="['70','70','60','40']"
+                              data-width="['650','650','600','320']"
+                              data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on"
                               data-frames='[{"delay":10,"split":"lines","splitdelay":0.1,"speed":600,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
                               data-textAlign="['left']">
                             <strong style="color:#fff;">DGIST<br><a style="font-size:40px;">Advanced Radar Tech. Lab</a></strong>
                         </div>
-
-                            <!-- LAYER NR. 2 -->
                         <div class="tp-caption tp-resizeme slide-txt"
                               data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']"
-                              data-y="['top','top','top','top']" data-voffset="['350','370','370','300']"
+                              data-y="['top','top','top','top']" data-voffset="['350','370','200','300']"
                               data-fontsize="['16','20','20','20']" data-fontweight="['400','400','400','400']" data-width="['600','600','600','320']" data-height="none" data-whitespace="normal"
                               data-visibility="['on','on','on','on']" data-type="text" data-responsive_offset="on"
                               data-frames='[{"delay":360,"split":"lines","splitdelay":0.1,"speed":500,"split_direction":"forward","frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
@@ -81,126 +70,40 @@
                               radar techniques.
                               </p>
                         </div>
-
-                            <!-- LAYER NR. 3 -->
-                        <div  onclick="location.href='https://interdisciplinary.dgist.ac.kr/'"class="tp-caption Button-Outline-Secondary rev-btn" id="slide-27-layer-11"
-                            data-x="['left','left','left','left']" data-hoffset="['100','135','45','40']"
-                            data-y="['top','top','top','top']" data-voffset="['540','470','490','465']"
-                            data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
-                            data-responsive_offset="on" data-responsive="off"
-                            data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]'
-                            data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">융합전공
-                        </div>
-
-                        <div  onclick="location.href='https://www.dgist.ac.kr/gadm/html/sub02/020101.html'"class="tp-caption Button-Outline-Secondary rev-btn"
-                            data-x="['left','left','left','left']" data-hoffset="['250','135','45','40']"
-                            data-y="['top','top','top','top']" data-voffset="['540','470','490','465']"
-                            data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
-                            data-responsive_offset="on" data-responsive="off"
-                            data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]'
-                            data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">입학안내
-                        </div>
                     </li>
-
-                    <!-- SLIDE  -->
                     <li data-index="rs-28" data-transition="slidingoverlayvertical,slidingoverlayleft,slideoverup" data-slotamount="default,default,default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default,default,default" data-easeout="default,default,default" data-masterspeed="default,default,default" data-thumb="assets/img/slider/02_thumb.jpg" data-rotate="0,0,0" data-saveperformance="off" data-title="Slide">
                         <!-- MAIN IMAGE -->
                         <img src="/image/main12.jpg" alt="Businex" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="15" class="rev-slidebg" data-no-retina>
 
                         <!-- LAYER NR. 4 -->
-                        <div class="tp-caption tp-resizeme slide-heading" data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']" data-y="['top','top','top','top']" data-voffset="['250','204','200','201']" data-fontsize="['60','60','50','30']" data-fontweight="['600']" data-lineheight="['70','70','60','40']" data-width="['650','650','600','320']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"split":"chars","splitdelay":0.1,"speed":1000,"split_direction":"forward","frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' data-textAlign="['left']">
+                        <div class="tp-caption tp-resizeme slide-heading"
+                        data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']"
+                        data-y="['top','top','top','top']" data-voffset="['250','204','200','150']"
+                        data-fontsize="['60','60','50','30']" data-fontweight="['600']" data-lineheight="['70','70','60','40']" data-width="['650','650','600','320']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"split":"chars","splitdelay":0.1,"speed":1000,"split_direction":"forward","frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' data-textAlign="['left']">
 
                           <strong style="color:#fff;">DGIST<br><a style="font-size:40px;">Advanced Radar Tech. Lab</a></strong>
                           </div>
-
-                            <!-- LAYER NR. 5 -->
                           <div class="tp-caption tp-resizeme slide-txt" data-x="['left','left','left','left']" data-hoffset="['135','135','40','40']" data-y="['top','top','top','top']" data-voffset="['400','370','370','300']" data-fontsize="['16','20','20','20']" data-fontweight="['400','400','400','400']" data-width="['600','600','600','320']" data-height="none" data-whitespace="normal" data-visibility="['on','on','on','on']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":360,"split":"lines","splitdelay":0.1,"speed":500,"split_direction":"forward","frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
                               <span style="color:#fff;"> We will create a new era through the development of cutting-edge automobile technology.</span>
-
                             </div>
-
-                              <!-- LAYER NR. 3 -->
-                          <div  onclick="location.href='https://interdisciplinary.dgist.ac.kr/'"class="tp-caption Button-Outline-Secondary rev-btn" id="slide-27-layer-11"
-                              data-x="['left','left','left','left']" data-hoffset="['100','135','45','40']"
-                              data-y="['top','top','top','top']" data-voffset="['540','470','490','465']"
-                              data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
-                              data-responsive_offset="on" data-responsive="off"
-                              data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]'
-                              data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">융합전공
-                          </div>
-
-                          <div  onclick="location.href='https://www.dgist.ac.kr/gadm/html/sub02/020101.html'"class="tp-caption Button-Outline-Secondary rev-btn"
-                              data-x="['left','left','left','left']" data-hoffset="['250','135','45','40']"
-                              data-y="['top','top','top','top']" data-voffset="['540','470','490','465']"
-                              data-width="none" data-height="none" data-whitespace="nowrap" data-type="button"
-                              data-responsive_offset="on" data-responsive="off"
-                              data-frames='[{"delay":650,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"350","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgb(8, 11, 26);"}]'
-                              data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[40,40,40,30]">입학안내
-                          </div>
                     </li>
                 </ul>
                 <div class="tp-bannertimer tp-bottom"></div>
             </div>
         </div>
+
+        <?php require_once $_SERVER['DOCUMENT_ROOT'].'/pg/popup/Assistantship_Opening/index.php'?>
+
     </div>
 
-  	<footer class="footer-area sp-y" style="position:absolute; bottom:0; width:100%; height:63px; padding-top:30px; background:#0c1325"><div class="footer-widget-area sm-top-wt" >
-        <div class="container">
-            <div class="row mtn-40">
-                <div class="col-lg-3" style="font-size:20px; text-align:center;">
-                  <div class="copyright-txt">
-                      <p style="margin:0; color:#ccc;">Advanced Radar Tech. Lab</p>
-                  </div>
-                </div>
-
-                <div class="col-lg-4" style="font-size:12px; text-align:center;">
-                  <div class="copyright-txt">
-                    <p style="margin:0; color:#ccc;">(우)42988 대구광역시 달성군 현풍읍 테크노중앙대로 333</p>
-                    <p style="margin:0; color:#ccc;">COPYRIGHT(C) DGIST. ALL RIGHTS RESERVED.</p>
-                  </div>
-                </div>
-
-                <div class="col-lg-2" style="font-size:12px; text-align:center;">
-                  <div class="copyright-txt">
-                    <p style="margin:0; color:#ccc;">Tel : 054-123-1234</p>
-                    <p style="margin:0; color:#ccc;">Fax : 053-123-1324</p>
-                  </div>
-                </div>
-
-                <div class="col-lg-3" style="font-size:12px; text-align:center;" >
-                  <div class="copyright-txt">
-                      <a style="color:#ccc; float:left; line-height:40px;">관련 학부</a>
-                      <select style="margin-left:30px; color:#333; float:left; margin-top:10px;" onchange="if(this.value) window.open(this.value);" >
-                        <option value="https://www.dgist.ac.kr/kr/">DGIST</option>
-                        <option value="https://interdisciplinary.dgist.ac.kr/">융합전공</option>
-                        <option value="https://www.dgist.ac.kr/gadm/">대학원</option>
-                        <option value="" disable>미래자동차연구부</option>
-                      </select>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  	</footer>
-
-    <!-- Scroll Top Button -->
     <button class="btn-scroll-top"><i class="mdi mdi-chevron-up"></i></button>
 
-
-
-
-
-
-    <!-- Start Off Canvas Menu Wrapper -->
     <aside class="off-canvas-wrapper off-canvas-menu">
         <div class="off-canvas-overlay"></div>
         <div class="off-canvas-inner">
-            <!-- Start Off Canvas Header -->
             <div class="close-btn">
                 <button class="btn-close"><i class="mdi mdi-close"></i></button>
             </div>
-
-            <!-- Start Off Canvas Content -->
             <div class="off-canvas-content">
                 <div class="res-mobile-menu">
 
@@ -208,7 +111,6 @@
             </div>
         </div>
     </aside>
-    <!-- End Off Canvas Menu Wrapper -->
 
 
     <!--=======================Javascript============================-->
@@ -221,8 +123,8 @@
     <script src="assets/js/plugins/counterup.min.js"></script>
     <script src="assets/js/plugins/instafeed.min.js"></script>
     <script src="assets/js/plugins/jquery.appear.js"></script>
-    <script src="assets/js/plugins/jquery.slicknav.min.js"></script>
     <script src="assets/js/plugins/parallax.min.js"></script>
+    <script src="assets/js/plugins/jquery.slicknav.min.js"></script>
     <script src="assets/js/plugins/slick.min.js"></script>
     <script src="assets/js/plugins/magnific-popup.min.js"></script>
 
@@ -248,17 +150,19 @@
     <!--=== REVOLUTION JS ===-->
     <script src="assets/js/revslider/rev-active.js"></script>
 
+    <!-- COOKIE JS -->
+    <script src="assets/js/cookie.js"></script>
+
+
     <script>
-    function popup(){
-      var url = "<?php $_SERVER['DOCUMENT_ROOT']?>/pg/popup/notice.php";
-      var name = "popup test";
-      var option = "width = 600, height = 800, top = 100, left = 200, irectories=no,resizable=no,status=no,toolbar=no,menubar=no";
-      window.open(url, name, option);
-    }
+      $("#exampleModalLong").on("hidden.bs.modal", function () {
+        var isCheck = $("#check-close-day").is(":checked"); // 하루동안 열지않겠는지에 대한 체크여부
+        if(isCheck) setCookie("artlab", "done", 1);        // 쿠키에 저장
+      });
 
-    popup();
+      if (getCookie("artlab") != "done"){
+        $('#exampleModalLong').modal({ show: true})
+      }
     </script>
-
 </body>
-
 </html>

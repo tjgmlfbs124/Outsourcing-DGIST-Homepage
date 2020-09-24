@@ -40,12 +40,12 @@
     <div class="blog-details-page-content sp-y">
         <div class="container">
             <div class="row">
-                <div class="col-lg-15">
+                <div class="col-lg-15" style="width:100%;">
                     <article class="blog-post-details">
 
                         <!-- Start Comment Area Wrapper -->
                         <div class="comment-area-wrapper">
-                            <div id="professor-list"class="comments-view-area">
+                            <div id="professor-list" class="comments-view-area">
 
                             </div>
                         </div>
@@ -57,7 +57,7 @@
     </div>
     <!--== End Blog Details Page Content ==-->
 
-    <footer class="footer-area sp-y" style="position:absolute; bottom:0; width:100%; height:63px; padding-top:30px;">
+    <footer class="footer-area sp-y" style="margin-top: 50px; padding:30px 0px 10px 0px;">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   	</footer>
 
@@ -79,7 +79,7 @@
                 <div class="off-canvas-item">
                     <div class="log-in-content-wrap">
                         <h2>Login</h2>
-                        <div class="login-form mtn-15">
+                        <div class="login-form mtn-15" >
                             <form action="#" method="post">
                                 <div class="form-input-item">
                                     <label for="username" class="sr-only">Username</label>
@@ -157,6 +157,7 @@
   }
 
   function copy_to_clipboard(str) {
+    event.stopPropagation(); // 부모 온클릭 이벤트 삭제
     if( is_ie() ) {
       window.clipboardData.setData("Text", str);
       alert("복사되었습니다.");
@@ -170,18 +171,18 @@
 		$api = new getForm();
     $result = $api -> select_peoples($_GET['cat']);
 			while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
-        $("#professor-list").append("<div class=\"single-comment-wrap d-flex\" id=\"list-" + <?php echo $row['id']?> + "\"></div>");
+        $("#professor-list").append("<div class=\"single-comment-wrap d-flex\" id=\"list-" + <?php echo $row['id']?> + "\" onclick=\"location.href='/pg/professorInfo.php?cat=professor&id=<?php echo $row['id']?>'\"></div>");
         $("#list-<?php echo $row['id']?>").append("<figure class=\"author-thumb\"></figure>");
         $("#list-<?php echo $row['id']?> > .author-thumb").append("<a href=\"/pg/professorInfo.php?cat=professor&id=<?php echo $row['id']?>\"><img src=\"<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile/<?php echo $row['image']?>.jpg\" alt=\"Author\"></a>");
         $("#list-<?php echo $row['id']?>").append("<div class=\"comments-info\"></div>");
         $("#list-<?php echo $row['id']?> > .comments-info").append(
-          "<p class=\"m-0\" onclick=\"location.href='/pg/professorInfo.php?pos=professor&id=<?php echo $row['id']?>'\">" +
+          "<p class=\"m-0\" \">" +
           "<div class=\"member-desc\"><h2 style=\"font-size:20px;\"><?php echo $row['en_name'] ?> &nbsp <a>Ph.D</a></h2><h5><?php echo $row['kr_name'] ?></h5></div>" +
           "Position : <?php echo $row['position'] ?> <br>" +
           "Address : <?php echo $row['address'] ?> <br>" +
           "Phone : <?php echo $row['phone'] ?> <br>" +
           "Fax : <?php echo $row['fax'] ?> <br>" +
-          "<p onclick=copy_to_clipboard(\"<?php echo $row['email'] ?>\")>Email : <span  style=\"color:#007bff; cursor:pointer;text-decoration:underline;\"><?php echo $row['email'] ?></span></p> <br>" +
+          "<p onclick=copy_to_clipboard(\"<?php echo $row['email'] ?>\")>Email : <span  style=\"color:#007bff; cursor:pointer;text-decoration:underline;\"><?php echo $row['email'] ?></span></p><br>" +
         "</p>"
       );
       <?php }

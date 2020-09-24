@@ -1,6 +1,6 @@
 <div class="footer-widget-area sm-top-wt" >
     <div class="container">
-        <div class="row mtn-40">
+        <div class="row mtn-40" style="background:#f8f9fc;">
             <div class="col-lg-3" style="font-size:20px; text-align:center;">
               <div class="copyright-txt">
                   <p style="margin:0; color:#333;">DGIST ART LAB</p>

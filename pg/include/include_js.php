@@ -29,3 +29,5 @@
 <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/revslider/extensions/revolution.extension.parallax.min.js"></script>
 <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/revslider/extensions/revolution.extension.slideanims.min.js"></script>
 <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/revslider/extensions/revolution.extension.video.min.js"></script>
+<script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/plugins/jquery.slicknav.min.js"></script>
+<script src="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/js/plugins/slick.min.js"></script>

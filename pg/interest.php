@@ -33,7 +33,7 @@
     </div>
       <!--== End Page Header Area ==-->
 
-    <div class="blog-details-page-content sp-y" style="margin-top:40px;">
+    <div class="blog-details-page-content sp-y" style="margin:40px 0px 110px 0px;">
       <div class="container" style="padding-bottom:40px;">
           <div class="row align-items-lg-stretch" style="align-items:stretch;">
               <div class="col-lg-10">
@@ -58,9 +58,9 @@
         </div>
       </div>
 
-  	<footer class="footer-area sp-y" style="position:absolute; bottom:0; width:100%; height:63px; padding-top:30px;">
-  			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
-  	</footer>
+      <footer class="footer-area sp-y" style="margin-top: 50px; padding:30px 0px 10px 0px;">
+          <?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
+      </footer>
 
     <!-- Start Off Canvas Menu Wrapper -->
     <aside class="off-canvas-wrapper off-canvas-menu">

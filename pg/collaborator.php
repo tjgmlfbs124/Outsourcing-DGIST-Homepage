@@ -39,10 +39,10 @@
             </div>
         </div>
     </div>
-
-  	<footer class="footer-area sp-y" style="position:absolute; bottom:0; width:100%; height:63px; padding-top:30px; mar">
+    <footer class="footer-area sp-y" style="margin-top: 50px; padding:30px 0px 10px 0px;">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   	</footer>
+
 		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/pg/include/include_js.php'?>
 
     <script>

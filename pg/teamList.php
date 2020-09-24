@@ -36,10 +36,10 @@
 
 
     <!--== Start Blog Details Page Content ==-->
-    <div class="blog-details-page-content sp-y">
+    <div class="blog-details-page-content sp-y" style="margin-bottom: 50px;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-15">
+                <div class="col-lg-15" style="width:100%;">
                     <article class="blog-post-details">
 
                       <div class="team-page-area-wrapper bg-offwhite sp-y sm-top">
@@ -58,7 +58,10 @@
     <!--== End Blog Details Page Content ==-->
 
 
-  	<footer class="footer-area sp-y" style="position:absolute; bottom:0; width:100%; height:63px; padding-top:30px;">
+
+
+
+    <footer class="footer-area sp-y" style="margin-top: 50px; padding:30px 0px 10px 0px; position:fixed; bottom:0; width:100%;">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   	</footer>
 

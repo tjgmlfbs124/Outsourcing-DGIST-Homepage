@@ -63,7 +63,7 @@
   </div>
   <!--== End Blog Details Page Content ==-->
 
-  <footer class="footer-area sp-y" style="position:absolute; bottom:0; width:100%; height:63px; padding-top:30px;">
+  <footer class="footer-area sp-y" style="margin-top: 50px; padding:30px 0px 10px 0px;">
       <?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   </footer>
 
@@ -104,7 +104,7 @@
 
         while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
           $("#notice-list").append("<li id=\"list-<?php echo $row['id']?>\" style=\"border-bottom:1px solid #eee; padding:10px 0px 10px 0px; cursor:pointer;\" onclick=\"location.href='<?php $_SERVER['DOCUMENT_ROOT']?>/pg/noticeInfo.php?no=<?php echo $row['id']?>'\"></li>")
-          $("#list-<?php echo $row['id']?>").append('<p><?php echo $row['title']?><a style=\"float:right;\">' +  sliceDate("<?php echo $row['date'] ?>") + '</a></p>');
+          $("#list-<?php echo $row['id']?>").append('<p><?php echo $row['title']?><a style=\"position:absolute; right:0;\">' +  sliceDate("<?php echo $row['date'] ?>") + '</a></p>');
         <?php }
 
         for($idx=0; $idx<=$pages['CNT'] / 10; $idx++){ ?>

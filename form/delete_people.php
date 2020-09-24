@@ -8,3 +8,5 @@
   $model = new getForm();
   $model -> delete_people($_GET['id'], $_GET['cat']);
 ?>
+
+</html>

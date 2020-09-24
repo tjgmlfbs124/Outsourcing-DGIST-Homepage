@@ -26,4 +26,3 @@
 <link href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/css/bootstrap.min.css" rel="stylesheet" />
 <!--== Main Style CSS ==-->
 <link href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/css/style.min.css" rel="stylesheet" />
-</head>
