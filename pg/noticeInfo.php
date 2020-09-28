@@ -37,7 +37,7 @@
 
     <!--== Start Page Content Area Wrapper ==-->
     <div class="page-content-wrapper" >
-        <div class="service-details-wrapper sm-top" style="margin-top:50px;">
+        <div class="service-details-wrapper sm-top" style="margin:50px 0px 100px 0px;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-11">
@@ -61,9 +61,10 @@
     </div >
     <!--== End Page Content Area Wrapper ==-->
 
-    <footer class="footer-area sp-y" style="margin-top: 100px; padding:30px 0px 10px 0px;">
+    <footer class="footer-area sp-y" style="margin-top: 50px; padding:30px 0px 10px 0px; position:fixed; bottom:0; width:100%;">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   	</footer>
+
 
 
     <!-- Start Off Canvas Menu Wrapper -->

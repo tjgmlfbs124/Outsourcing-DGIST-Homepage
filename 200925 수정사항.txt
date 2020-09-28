@@ -1,0 +1,56 @@
+첫페이지에 문구 수정 [완료]
+- automobile -> radar
+
+헤더메뉴에 DGIST  +  ARTLAB 있어야할듯
+
+하단메뉴에 전화번호, 팩스 수정 [완료]
+TEL : 053-785-4580
+FAX : 053-75-4589
+
+교수페이지
+이름 Prof. Jonghun Lee 수정
+positon에 적힌 내용이 address의 DGIST 뒤에 오도록
+position은 Professor & Chief Researcher
+Address = DGIST, Department of Inter ... E, Graduate.
+한글 이름뒤에 교수
+
+상세 이력서에 수정
+이종훈 교수님
+	CV 파일을 다운받을수 있게 수정.
+	수상경력은 History 빈공간에 넣게.
+	사진옆에 수상경력이 있는쪽에는 타이밍해서 준걸 넣게.
+	한글 이름뒤에 교수
+
+연구원 소개 수정
+	김봉석 Ph. D. 추가.
+	송승언 M.A
+
+학생 소개 수정
+	손은강 포지션 : M.A Student, Mr.이름..  으로 수정
+
+졸업자 소개 수정
+	이철희 박사 : 이름뒤에 Ph. D.  / 이메일 : cherlhee@jcradar.com
+	Jasurbek : Prof. 이름 ... 으로 / 이메일 : 219729@inha.ac.kr
+
+
+리서쳐에서 IE에서 항목이 안나오는 문제 수정
+리서쳐에서 옆에 메뉴 삭제
+
+푸터에도 DGIST 마크 추가
+
+IE에서도 푸터 밑에 고정될수 있게 수정
+
+
+Technology Transfer 페이지
+자료받아서 다시 수정
+
+Collaborator 페이지에
+단국대학교 세로 크기 수정
+
+리서쳐 페이지에서 paper 에서만 카테고리스가 보이게 .
+interest는 카테고리스 삭제
+
+Books 삭제
+
+푸터페이지에서
+푸터의 관련사이트에서 DGISt 선택후 DGIST 를 다시 선택하면 안들어가짐.

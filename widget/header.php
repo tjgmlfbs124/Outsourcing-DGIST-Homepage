@@ -1,11 +1,16 @@
 <!--== Start Header Area Wrapper ==-->
-<div class="container">
+<div class="container" >
     <div class="row align-items-center">
-        <div class="col-5 col-lg-2">
+        <div class="col-5 col-lg-3">
             <!-- Start Logo Area -->
             <div class="logo-area">
-                <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/">
-                <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/logo.svg" alt="Businex-Logo"></a>
+            <a href="https://www.dgist.ac.kr/kr/">
+              <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/dgistlogo.png" alt="Businex-Logo" style="max-width:50%; float:left;">
+            </a>
+              <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/">
+                <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/logo.svg" alt="Businex-Logo" style="max-width:50%; float:left;">
+              </a>
+              <!-- <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/dgistlogo.png" alt="Businex-Logo" style="max-width:50%;float:left;"> -->
             </div>
             <!-- End Logo Area -->
         </div>
@@ -30,7 +35,7 @@
                       <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal&page=1">Research</a>
                       <ul class="submenu-nav">
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal&page=1">paper</a></li>
-                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=patents&page=1">patent</a></li>
+                          <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/patents.php?cat=patents&page=1">patent</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/techonology_transfer.php">technology Transfer</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/projectList.php">project</a></li>
                           <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/interest.php">interest</a></li>

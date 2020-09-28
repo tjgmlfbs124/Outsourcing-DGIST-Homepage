@@ -38,8 +38,8 @@
                                         <a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-01.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
-                                        <h2 class="h5"><a href="blog-details.html">Automotive Radar</a></h2>
-                                        <p>LCA and BSD integrated Automotive radar core technology development.</p>
+                                        <h2 class="h5"><a>Automotive Radar</a></h2>
+                                        <p>3D Imaging Radar<br>360º MIMO Radar(24GHz, 60GHz, 77GHz,81GHz, 120GHz)</p>
                                     </div>
                                 </div>
                             </div>
@@ -50,8 +50,8 @@
                                         <a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-02.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
-                                        <h2 class="h5"><a href="blog-details.html">Vital Radar</a></h2>
-                                        <p>Continuous observation of vital signs of people with circulatory or respiratory problems.</p>
+                                        <h2 class="h5"><a>Vital & NDT Radar</a></h2>
+                                        <p>Vital Sign Detection<br>Heart & Respiration rate<br>See Thru-the-obstacle</p>
                                     </div>
                                 </div>
                             </div>
@@ -62,8 +62,8 @@
                                         <a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-03.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
-                                        <h2 class="h5"><a href="blog-details.html">Air-Born Radar</a></h2>
-                                        <p>FOD (foreign matter) and drone detection radar algorithm development.</p>
+                                        <h2 class="h5"><a>Air-Borne & SAR Radar</a></h2>
+                                        <p>Foreign  Obstacle and drone detection radar</p>
                                     </div>
                                 </div>
                             </div>
@@ -74,8 +74,8 @@
                                         <a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-04.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
-                                        <h2 class="h5"><a href="blog-details.html">Sports Radar</a></h2>
-                                        <p>Development of 24GHz radar for golf swing analysis.</p>
+                                        <h2 class="h5"><a>AI & Sports Radar</a></h2>
+                                        <p>Machine Learning & Deep Learning<br>Speed & Target Tracking Radar<br>Gesture Recognition</p>
                                     </div>
                                 </div>
                             </div>
@@ -86,8 +86,8 @@
                                         <a><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/projects/projects-05.jpg" alt="Businex-Blog" /></a>
                                     </figure>
                                     <div class="blog-content">
-                                        <h2 class="h5"><a href="blog-details.html">Defense Radar</a></h2>
-                                        <p>Parallel and pipelined Hardware Implementation of radar signal processing.</p>
+                                        <h2 class="h5"><a>Defense Radar</a></h2>
+                                        <p>SAR & ISAR Radar <br> AutoMatic Target Recognition<br> Passive Radar</p>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@
                                     </figure>
                                     <div class="blog-content">
                                         <h2 class="h5"><a href="blog-details.html">Smart Lightning Radar</a></h2>
-                                        <p>Development of radar sensor for pedestrian recognition.</p>
+                                        <p>Various industry Applications. </p>
                                     </div>
                                 </div>
                             </div>

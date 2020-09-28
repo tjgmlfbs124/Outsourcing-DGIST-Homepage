@@ -50,16 +50,16 @@
 
                             <div class="col-md-8 ml-auto">
                                 <div class="member-desc">
-                                    <h2 id="profile-name">Hong Gil Dong</h2>
-                                    <h5 id="profile-position">Professor/Convergence Engineering</h5>
-                                    <p id="profile-info">abcdefghijklmnopqrxtuvwxyzabcdefghijklmnopqrxtuvwxyzabcdefghi</p>
+                                    <h2 id="profile-name"></h2>
+                                    <h5 id="profile-position"></h5>
+                                    <p id="profile-info"></p>
 
                                     <div class="contact-info mt-25">
-                                        <p id="profile-address"><strong>Address</strong> DGIST (Daegu Gyeongbuk Institute of Science & Technology), 50-1,<br>
-                                           Sang-Ri, Hyeongpung-Myeon, Dalseong-Gun, Daegu, 711-873, Korea</p>
-                                        <p id="profile-phone"><strong>Phone</strong> 82-53-785-4580</p>
-                                        <p id="profile-fax"><strong>Fax</strong> 82-53-785-4589</p>
-                                        <p id="profile-email"><strong>Email</strong> jhlee@dgist.ac.kr</p>
+                                        <p id="profile-address"><strong></strong> <br></p>
+                                        <p id="profile-phone"><strong>Phone</strong></p>
+                                        <p id="profile-fax"><strong>Fax</strong></p>
+                                        <p id="profile-email"><strong>Email</strong></p>
+                                        <p><strong>이력서</strong><a id="profile-cv" style="color:#007bff; cursor:pointer;text-decoration:underline;">다운로드</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                             <div class="col-12">
                                 <div class="cd-timeline-wrap">
                                     <div id="biography-line" class="cd-timeline">
-                                      
+
                                     </div>
                                 </div>
                             </div>
@@ -94,67 +94,6 @@
 
     <!-- Scroll Top Button -->
     <button class="btn-scroll-top"><i class="mdi mdi-chevron-up"></i></button>
-
-
-    <!-- Start Off Canvas Menu Wrapper -->
-    <aside class="off-canvas-wrapper off-canvas-cog">
-        <div class="off-canvas-overlay"></div>
-        <div class="off-canvas-inner">
-            <div class="close-btn">
-                <button class="btn-close"><i class="mdi mdi-close"></i></button>
-            </div>
-
-            <!-- Start Off Canvas Content -->
-            <div class="off-canvas-content mb-sm-30">
-                <div class="off-canvas-item">
-                    <div class="log-in-content-wrap">
-                        <h2>Login</h2>
-                        <div class="login-form mtn-15">
-                            <form action="#" method="post">
-                                <div class="form-input-item">
-                                    <label for="username" class="sr-only">Username</label>
-                                    <input type="text" id="username" placeholder="Username" required>
-                                </div>
-
-                                <div class="form-input-item">
-                                    <label for="password" class="sr-only">Password</label>
-                                    <input type="password" id="password" placeholder="Password" required>
-                                </div>
-
-                                <div class="form-input-item">
-                                    <button type="submit" class="btn-submit">Login</button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="sign-up-notification">
-                            <p>Not Resisted? <a href="#">Create Account Now.</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="off-canvas-item mt-sm-30">
-                    <div class="social-icons">
-                        <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
-                        <a href="https://dribbble.com" target="_blank"><i class="fa fa-dribbble"></i></a>
-                        <a href="https://pinterest.com" target="_blank"><i class="fa fa-pinterest"></i></a>
-                    </div>
-                    <div class="copyright-content">
-                        <p> © Businex 2019. All Right Reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </aside>
-    <!-- End Off Canvas Menu Wrapper -->
-
-
-
-
-
-
 
     <!-- Start Off Canvas Menu Wrapper -->
     <aside class="off-canvas-wrapper off-canvas-menu">
@@ -194,7 +133,7 @@
       prompt("Ctrl+C를 눌러 복사하세요.", str);
     }
 
-    function addBiography(title, date, location){
+    function addBiography(title, date, location, honor){
       return ""+
       "<div class=\"cd-timeline-block\">"+
           "<div class=\"cd-timeline-img\">"+
@@ -205,6 +144,7 @@
                   "<h2>"+title+"</h2>"+
                   "<p>"+date+" | <span>"+location+"</span></p>"+
               "</div>"+
+              "<p class=\"cd-description\">" + honor + "</p>"+
           "</div>"+
       "</div>";
     }
@@ -213,24 +153,27 @@
       require $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
       $api = new getForm();
       $result = $api -> select_people($_GET['cat'],$_GET['id']);
-      $biography = $api -> select_biography($_GET['id']);
+      $biography = $api -> select_history($_GET['id']);
       while ($row = $result->fetch(PDO::FETCH_BOTH)){?>
         $("#profile-img").attr("src","<?php $_SERVER['DOCUMENT_ROOT']?>/image/profile/<?php echo $row['image']?>.jpg");
         $("#profile-name").html("<?php echo $row['en_name']?> &nbsp Ph.D");
-        $("#profile-position").text("<?php echo $row['kr_name']?>, <?php echo $row['position']?>");
+        $("#profile-position").text("Prof. <?php echo $row['kr_name']?>교수");
         $("#profile-address").html("<strong>Address</strong><?php echo $row['address']?>");
         $("#profile-phone").html("<strong>Phone</strong><?php echo $row['phone']?>");
         $("#profile-fax").html("<strong>Fax</strong><?php echo $row['fax']?>");
         $("#profile-email").html("<strong>Email</strong><span onclick=copy_to_clipboard(\"<?php echo $row['email'] ?>\") style=\"color:#007bff; cursor:pointer;text-decoration:underline;\"><?php echo $row['email']?></span>");
-        $("#profile-info").html("<?php echo $row['awards_and_honors']?>")
+        $("#profile-info").html("<?php echo $row['cv']?>")
+        $("#profile-cv").attr("href","<?php $_SERVER['DOCUMENT_ROOT']?>/cvFile/<?php echo $row['cv_file']?>");
       <?php }
 
       while ($row = $biography->fetch(PDO::FETCH_BOTH)){?>
+        console.log("<?php echo $row['honorsTitle']?>");
         $("#biography-line").append(
           addBiography(
             "<?php echo $row['title']?>",
             "<?php echo $row['year']?>",
-            "<?php echo $row['location']?>")
+            "<?php echo $row['location']?>",
+            "<?php echo $row['honorsTitle']?>")
           );
       <?php }
      ?>

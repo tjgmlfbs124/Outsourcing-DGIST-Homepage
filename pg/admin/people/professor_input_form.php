@@ -1,4 +1,4 @@
-<form method="POST" action="<?php $_SERVER['DOCUMENT_ROOT']?>/form/update_professor.php" enctype="multipart/form-data">
+<form method="POST" action="<?php $_SERVER['DOCUMENT_ROOT']?>/form/update_professor.php" enctype="multipart/form-data" style="margin-bottom:150px;">
   <input name="id" style="display:none;"/>
   <div class="comment-area-wrapper">
     <div id="professor-list"class="comments-view-area">
@@ -61,10 +61,23 @@
               <input name="email" type="text" placeholder="email " required />
           </div>
       </div>
-      <div class="col-md-12">
-        Awards and Honors
+      <div class="col-md-10">
+        CV File
           <div class="single-input-item">
-            <textarea name="awards_and_honors" id="con_message" cols="30" rows="7" placeholder="awards and honors" required></textarea>
+              <input name="cvfile" type="text" placeholder="file Name " required readonly/>
+          </div>
+      </div>
+      <div class="col-md-2">
+         &nbsp
+          <div class="single-input-item">
+              <input type="button" class="btn btn-outline w-100" onclick="uploadToCvFile()" value="파일찾기"></button>
+              <input type="file" name="upfile" id="uploadCvFile" style="display:none;" />
+          </div>
+      </div>
+      <div class="col-md-12">
+        CV
+          <div class="single-input-item">
+            <textarea name="cv" id="con_message" cols="30" rows="7" placeholder="awards and honors" required></textarea>
           </div>
       </div>
     </div>
@@ -74,9 +87,16 @@
 </form>
 
 <script>
+
+  // 이미지 프리뷰
   var target = document.getElementById('fileToUpload');
+  var target2 = document.getElementById('uploadCvFile');
+
   imagePreView(target, function(img){
     $("#profileImg").replaceWith(img);
+  });
+  filePreView(target2, function(name){
+    $("input[name=cvfile]").val(name);
   });
 
   function lineBreaker(str){
@@ -88,6 +108,10 @@
   function updateToImage(){
       jQuery("#fileToUpload").click();
   }
+  function uploadToCvFile(){
+      jQuery("#uploadCvFile").click();
+  }
+
   // 폼을 통해 이미지를 업로드하면 클라이언트에 이미지가 프리뷰되는것.
   function imagePreView(target, callback){
     var img = new Image();
@@ -102,6 +126,16 @@
       };
       reader.readAsDataURL(file);
       callback(img);
+    };
+  }
+
+  // 폼을 통해 이미지를 업로드하면 클라이언트에 파일명 프리뷰
+  function filePreView(target, callback){
+    target.onchange = function (e) {
+      e.preventDefault();
+      var file = target.files[0], reader = new FileReader();
+      console.log("file : " , file)
+      callback(file.name);
     };
   }
 
@@ -120,7 +154,8 @@
         $("input[name=fax]").val("<?php echo $row['fax']?>");
         $("input[name=address]").val("<?php echo $row['address']?>");
         $("input[name=email]").val("<?php echo $row['email']?>");
-        $("textarea[name=awards_and_honors]").html(lineBreaker("<?php echo $row['awards_and_honors']?>"));
+        $("textarea[name=cv]").html(lineBreaker("<?php echo $row['cv']?>"));
+        $("input[name=cvfile]").val("<?php echo $row['cv_file']?>");
 
       <?php }
     }

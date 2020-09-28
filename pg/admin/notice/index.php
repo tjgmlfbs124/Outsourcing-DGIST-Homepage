@@ -115,6 +115,9 @@
       </div>
   </div>
   <!--== End Blog Details Page Content ==-->
+  <footer class="footer-area sp-y" style="margin-top: 50px; padding:30px 0px 10px 0px; position:fixed; bottom:0; width:100%;">
+			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
+	</footer>
 
     <!-- Start Off Canvas Menu Wrapper -->
     <aside class="off-canvas-wrapper off-canvas-menu">

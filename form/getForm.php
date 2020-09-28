@@ -12,22 +12,28 @@ function renderView($msg, $url){
 class getForm{
 	function __construct(){}
 
-	function add_people($kr_name, $en_name, $_position, $_address, $_phone, $_fax, $_email,$_department, $_image, $_category, $_awards_and_honors){
+	function add_people($kr_name, $en_name, $_position, $_address, $_phone, $_fax, $_email,$_department, $_image, $_category, $cv, $cvfile){
 		try{
-			$_awards_and_honors = str_replace("\r\n","<br>",$_awards_and_honors);
-			/*이미지가 있을경우 이미지도 업데이트*/
+			$cv = str_replace("\r\n","<br>",$cv);
+
+			$query = "insert into people_tb(kr_name, en_name, position, address, phone, fax, email, department ";
 			if(isset($_image)){
-				$query = "INSERT INTO people_tb(kr_name, en_name, position, address, phone, fax, email, department, image, category, awards_and_honors)".
-				" VALUES(\"$kr_name\",\"$en_name\",\"$_position\", \"$_address\", \"$_phone\", \"$_fax\", \"$_email\", \"$_department\", \"$_image\", \"$_category\", \"$_awards_and_honors\")";
+				$query = $query.",image ";
 			}
-			/*이미지가 없을경우, 원래 이미지 사용을 위해 이미지 빼고 업데이트*/
-			else{
-				$query = "INSERT INTO people_tb(kr_name, en_name, position, address, phone, fax, email, department, category, awards_and_honors)".
-				" VALUES(\"$kr_name\", \"$en_name\", \"$_position\", \"$_address\", \"$_phone\", \"$_fax\", \"$_email\", \"$_department\", \"$_category\", \"$_awards_and_honors\")";
+			$query = $query.", category, cv";
+			if(isset($cvfile)){
+				$query = $query.",cv_file ";
 			}
-			echo "<br><br>";
-			echo "query : ".$query;
-			echo "<br><br>";
+			$query = $query.") ";
+			$query = $query." VALUES(\"$kr_name\",\"$en_name\",\"$_position\", \"$_address\", \"$_phone\", \"$_fax\", \"$_email\", \"$_department\"";
+			if(isset($_image)){
+				$query = $query.",\"$_image\"";
+			}
+			$query = $query.", \"$_category\", \"$cv\"";
+			if(isset($cvfile)){
+				$query = $query.",\"$cvfile\"";
+			}
+			$query = $query.");";
 			$pdo = $GLOBALS["pdo"];
 			$stmt = $pdo->prepare($query);
 			$stmt->execute();
@@ -74,18 +80,20 @@ class getForm{
 	}
 
 	// id에 맞는 임직원 업데이트
-	function update_people($_id, $kr_name, $en_name, $_position, $_address, $_phone, $_fax, $_email,$_department, $_image, $_category, $_awards_and_honors){
+	function update_people($_id, $kr_name, $en_name, $_position, $_address, $_phone, $_fax, $_email,$_department, $_image, $_category, $cv, $cvfile){
 		try{
-	    $_awards_and_honors = str_replace("\r\n","<br>",$_awards_and_honors);
+	    $cv = str_replace("\r\n","<br>",$cv);
 			/*이미지가 있을경우 이미지도 업데이트*/
+			$query = "UPDATE people_tb SET kr_name=\"$kr_name\", en_name=\"$en_name\", position=\"$_position\", address=\"$_address\", phone=\"$_phone\", fax=\"$_fax\", email=\"$_email\", department=\"$_department\", category=\"$_category\", cv=\"$cv\"";
 			if(isset($_image)){
-	      $query = "UPDATE people_tb SET kr_name=\"$kr_name\", en_name=\"$en_name\", position=\"$_position\", address=\"$_address\", phone=\"$_phone\", fax=\"$_fax\", email=\"$_email\", department=\"$_department\", image=\"$_image\", category=\"$_category\", awards_and_honors=\"$_awards_and_honors\" WHERE id=\"$_id\"";
-	    }
-			/*이미지가 없을경우, 원래 이미지 사용을 위해 이미지 빼고 업데이트*/
-	    else{
-	      $query = "UPDATE people_tb SET kr_name=\"$kr_name\", en_name=\"$en_name\", position=\"$_position\", address=\"$_address\", phone=\"$_phone\", fax=\"$_fax\", email=\"$_email\", department=\"$_department\", category=\"$_category\", awards_and_honors=\"$_awards_and_honors\" WHERE id=\"$_id\"";
-	    }
+				$query = $query.", image = \"$_image\"";
+			}
+			if(isset($cvfile)){
+				$query = $query.", cv_file = \"$cvfile\"";
+			}
+			$query = $query." WHERE id=\"$_id\"";
 			$pdo = $GLOBALS["pdo"];
+
 			$stmt = $pdo->prepare($query);
 			$stmt->execute();
 			renderView("변경되었습니다.", "/pg/admin/people/index.php?cat=".$_category);
@@ -225,14 +233,17 @@ class getForm{
 	}
 
 	// 교수 경력 조회
-	function select_biography($id){
+	function select_history($id){
     try{
 			$pdo = $GLOBALS["pdo"];
 			$sql = "
-				SELECT * FROM biography_tb
-				WHERE professorid =".$id."
-				ORDER BY order_idx;
-				";
+			SELECT * FROM (
+				SELECT
+					A.*,
+					B.title AS honorsTitle FROM kyu_db.biography_tb AS A LEFT JOIN kyu_db.awards_and_honors_tb AS B on A.order_idx = B.order_idx
+					WHERE A.professorid = ".$id." AND b.professorid = ".$id."
+          ORDER BY order_idx
+			)history";
 			$stmt = $pdo->prepare($sql);
       $stmt->execute();
       return $stmt;

@@ -2,8 +2,9 @@
     <div class="container">
         <div class="row mtn-40" style="background:#f8f9fc;">
             <div class="col-lg-3" style="font-size:20px; text-align:center;">
-              <div class="copyright-txt">
-                  <p style="margin:0; color:#333;">DGIST ART LAB</p>
+              <div class="copyright-txt" style="margin-top:10px;">
+                  <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/dgistlogo2.png" alt="Businex-Logo" style="max-width:50%;float:left;">
+                  <img src="<?php $_SERVER['DOCUMENT_ROOT']?>/image/logo2.svg" alt="Businex-Logo" style="max-width:50%; float:left;">
               </div>
             </div>
 
@@ -16,8 +17,8 @@
 
             <div class="col-lg-2" style="font-size:12px; text-align:center;">
               <div class="copyright-txt">
-                <p style="margin:0; color:#333;">Tel : 054-123-1234</p>
-                <p style="margin:0; color:#333;">Fax : 053-123-1324</p>
+                <p style="margin:0; color:#333;">Tel : 053-785-4580</p>
+                <p style="margin:0; color:#333;">Fax : 053-785-4589</p>
               </div>
             </div>
 

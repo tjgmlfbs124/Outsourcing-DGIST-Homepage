@@ -19,7 +19,7 @@
   <div class="blog-details-page-content sp-y"  style="margin-top:50px;">
       <div class="container">
           <div class="row">
-              <div class="col-lg-9">
+              <div class="col-lg-12">
                   <article class="blog-post-details">
                       <div class="blog-post-txt">
                         <div class="member-desc">
@@ -35,23 +35,6 @@
                         </div>
                       </div>
                   </article>
-              </div>
-
-              <div class="col-lg-3">
-                  <aside class="sidebar-area-wrapper mt-md-80 mt-sm-60">
-                      <!-- Start Single Sidebar Wrap -->
-                      <div class="single-sidebar-item-wrap">
-                          <h3 class="sidebar-title">Categories</h3>
-                          <div class="sidebar-body">
-                              <ul class="sidebar-list">
-                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=international_journal&page=1">INTERNATIONAL JOURNAL</a></li>
-                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=domestic_journal&page=1">DOMESTIC JOURNAL</a></li>
-                                  <li><a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/paper.php?cat=conference&page=1">CONFERENCE</a></li>
-                              </ul>
-                          </div>
-                      </div>
-                      <!-- End Single Sidebar Wrap -->
-                  </aside>
               </div>
           </div>
       </div>

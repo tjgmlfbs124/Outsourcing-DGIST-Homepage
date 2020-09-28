@@ -42,14 +42,14 @@
                   <div class="about-service mt-50 mt-sm-35" style="margin:0;">
                     <h4>Research Interests</h4>
                     <ul class="service-feature">
+                      <li>Machine learning & Deep learning Radar</li>
+                      <li>AI & Automatic Target Recognition</li>
+                      <li>3D & Multi-dimensional Radar</li>
                       <li>Radar Detection & Classification</li>
-                        <li>Radar System Design</li>
-                        <li>MIMO/Multi-channel Radar</li>
-                        <li>Multifunctional Radar(MFR)</li>
-                        <li>Multi-dimensional Imaging Radar</li>
-                        <li>Super-resolution radar algorithm</li>
-                        <li>Automatic Target Recognition</li>
-                        <li>Machine learning & Deep learning Radar</li>
+                      <li>Radar System Design</li>
+                      <li>MIMO/Multi-channel Radar</li>
+                      <li>Multifunctional Radar(MFR)</li>
+                      <li>Super-resolution radar algorithm</li>
                     </ul>
                   </div>
                 </div>
@@ -58,9 +58,9 @@
         </div>
       </div>
 
-      <footer class="footer-area sp-y" style="margin-top: 50px; padding:30px 0px 10px 0px;">
-          <?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
-      </footer>
+      <footer class="footer-area sp-y" style="margin-top: 50px; padding:30px 0px 10px 0px; position:fixed; bottom:0; width:100%;">
+    			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
+    	</footer>
 
     <!-- Start Off Canvas Menu Wrapper -->
     <aside class="off-canvas-wrapper off-canvas-menu">

@@ -47,6 +47,29 @@
     }
   }
 
+
+  if(isset($_FILES['upfile']) && $_FILES['upfile']['name'] != "") {
+    $file = $_FILES['upfile'];
+    $upload_directory = $_SERVER['DOCUMENT_ROOT']."cvFile/";
+    $ext_str = "hwp,xls,doc,xlsx,docx,pdf,jpg,gif,png,txt,ppt,pptx";
+    $allowed_extensions = explode(',', $ext_str);
+    $max_file_size = 5242880;
+    $ext = substr($file['name'], strrpos($file['name'], '.') + 1);
+
+    if(!in_array($ext, $allowed_extensions)) {
+        echo "업로드할 수 없는 확장자 입니다.";
+    }
+    // 파일 크기 체크
+    if($file['size'] >= $max_file_size) {
+        echo "5MB 까지만 업로드 가능합니다.";
+    }
+    $cv_path = time()."_".$file['name'];
+    if(move_uploaded_file($file['tmp_name'], $upload_directory.$cv_path)) {
+      // 성공
+    }
+
+  }
+
   require_once $_SERVER['DOCUMENT_ROOT'].'/form/getForm.php';
   $model = new getForm();
 
@@ -58,7 +81,9 @@
   $phone = $_POST['phone'];
   $fax = $_POST['fax'];
   $email = $_POST['email'];
-  $awards_and_honors = $_POST['awards_and_honors'];
+  $cv = $_POST['cv'];
+  if(!isset($cv_path)) $cv_path = "";
+  $cvfile = $cv_path;
 
 
   if(!isset($filename)){ // 이미지가 없다면
@@ -67,5 +92,5 @@
   else{ // 이미지가 있다면
     $image = $filename;
   }
-  $model -> update_people($_id, $kr_name, $en_name, $position, $address, $phone, $fax, $email, 'null', $image,'professor',$awards_and_honors);
+  $model -> update_people($_id, $kr_name, $en_name, $position, $address, $phone, $fax, $email, 'null', $image,'professor',$cv, $cvfile);
 ?>

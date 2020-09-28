@@ -39,16 +39,17 @@
             </div>
         </div>
     </div>
-    <footer class="footer-area sp-y" style="margin-top: 50px; padding:30px 0px 10px 0px;">
+    <footer class="footer-area sp-y" style="margin-top: 50px; padding:30px 0px 10px 0px; position:fixed; bottom:0; width:100%;">
   			<?php require_once $_SERVER['DOCUMENT_ROOT'].'/widget/footer.php'?>
   	</footer>
+
 
 		<?php require_once $_SERVER['DOCUMENT_ROOT'].'/pg/include/include_js.php'?>
 
     <script>
       function addCompany(){
         return ""+
-        "<div class=\"col-md-6 col-lg-4\">"+
+        "<div class=\"col-md-6 col-lg-3\">"+
           "<div class=\"blog-item\" style=\"border:1px solid #ccc; padding:10px; background-color:#fff;\">"+
             "<figure class=\"blog-thumb\" style=\" text-align:center;\">"+
               "<a >"+
